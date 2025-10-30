@@ -102,14 +102,85 @@ html, body {
   filter: brightness(0) invert(1); /* keep white on hover */
 }
 
-
-/* Next section */
-.section-content {
-  height: 100vh;
-  background-color: #f5f5f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
+.split__right .sticky {
+  position: sticky;
+  top: 2rem;
+  min-height: 100vh;        /* cria pista vertical para available > 0 */
 }
+
+.split { 
+  overscroll-behavior: contain; 
+  overflow: visible;        /* não quebrar sticky */
+}
+
+
+/* wrapper que será deslocado para baixo */
+.sticky .media-shift {
+  will-change: transform;
+  transition: transform 0.06s linear; /* suaviza levemente sem atrasar */
+}
+
+
+/* Duas colunas e sticky confiável */
+.split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.25rem;
+} /* Grid bidimensional ideal para a composição */
+.split__right .sticky { position: sticky; top: 2rem; }
+.media-frame {
+  width: 520px;
+  height: 360px;
+  overflow: hidden;     /* recorta excedentes */
+  border-radius: 16px;
+}
+.media-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* preenche a caixa, pode cortar bordas */
+  display: block;
+}
+
+
+/* Título grande à esquerda */
+.section-title { font-size: clamp(2rem, 3.2vw + 1rem, 4rem); font-weight: 800; margin: 0 0 2.5rem 0; }
+
+/* Lista sem divisores e com espaçamento médio */
+.list { list-style: none; margin: 0; padding: 0; }
+.item {
+  margin-bottom: 1.25rem;      /* espaço médio entre itens */
+  padding: 0;                  /* sem padding inferior obrigatório */
+  border: 0;                   /* remove qualquer divisor */
+}
+.item:last-child { margin-bottom: 0; } /* sem espaço no fim */
+
+/* Tipografia e estados de cor */
+.item__title { margin: 0; font-weight: 800; font-size: 1.5rem; }
+.item__meta { display: flex; gap: .5rem; align-items: center; margin-top: .35rem; font-size: .95rem; }
+
+/* Estados: inativo cinza, ativo preto */
+.item { color: #6b7280; }                /* cinza para não selecionado */
+.item.active { color: #111827; }         /* preto para selecionado */
+.item.active .item__title { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Bullets */
+.item__bullets { list-style: disc; margin: .8rem 0 0 1.25rem; padding: 0; }
+.item__bullets li { line-height: 1.55; margin-bottom: .45rem; }
+.item__bullets li::marker { font-size: .9em; }
+
+/* Responsivo: empilha no mobile */
+@media (max-width: 900px) {
+  .split { grid-template-columns: 1fr; gap: 1.5rem; }
+  .split__right .sticky { position: static; }
+}
+
+
+.centered {   /* ocupa a altura da janela */
+  display: grid;         /* ou flex */
+  place-items: center;   /* center X e Y; com flex: align-items + justify-content */
+}
+.section-title { margin: 0; }
