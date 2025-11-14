@@ -11,6 +11,101 @@ html, body {
   overflow: hidden;
 }
 
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+/* Glass Button */
+.glass_button {
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: 1px solid rgb(255, 255, 255);
+  background: rgba(174, 171, 171, 0.415);
+  backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.glass_button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Botão de tema fixo e minimalista */
+.theme_toggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.theme_toggle:hover {
+  transform: scale(1.25);
+}
+
+/* Tema claro */
+body.light-mode {
+  background: #f8f9fa;
+  color: #222;
+}
+
+body.light-mode .theme_toggle {
+  color: #111;
+}
+
+body.light-mode .glass_button {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/* Botão de tema simples */
+.theme_toggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.theme_toggle:hover {
+  transform: scale(1.25);
+}
+
+/* Tema claro */
+body.light-mode {
+  background: #f8f9fa;
+  color: #222;
+}
+
+body.light-mode .theme_toggle {
+  color: #111;
+}
+
+body.light-mode .glass_button {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
 .hero video {
   position: absolute;
   top: 50%;
@@ -48,28 +143,6 @@ html, body {
   margin-top: 10px;
 }
 
-/* Glass Button */
-.glass_button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 12px 28px;
-  border-radius: 999px;
-  border: 1px solid rgb(255, 255, 255);
-  background: rgba(174, 171, 171, 0.415);
-  backdrop-filter: blur(10px);
-  color: rgb(255, 255, 255);
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.glass_button:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
-}
-
 /* Links */
 .links {
   display: flex;
@@ -102,59 +175,96 @@ html, body {
   filter: brightness(0) invert(1); /* keep white on hover */
 }
 
-.split__right .sticky {
-  position: sticky;
-  top: 2rem;
-  min-height: 100vh;        /* cria pista vertical para available > 0 */
-}
+/* ========== CAREER SECTION CORREÇÕES ========== */
 
-.split { 
-  overscroll-behavior: contain; 
-  overflow: visible;        /* não quebrar sticky */
-}
-
-
-/* wrapper que será deslocado para baixo */
-.sticky .media-shift {
-  will-change: transform;
-  transition: transform 0.06s linear; /* suaviza levemente sem atrasar */
-}
-
-
-/* Duas colunas e sticky confiável */
+/* Estrutura principal */
 .split {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 3rem;
   align-items: start;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 1.25rem;
-} /* Grid bidimensional ideal para a composição */
-.split__right .sticky { position: sticky; top: 2rem; }
+  padding: 8rem 1.25rem; /* aumentei o padding-top para visual */
+  position: relative;
+  z-index: 2;
+}
+
+/* Lado esquerdo (lista) */
+.split__left {
+  position: relative;
+}
+
+.list.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.25rem; 
+}
+
+.item {
+  margin-bottom: 100vh;
+  transition: color 0.3s ease;
+}
+
+/* Lado direito (sticky image) */
+.split__right {
+  position: relative;
+}
+
+.split__right .sticky {
+  position: sticky;
+  top: 10vh; /* 👉 dá um pequeno respiro no topo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .media-frame {
-  width: 520px;
-  height: 360px;
-  overflow: hidden;     /* recorta excedentes */
+  width: 390px;           /* largura fixa */
+  height: 390px;          /* altura fixa */
+  overflow: hidden;       /* corta excedente quando cover */
   border-radius: 16px;
 }
+
 .media-frame img {
   width: 100%;
   height: 100%;
-  object-fit: cover;    /* preenche a caixa, pode cortar bordas */
-  display: block;
+  object-fit: cover;      /* preenche mantendo proporção, corta sobras */
+  object-position: center;
 }
 
+/* efeito leve ao trocar imagem */
+.media-frame img:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Efeito suave no shift */
+.sticky .media-shift {
+  will-change: transform;
+  transition: transform 0.15s linear;
+}
+
+/* Ativo e inativo */
+.item { color: #9ca3af; } /* cinza */
+.item.active { color: #111827; }
+.item.active .item__title {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 
 /* Título grande à esquerda */
-.section-title { font-size: clamp(2rem, 3.2vw + 1rem, 4rem); font-weight: 800; margin: 0 0 2.5rem 0; }
+.section-title { font-size: clamp(2rem, 3.2vw + 1rem, 4rem); font-weight: 800; margin: 0 0 rem 0;}
 
 /* Lista sem divisores e com espaçamento médio */
 .list { list-style: none; margin: 0; padding: 0; }
 .item {
-  margin-bottom: 1.25rem;      /* espaço médio entre itens */
+  margin-top: 5.25;
+  margin-bottom: 5.25rem;      /* espaço médio entre itens */
   padding: 0;                  /* sem padding inferior obrigatório */
-  border: 0;                   /* remove qualquer divisor */
+  border: 0;          
 }
 .item:last-child { margin-bottom: 0; } /* sem espaço no fim */
 
@@ -177,7 +287,6 @@ html, body {
   .split { grid-template-columns: 1fr; gap: 1.5rem; }
   .split__right .sticky { position: static; }
 }
-
 
 .centered {   /* ocupa a altura da janela */
   display: grid;         /* ou flex */

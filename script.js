@@ -1,3 +1,11 @@
+ async function loadSection(id, file) {
+  const html = await fetch(file).then(res => res.text());
+  document.getElementById(id).innerHTML = html;
+}
+
+loadSection("hero", "sections/hero.html");
+loadSection("career", "sections/career.html");
+
 // Example JS file - currently empty
 console.log("Hero page loaded");
 
@@ -40,48 +48,46 @@ const observer = new IntersectionObserver((entries) => {
   rootMargin: '-45% 0px -45% 0px'    // faixa central (~10% da viewport)
 });
 
+// Observar os headings
+headings.forEach(h => observer.observe(h));
+
 const list = document.querySelector('.split__left .timeline');
-const sticky = document.querySelector('.split__right .sticky');
-const mediaFrame = document.querySelector('.split__right .media-frame');
 const mediaShift = document.querySelector('.split__right .media-shift');
 
-let visibleProgress = 0; // 0..1 do que está visível da lista
+// Limite de quanto a imagem pode “descer”
+const MAX_SHIFT_PX = 660; // ajuste conforme a estética/print
 
-function clamp(v, a, b){ return Math.min(b, Math.max(a, v)); }
+function clamp(v, min, max) { return Math.min(max, Math.max(min, v)); }
 
-// Observa a lista inteira para saber quanto dela está visível
-const visObserver = new IntersectionObserver((entries) => {
-  // Deve haver só 1 entry (a da lista)
-  const entry = entries[0];
-  if (!entry) return;
+function updateMediaShift() {
+  if (!list || !mediaShift) return;
 
-  // Fração visível (0..1) independentemente da posição inicial fora da tela
-  const ratio = entry.intersectionRatio; // já é 0..1
-  visibleProgress = clamp(ratio, 0, 1);
+  const rect = list.getBoundingClientRect();
+  const vh = window.innerHeight;
 
-  // Atualiza deslocamento imediatamente
-  applyShift();
-}, {
-  root: null,                 // viewport
-  threshold: Array.from({length: 21}, (_,i)=> i/20), // passos finos de 0..1
-  rootMargin: '0px 0px 0px 0px'
-});
+  // Progresso 0..1: 0 quando o topo da lista alinha ao topo da viewport,
+  // 1 quando a base da lista alinha ao fundo da viewport.
+  const totalTravel = rect.height + vh; // faixa de movimento visível
+  const scrolled = vh - rect.top;       // quanto a viewport “entrou” na lista
+  const t = clamp(scrolled / totalTravel, 0, 1);
 
-visObserver.observe(list);
-
-function applyShift(){
-  if (!sticky || !mediaFrame || !mediaShift) return;
-
-  const stickyRect = sticky.getBoundingClientRect();
-  const frameRect  = mediaFrame.getBoundingClientRect();
-
-  // Espaço útil dentro do sticky
-  const available = Math.max(0, stickyRect.height - frameRect.height);
-
-  // Deslocamento proporcional ao que a lista tem visível
-  const dy = visibleProgress * available;
+  // Desloca a imagem para baixo enquanto a lista sobe
+  const dy = t * MAX_SHIFT_PX;
   mediaShift.style.transform = `translateY(${dy}px)`;
 }
 
-// Atualiza limites quando layout muda
-addEventListener('resize', applyShift);
+// Atualiza em scroll e resize
+addEventListener('scroll', updateMediaShift, { passive: true });
+addEventListener('resize', updateMediaShift);
+updateMediaShift();
+
+
+  const toggleBtn = document.getElementById('themeToggle');
+
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    const isLight = document.body.classList.contains('light-mode');
+    toggleBtn.textContent = isLight ? '☼' : '☾';
+  });
+
+
