@@ -179,16 +179,16 @@ body.light-mode .glass_button {
 
 /* Estrutura principal */
 .split {
+  position: relative;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 3rem;
-  align-items: start;
+  align-items: flex-start; /* FIX */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 8rem 1.25rem; /* aumentei o padding-top para visual */
-  position: relative;
-  z-index: 2;
+  padding: 8rem 1.25rem;
 }
+
 
 /* Lado esquerdo (lista) */
 .split__left {
@@ -199,97 +199,92 @@ body.light-mode .glass_button {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 1.25rem; 
+  gap: 1.25rem;
 }
 
 .item {
-  margin-bottom: 100vh;
+  margin-bottom: 5.25rem;
+  color: #6b7280;
   transition: color 0.3s ease;
+}
+
+.item.active {
+  color: #111827;
 }
 
 /* Lado direito (sticky image) */
 .split__right {
-  position: relative;
+  height: 100%;
 }
 
 .split__right .sticky {
   position: sticky;
-  top: 10vh; /* 👉 dá um pequeno respiro no topo */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 10vh; /* ⭐ image becomes sticky here */
 }
 
+/* STATIC IMAGE — NO SCROLLING ANIMATION */
+.media-shift {
+  position: relative;
+  width: 100%;
+  transform: none !important; /* completely disable JS movement */
+}
+
+/* Image frame */
 .media-frame {
-  width: 390px;           /* largura fixa */
-  height: 390px;          /* altura fixa */
-  overflow: hidden;       /* corta excedente quando cover */
+  width: 390px;
+  height: 390px;
+  overflow: hidden;
   border-radius: 16px;
 }
 
 .media-frame img {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* preenche mantendo proporção, corta sobras */
+  object-fit: cover;
   object-position: center;
+  opacity: 1;
+  transition: opacity 0.35s ease;
 }
 
-/* efeito leve ao trocar imagem */
+.media-frame img.is-changing {
+  opacity: 0;
+}
+
 .media-frame img:not(:first-child) {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-/* Efeito suave no shift */
-.sticky .media-shift {
-  will-change: transform;
-  transition: transform 0.15s linear;
-}
-
 /* Ativo e inativo */
-.item { color: #9ca3af; } /* cinza */
-.item.active { color: #111827; }
 .item.active .item__title {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
-/* Título grande à esquerda */
-.section-title { font-size: clamp(2rem, 3.2vw + 1rem, 4rem); font-weight: 800; margin: 0 0 rem 0;}
-
-/* Lista sem divisores e com espaçamento médio */
-.list { list-style: none; margin: 0; padding: 0; }
-.item {
-  margin-top: 5.25;
-  margin-bottom: 5.25rem;      /* espaço médio entre itens */
-  padding: 0;                  /* sem padding inferior obrigatório */
-  border: 0;          
+/* Título */
+.section-title {
+  font-size: clamp(2rem, 3.2vw + 1rem, 4rem);
+  font-weight: 800;
+  margin: 0 0 rem 0;
 }
-.item:last-child { margin-bottom: 0; } /* sem espaço no fim */
-
-/* Tipografia e estados de cor */
-.item__title { margin: 0; font-weight: 800; font-size: 1.5rem; }
-.item__meta { display: flex; gap: .5rem; align-items: center; margin-top: .35rem; font-size: .95rem; }
-
-/* Estados: inativo cinza, ativo preto */
-.item { color: #6b7280; }                /* cinza para não selecionado */
-.item.active { color: #111827; }         /* preto para selecionado */
-.item.active .item__title { text-decoration: underline; text-underline-offset: 4px; }
 
 /* Bullets */
+.item__title { margin: 0; font-weight: 800; font-size: 1.5rem; }
+.item__meta { display: flex; gap: .5rem; align-items: center; margin-top: .35rem; font-size: .95rem; }
 .item__bullets { list-style: disc; margin: .8rem 0 0 1.25rem; padding: 0; }
 .item__bullets li { line-height: 1.55; margin-bottom: .45rem; }
 .item__bullets li::marker { font-size: .9em; }
 
-/* Responsivo: empilha no mobile */
+/* Responsivo */
 @media (max-width: 900px) {
   .split { grid-template-columns: 1fr; gap: 1.5rem; }
   .split__right .sticky { position: static; }
 }
 
-.centered {   /* ocupa a altura da janela */
-  display: grid;         /* ou flex */
-  place-items: center;   /* center X e Y; com flex: align-items + justify-content */
+.centered {
+  display: grid;
+  place-items: center;
 }
+
 .section-title { margin: 0; }
