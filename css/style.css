@@ -1,0 +1,295 @@
+@import url('contact.css');
+@import url('horizontalCarousel.css');
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+/* Glass Button */
+.glass_button {
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: 1px solid rgb(255, 255, 255);
+  background: rgba(174, 171, 171, 0.415);
+  backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.glass_button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Botão de tema fixo e minimalista */
+.theme_toggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.theme_toggle:hover {
+  transform: scale(1.25);
+}
+
+/* Tema claro */
+body.light-mode {
+  background: #f8f9fa;
+  color: #222;
+}
+
+body.light-mode .theme_toggle {
+  color: #111;
+}
+
+body.light-mode .glass_button {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/* Botão de tema simples */
+.theme_toggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.theme_toggle:hover {
+  transform: scale(1.25);
+}
+
+/* Tema claro */
+body.light-mode {
+  background: #f8f9fa;
+  color: #222;
+}
+
+body.light-mode .theme_toggle {
+  color: #111;
+}
+
+body.light-mode .glass_button {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-bottom-left {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: white;
+  font-family: 'Jomolhari', serif;
+  line-height: 1;
+  z-index: 1;
+  text-align: left;
+}
+
+.blake {
+  font-size: 150px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 10px;
+}
+
+/* Links */
+.links {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.links a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.links a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+  
+  /* Make the image white */
+  filter: brightness(0) invert(1);
+}
+
+.links a:hover img {
+  transform: scale(1.2);
+  opacity: 0.8;
+  filter: brightness(0) invert(1); /* keep white on hover */
+}
+
+/* ========== CAREER SECTION CORREÇÕES ========== */
+
+/* Estrutura principal */
+.split {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: flex-start; /* FIX */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 1.25rem;
+}
+
+
+/* Lado esquerdo (lista) */
+.split__left {
+  position: relative;
+}
+
+.list.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.25rem;
+}
+
+.item {
+  margin-bottom: 5.25rem;
+  color: #6b7280;
+  transition: color 0.3s ease;
+}
+
+.item.active {
+  color: #111827;
+}
+
+/* Lado direito (sticky image) */
+.split__right {
+  height: 100%;
+}
+
+.split__right .sticky {
+  position: sticky;
+  top: 10vh; /* ⭐ image becomes sticky here */
+}
+
+/* STATIC IMAGE — NO SCROLLING ANIMATION */
+.media-shift {
+  position: relative;
+  width: 100%;
+  transform: none !important; /* completely disable JS movement */
+}
+
+/* Image frame */
+.media-frame {
+  width: 390px;
+  height: 390px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.media-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+
+.media-frame img.is-changing {
+  opacity: 0;
+}
+
+.media-frame img:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Ativo e inativo */
+.item.active .item__title {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Título */
+.section-title {
+  font-size: clamp(2rem, 3.2vw + 1rem, 4rem);
+  font-weight: 800;
+  margin: 0 0 rem 0;
+}
+
+/* Bullets */
+.item__title { margin: 0; font-weight: 800; font-size: 1.5rem; }
+.item__meta { display: flex; gap: .5rem; align-items: center; margin-top: .35rem; font-size: .95rem; }
+.item__bullets { list-style: disc; margin: .8rem 0 0 1.25rem; padding: 0; }
+.item__bullets li { line-height: 1.55; margin-bottom: .45rem; }
+.item__bullets li::marker { font-size: .9em; }
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .split { grid-template-columns: 1fr; gap: 1.5rem; }
+  .split__right .sticky { position: static; }
+}
+
+.centered {
+  display: grid;
+  place-items: center;
+}
+
+.divider {
+  border:  1px solid #090808;  
+}
