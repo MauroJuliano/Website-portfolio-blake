@@ -1,3 +1,6 @@
+@import url('contact.css');
+@import url('horizontalCarousel.css');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -287,4 +290,6 @@ body.light-mode .glass_button {
   place-items: center;
 }
 
-.section-title { margin: 0; }
+.divider {
+  border:  1px solid #090808;  
+}

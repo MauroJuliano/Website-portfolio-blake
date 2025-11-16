@@ -1,0 +1,163 @@
+<section class="centered">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="carousel-wrapper">
+    <div class="carousel-track">
+      <div class="carousel-item">1</div>
+      <div class="carousel-item">2</div>
+      <div class="carousel-item">3</div>
+      <div class="carousel-item">4</div>
+      <div class="carousel-item">5</div>
+    </div>
+  </div>
+</section>
+
+<style>
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* WRAPPER — mostra parcialmente os itens laterais */
+.carousel-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+  padding: 60px 0; /* mais espaço para o scale */
+  display: flex;
+  justify-content: center;
+  scroll-behavior: smooth;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding-inline: 20%; /* importante → mostra itens laterais */
+}
+
+/* Itens base */
+.carousel-item {
+  width: 280px;
+  height: 380px;
+  background: #333;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  user-select: none;
+}
+
+/* item central */
+.carousel-item.active {
+  transform: scale(1.25);
+  filter: brightness(1);
+}
+
+/* itens laterais */
+.carousel-item:not(.active) {
+  transform: scale(0.8);
+  filter: brightness(0.6);
+}
+</style>
+
+<script>
+const wrapper = document.querySelector(".carousel-wrapper");
+const items = [...document.querySelectorAll(".carousel-item")];
+
+let dragging = false;
+let startX = 0;
+let scrollStart = 0;
+
+// drag
+wrapper.addEventListener("pointerdown", e => {
+  dragging = true;
+  startX = e.clientX;
+  scrollStart = wrapper.scrollLeft;
+  wrapper.style.cursor = "grabbing";
+  wrapper.setPointerCapture(e.pointerId);
+});
+
+wrapper.addEventListener("pointermove", e => {
+  if (!dragging) return;
+  const dx = e.clientX - startX;
+  wrapper.scrollLeft = scrollStart - dx;
+  updateScales(); // atualiza efeitos dinâmicos enquanto arrasta
+});
+
+wrapper.addEventListener("pointerup", stopDrag);
+wrapper.addEventListener("pointerleave", stopDrag);
+wrapper.addEventListener("pointercancel", stopDrag);
+
+function stopDrag(e) {
+  if (!dragging) return;
+  dragging = false;
+  wrapper.style.cursor = "grab";
+  snapToCenter();
+  if (e.pointerId) wrapper.releasePointerCapture(e.pointerId);
+}
+
+// Centralizar o item mais próximo do meio
+function snapToCenter() {
+  const rect = wrapper.getBoundingClientRect();
+  const center = wrapper.scrollLeft + rect.width / 2;
+
+  let closest = items[0];
+  let minDist = Infinity;
+
+  items.forEach(item => {
+    const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+    const dist = Math.abs(itemCenter - center);
+    if (dist < minDist) {
+      minDist = dist;
+      closest = item;
+    }
+  });
+
+  wrapper.scrollTo({
+    left: closest.offsetLeft - rect.width / 2 + closest.offsetWidth / 2,
+    behavior: "smooth",
+  });
+
+  // atualiza classe ativa
+  items.forEach(item => item.classList.remove("active"));
+  closest.classList.add("active");
+}
+
+// efeito dinâmico (scale + brightness conforme distância)
+function updateScales() {
+  const rect = wrapper.getBoundingClientRect();
+  const center = wrapper.scrollLeft + rect.width / 2;
+
+  items.forEach(item => {
+    const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+    const dist = Math.abs(itemCenter - center);
+    const maxDist = rect.width / 2;
+
+    const scale = 1 - Math.min(dist / maxDist, 1) * 0.25; // 1.0 → 0.75
+    const brightness = 1 - Math.min(dist / maxDist, 1) * 0.4;
+
+    item.style.transform = `scale(${scale})`;
+    item.style.filter = `brightness(${brightness})`;
+  });
+}
+
+updateScales();
+snapToCenter();
+</script>

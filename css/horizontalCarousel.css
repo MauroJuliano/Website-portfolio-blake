@@ -1,0 +1,123 @@
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Área do carrossel */
+.carousel-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+  padding: 60px 0; 
+  display: flex;
+  justify-content: center;
+  scroll-behavior: smooth;
+  touch-action: pan-y; 
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding-inline: 20%; /* mostra itens laterais */
+}
+
+/* Itens */
+.carousel-item {
+  width: 800px;
+  height: 400px;
+  background: #333;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  font-size: 3rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  user-select: none;
+  touch-action: none;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-family: Arial, sans-serif;
+}
+
+.card-left h2 {
+  width: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
+  margin: 4px 0;
+}
+
+.card-left p {
+  width: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 4px 0;
+}
+
+
+/* Centro */
+.carousel-item.active {
+  transform: scale(1.25);
+  filter: brightness(1);
+}
+
+/* Laterais */
+.carousel-item:not(.active) {
+  transform: scale(0.8);
+  filter: brightness(0.6);
+}
+
+/* Lado direito fixo */
+.card-right {
+  width: 300px;
+  height: 100%;
+}
+
+.card-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Botão */
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  margin: 4px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button:hover {
+  background: #333;
+}

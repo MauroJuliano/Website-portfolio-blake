@@ -1,19 +1,4 @@
-async function loadSection(id, file, callback) {
-  const html = await fetch(file).then(res => res.text());
-  document.getElementById(id).innerHTML = html;
-
-  if (callback) callback();
-}
-
-// Load sections
-loadSection("hero", "sections/hero.html");
-loadSection("career", "sections/career.html", initItensAnimationScroll);
-loadSection("projects", "sections/projects.html");
-
-// -----------------------------------
-//  SCROLL ANIMATION
-// -----------------------------------
-function initItensAnimationScroll() {
+export function initItensAnimationScroll() {
   const items = document.querySelectorAll(".item");
   const image = document.querySelector("#detailImage");
 
