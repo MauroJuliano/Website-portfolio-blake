@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flux - Blake Figueiredo</title>
+<style>
+  /* Reset básico */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  /* Galeria de produto */
+  .product-gallery {
+    flex: 1 1 400px;
+  }
+
+  .main-image {
+    width: 500px;
+    height: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .thumbnails img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    object-fit: cover;
+  }
+
+  /* Informações do produto */
+  .product-info {
+    flex: 1 1 400px;
+  }
+
+  .product-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .rating {
+    color: #f0a500;
+    margin-bottom: 10px;
+  }
+
+  .colors {
+    margin-bottom: 20px;
+  }
+
+  .colors strong {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .colors button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .colors button:hover {
+    background-color: #0046d5;
+    color: #fff;
+  }
+
+  .add-cart {
+    padding: 15px 30px;
+    background-color: #0046d5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+  }
+
+  .add-cart:hover {
+    background-color: #0031a9;
+  }
+
+  .options {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Novo container de texto alinhado */
+  .text-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Galeria de imagens -->
+  <div class="product-gallery">
+    <img src="../milkshake.gif" alt="Flux" class="main-image">
+
+    <div class="thumbnails">
+      <img src="../thumb1.jpg" alt="Thumbnail 1">
+      <img src="../thumb2.jpg" alt="Thumbnail 2">
+      <img src="../thumb3.avif" alt="Thumbnail 3">
+    </div>
+  </div>
+
+  <!-- Informações do produto -->
+  <div class="product-info">
+    <div class="product-title">Flux</div>
+    <div class="rating">Completed</div>
+
+    <div class="colors">
+      <strong>Tecnologies</strong>
+      <button>Swift</button>
+      <button>SwiftUI</button>
+      <button>Firebase</button>
+      <button>Jira</button>
+    </div>
+
+    <button class="add-cart">Github</button>
+
+    <div class="options">
+      <p>Take control of your money with Flux, the intuitive app designed to simplify your financial life. Track your spending, monitor investments, and plan your budget effortlessly. With real-time insights and clear visualizations, Flux helps you make smarter financial decisions and achieve your financial goals faster. Stay organized, stay informed, and let your money flow with confidence.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Texto adicional alinhado -->
+<div class="text-container">
+  <p>Take control of your money with Flux, the intuitive app designed to simplify your financial life. Track your spending, monitor investments, and plan your budget effortlessly. With real-time insights and clear visualizations, Flux helps you make smarter financial decisions and achieve your financial goals faster. Stay organized, stay informed, and let your money flow with confidence.</p>
+</div>
+
+</body>
+</html>
+
+<script>
+  const mainImage = document.querySelector('.main-image');
+  const thumbnails = document.querySelectorAll('.thumbnails img');
+
+  // Start with the first thumbnail as active and main image
+  thumbnails[0].classList.add('active');
+  mainImage.src = thumbnails[0].src;
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+      if (thumbnail.classList.contains('active')) return;
+
+      thumbnails.forEach(t => t.classList.remove('active'));
+      thumbnail.classList.add('active');
+
+      mainImage.style.opacity = 0;
+      setTimeout(() => {
+        mainImage.src = thumbnail.src;
+        mainImage.style.opacity = 1;
+      }, 200);
+    });
+  });
+</script>
+
+<style>
+  /* Estilo opcional para o thumbnail ativo */
+  .thumbnails img.active {
+    border: 2px solid #161616;
+  }
+</style>
+
+
