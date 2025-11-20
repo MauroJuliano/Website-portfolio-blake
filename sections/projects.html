@@ -1,47 +1,92 @@
+<!-- Flickity CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<!-- Your custom CSS -->
+<link rel="stylesheet" href="carousel.css">
+
+
 <section class="centered">
   <h2 class="section-title">Projects</h2>
+</section>
 
-  <div class="carousel-wrapper">
-    <div class="carousel-track">
-      <div class="carousel-item">
-     <div class="card-left">
-     <h2>Título do Projeto</h2>
-    <p>Pequena descrição do projeto.</p>
-    <p>Tecnologias usadas: HTML, CSS, JS.</p>
-    <p>Status: Concluído.</p>
-    <button id="openButton">Ver Mais</button>
-  </div>
 
-  <div class="card-right">
-    <img src="milkshake.gif" alt="Imagem do projeto">
-  </div>
-      </div>
-    <div class="carousel-item">
-    <div class="card-left">
-        <h2>Flux — Financial App</h2>
-        <p>Smart control of your finances in one place.</p>
-        <p>Tecnologias usadas: Swift, SwiftUI.</p>
-        <p>Status: Concluído.</p>
-        <button id="openButton">View details →</button>
-    </div>
+<section class="carousel-section">
 
-    <div class="card-right">
-        <img src="milkshake.gif" alt="Imagem do projeto">
-    </div>
-    </div>
-    <div class="carousel-item">
-    <div class="card-left">
+  <div class="gallery js-flickity"
+       data-flickity-options='{ "wrapAround": false, "cellAlign": "center", "contain": true, "pageDots": true }'>
+
+    <!-- CARD 1 -->
+    <div class="gallery-cell">
+      <div class="card-left">
         <h2>Título do Projeto</h2>
         <p>Pequena descrição do projeto.</p>
         <p>Tecnologias usadas: HTML, CSS, JS.</p>
         <p>Status: Concluído.</p>
-        <button id="openButton">Ver Mais</button>
+        <button>Ver Mais</button>
+      </div>
+      <div class="card-right">
+        <img src="milkshake.gif" alt="Imagem do projeto">
+      </div>
     </div>
 
-    <div class="card-right">
+    <!-- CARD 2 -->
+    <div class="gallery-cell">
+      <div class="card-left">
+        <h2>Título do Projeto</h2>
+        <p>Pequena descrição do projeto.</p>
+        <p>Tecnologias usadas: HTML, CSS, JS.</p>
+        <p>Status: Concluído.</p>
+        <button>Ver Mais</button>
+      </div>
+      <div class="card-right">
         <img src="milkshake.gif" alt="Imagem do projeto">
+      </div>
     </div>
+
+    <!-- CARD 3 -->
+    <div class="gallery-cell">
+      <div class="card-left">
+        <h2>Título do Projeto</h2>
+        <p>Pequena descrição do projeto.</p>
+        <p>Tecnologias usadas: HTML, CSS, JS.</p>
+        <p>Status: Concluído.</p>
+        <button>Ver Mais</button>
+      </div>
+      <div class="card-right">
+        <img src="milkshake.gif" alt="Imagem do projeto">
+      </div>
     </div>
+
+    <!-- CARD 4 -->
+    <div class="gallery-cell">
+      <div class="card-left">
+        <h2>Título do Projeto</h2>
+        <p>Pequena descrição do projeto.</p>
+        <p>Tecnologias usadas: HTML, CSS, JS.</p>
+        <p>Status: Concluído.</p>
+        <button>Ver Mais</button>
+      </div>
+      <div class="card-right">
+        <img src="milkshake.gif" alt="Imagem do projeto">
+      </div>
     </div>
+
+    <!-- CARD 5 -->
+    <div class="gallery-cell">
+      <div class="card-left">
+        <h2>Título do Projeto</h2>
+        <p>Pequena descrição do projeto.</p>
+        <p>Tecnologias usadas: HTML, CSS, JS.</p>
+        <p>Status: Concluído.</p>
+        <button>Ver Mais</button>
+      </div>
+      <div class="card-right">
+        <img src="milkshake.gif" alt="Imagem do projeto">
+      </div>
+    </div>
+
   </div>
+
+  <!-- Flickity JS -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 </section>

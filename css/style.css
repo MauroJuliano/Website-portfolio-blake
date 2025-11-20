@@ -238,6 +238,10 @@ body.light-mode .glass_button {
   height: 390px;
   overflow: hidden;
   border-radius: 16px;
+
+   /* Sombra mais ampla */
+  box-shadow: 
+    0 0 25px 5px rgba(0, 0, 0, 0.4); /* sombra em volta */
 }
 
 .media-frame img {
