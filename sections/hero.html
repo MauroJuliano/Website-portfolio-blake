@@ -2,23 +2,30 @@
   <video autoplay loop muted playsinline>
     <source src="https://cdn.prod.website-files.com/6568e5c693ac2a6aade3ad99%2F66abd5153122bb677020b0c8_bg-landing-transcode.mp4" type="video/mp4">
     <source src="https://cdn.prod.website-files.com/6568e5c693ac2a6aade3ad99%2F66abd5153122bb677020b0c8_bg-landing-transcode.webm" type="video/webm">
-    Your browser does not support HTML5 video.
   </video>
 
   <div class="hero-buttons">
-    <button id="themeToggle" class="theme_toggle" aria-label="Toggle theme">🌙</button>
-    <button id="scrollBtn" class="glass_button">Get in touch</button>
+    <div class="lang-selector">
+    <label for="divisor">/</label>
+    <input type="radio" name="lang" id="pt">
+    <label for="pt">PT</label>
+    <input type="radio" name="lang" id="en" checked>
+    <label for="en">EN</label>
+    </div>
 
+    <input type="checkbox" id="toggle-icon" class="toggle-checkbox">
+    <label for="toggle-icon" class="toggle-btn"></label>
+    <button id="scrollBtn" class="glass_button">Get in touch</button>
   </div>
 
   <div class="hero-bottom-left">
-    <div class="blake">Blake F.</div>
-    <div class="title">iOS Developer</div>
+    <div id="hero-name" class="blake">Blake F.</div>
+    <div id="hero-title" class="title">iOS Developer</div>
     
     <div class="links">
-      <a href="#"><img src="resume.png" alt="Resume" class="icon"></a>
-      <a href="#"><img src="github.png" alt="GitHub" class="icon"></a>
-      <a href="#"><img src="linkedin.png" alt="LinkedIn" class="icon"></a>
-    </div>
+  <a class="icon-resume"><img src="resume.png" alt="Resume" download class="icon"></a>
+  <a class="icon-github"><img src="github.png" alt="GitHub" class="icon"></a>
+  <a class="icon-linkedin"><img src="linkedin.png" alt="LinkedIn" class="icon"></a>
+</div>
   </div>
 </section>

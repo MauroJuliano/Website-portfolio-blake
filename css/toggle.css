@@ -1,0 +1,69 @@
+.toggle-checkbox {
+  display: none;
+}
+
+/* O botão */
+.toggle-btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 28px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Ícone padrão (sol) */
+.toggle-btn::before {
+  content: "☀️";
+}
+
+/* Ao clicar (checked) troca o ícone (lua) */
+.toggle-checkbox:checked + .toggle-btn::before {
+  content: "🌙";
+}
+
+/* Animação opcional */
+.toggle-checkbox:checked + .toggle-btn {
+  color: white;
+}
+
+.lang-selector input {
+  display: none;
+}
+
+.lang-selector {
+  display: flex;
+  gap: 5px;
+  font-family: sans-serif;
+}
+
+.lang-selector label {
+  padding: 8px 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.5;
+  font-weight: normal;
+  transition: 0.3s ease;
+}
+
+#pt:checked + label {
+  opacity: 1;
+  font-weight: bold;
+}
+
+#en:checked + label {
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* truque para manter a ordem visual */
+.lang-selector label:nth-of-type(1) {
+  order: 1;
+}
+.lang-selector label:nth-of-type(2) {
+  order: 2;
+}
+
