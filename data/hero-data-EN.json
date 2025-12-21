@@ -1,5 +1,70 @@
 {
     "name": "Blake F.",
     "title": "iOS Developer",
-    "cta": "Get in touch"
+    "cta": "Get in touch",
+    "career": [
+        {
+        "company_name": "PicPay",
+        "role": "iOS Developer",
+        "duration": "2021 - Present",
+        "responsibilities": [
+            "Worked on credit and limit management features within the PicPay app.",
+            "Worked on “Limite Garantido”, enabling secured credit access for millions of users.",
+            "Developed secure and scalable systems integrated with financial backend services.",
+            "Collaborated with cross-functional teams ensuring compliance with financial regulations.",
+            "Developed interfaces and flows using Swift, SwiftUI, Combine, and modern iOS architectures."
+        ],
+        "image": "milkshake.gif"
+    },
+    {
+        "company_name": "Popcode",
+        "role": "iOS Developer",
+        "duration": "2020 - 2021",
+        "responsibilities": [
+            "Worked on credit and limit management features within the PicPay app.",
+            "Worked on “Limite Garantido”, enabling secured credit access for millions of users.",
+            "Developed secure and scalable systems integrated with financial backend services.",
+            "Collaborated with cross-functional teams ensuring compliance with financial regulations.",
+            "Developed interfaces and flows using Swift, SwiftUI, Combine, and modern iOS architectures."
+        ],
+        "image": "tastes.gif"
+    },
+    {
+        "company_name": "Cooper Card",
+        "role": "iOS Developer",
+        "duration": "2020 - 2020",
+        "responsibilities": [
+            "Worked on credit and limit management features within the PicPay app.",
+            "Worked on “Limite Garantido”, enabling secured credit access for millions of users.",
+            "Developed secure and scalable systems integrated with financial backend services.",
+            "Collaborated with cross-functional teams ensuring compliance with financial regulations.",
+            "Developed interfaces and flows using Swift, SwiftUI, Combine, and modern iOS architectures."
+        ],
+        "image": "tastes.gif"
+    }
+    ],
+    "projects": [
+        {
+            "title": "Flux",
+            "description": "A modern iOS app for tracking your expenses and income with beautiful charts, A modern iOS app for tracking your expenses and income with beautiful charts A modern iOS app for tracking your expenses and income with beautiful charts A modern iOS app for tracking your expenses and income with beautiful charts",
+            "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"]
+        },
+        {
+            "title": "Flux",
+            "description": "A modern iOS app for tracking your expenses and income with beautiful charts",
+            "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"]
+        },
+        {
+            "title": "Flux",
+            "description": "A modern iOS app for tracking your expenses and income with beautiful charts",
+            "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"]
+        }
+    ],
+    "contact": {
+        "title": "Get in touch",
+        "description": "Feel free to reach out for job opportunities, project ideas or even just to connect. I reply as soon as possible.",
+        "based_in": "Based in Brazil",
+        "email": "blake@outlook.com",
+        "phone": "+55 11 99999-9999"
+    }
 }

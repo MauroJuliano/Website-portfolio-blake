@@ -2,7 +2,7 @@
 
 export function initLanguageSelector(options) {
     const {
-        defaultLang = "pt",
+        defaultLang = "en",
         onLanguageChange = null,
         jsonPath = "./",        // caminho onde ficam seus hero-data-PT.json e hero-data-EN.json
         elementsToUpdate = {}   // mapeamento: idDoElemento → chaveDoJSON
@@ -29,9 +29,9 @@ export function initLanguageSelector(options) {
             Object.keys(elementsToUpdate).forEach(id => {
                 const element = document.getElementById(id);
                 const key = elementsToUpdate[id];
-
-                if (element && data[key]) {
-                    element.textContent = data[key];
+                const value = getNestedValue(data, key);
+                if (element && value !== undefined) {
+                    element.textContent = value;
                 }
             });
 
@@ -42,13 +42,18 @@ export function initLanguageSelector(options) {
     }
 
     // ---- 3. Listener de mudança (PT/EN) ----
-    langRadios.pt.addEventListener("change", () => changeLang("pt"));
     langRadios.en.addEventListener("change", () => changeLang("en"));
+    langRadios.pt.addEventListener("change", () => changeLang("pt"));
+    
 
     function changeLang(lang) {
         localStorage.setItem("lang", lang);
         loadLanguageFile(lang);
     }
+
+    function getNestedValue(obj, path) {
+  return path.split(".").reduce((acc, part) => acc?.[part], obj);
+}
 
     // ---- 4. Carrega o idioma logo na inicialização ----
     loadLanguageFile(savedLang);

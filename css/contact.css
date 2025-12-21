@@ -7,10 +7,7 @@
   height: fit-content;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto 60px;
 }
 
 .contact_us_green input:focus,
@@ -36,14 +33,10 @@
   padding: 0 50px;
 }
 
-.contact_us_green .text-blk.contactus-head {
-  font-size: 40px;
-  line-height: 50px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
 .contact_us_green .text-blk.contactus-subhead {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.25);
   width: 100%; /* Updated: now full width */
   color: #939393;
   font-size: 18px;
@@ -57,10 +50,10 @@
 }
 
 .contact_us_green .social-media-links {
-  margin: 80px auto 0;
-  width: 250px;
+  margin: 0 0 rem 0;
   display: flex;
-  justify-content: space-evenly;
+  gap: 40px;
+  justify-content: left;
 }
 
 .contact_us_green .social-svg {
@@ -74,51 +67,10 @@
 }
 
 .contact_us_green .contact-text {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.25);
   color: #939393;
-}
-
-.contact_us_green .input,
-.contact_us_green .textinput {
-  border: 2.5px solid #a2a2a2;
-  border-radius: 5px;
-  font-size: 16px;
-  padding: 5px 15px;
-}
-
-.contact_us_green .input {
-  height: 50px;
-  width: 90%;
-}
-
-.contact_us_green .textinput {
-  height: 200px;
-  width: 95%;
-  padding: 20px;
-}
-
-.contact_us_green .submit-btn {
-  min-width: 290px;
-  height: 60px;
-  background-color: #1c3b28;
-  font-size: 18px;
-  font-weight: 700;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  margin: 0 auto;
-  cursor: pointer;
-}
-
-.contact_us_green .btn-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.contact_us_green .text-blk.input-title {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 28px;
-  margin-bottom: 15px;
 }
 
 .contact_us_green .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
@@ -169,7 +121,7 @@
 
 @media (max-width: 768px) {
   .contact_us_green .text-content {
-    display: none;
+    display: flex;
   }
 
   .contact_us_green .input,
@@ -177,7 +129,7 @@
     width: 100%;
   }
 
-  .contact_us_green .text-blk.contactus-head {
+  .contact_us_green .text-blk.contactus-subhead {
     font-size: 30px;
   }
 }

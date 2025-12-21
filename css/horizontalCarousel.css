@@ -3,9 +3,8 @@
 }
 
 .carousel-section {
-  background: #fff;
   width: 100%;
-   padding: 100px 0; /* espaço em cima e embaixo */
+  padding: 100px 0; /* espaço em cima e embaixo */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,13 +22,14 @@
   height: 400px;
   border-radius: 20px;
   display: flex;
+  flex-direction: row-reverse; /* 🔁 imagem agora fica à esquerda */
   align-items: stretch;
   overflow: hidden;
   user-select: none;
   margin: 40px;
 
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
 }
 
 .carousel-section .gallery .is-selected {
@@ -47,28 +47,44 @@
   flex-direction: column;
   justify-content: space-between;
   width: 500px;
-  padding: 40px 30px;
+  padding-left: 40px; /* padding simétrico */
+  padding-right: 50px;
+  margin-top: -20px;
 }
 
 .carousel-section .card-left h2 {
-  font-size: 20px;
+  font-family: 'Canela', serif;
+  font-optical-sizing: auto;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+  font-size: 60px;
+  font-weight: 150;
   margin-bottom: 10px;
+  line-height: 1.1;
+  color: var(--text-primary);
 }
 
 .carousel-section .card-left p {
-  font-size: 14px;
-  line-height: 1.4;
-  margin-bottom: 20px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: -20px;
+  line-height: 1.6;
+  color: var(--text-secondary);
 }
 
 .carousel-section .card-left button {
+  width: 200px;
   padding: 12px 20px;
   font-size: 16px;
   border: none;
-  border-radius: 8px;
+  border-radius: 100px;
   background: black;
   color: white;
   cursor: pointer;
+  margin-bottom: 40px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.25);
 }
 
 .carousel-section .card-left button:hover {
@@ -91,3 +107,58 @@
 .carousel-section .gallery-cell:before {
   content: none;
 }
+
+@media (max-width: 900px) {
+
+  .carousel-section {
+    padding: 64px 0;
+  }
+
+  /* Remove efeitos que atrapalham leitura */
+  .carousel-section .gallery-cell,
+  .carousel-section .gallery-cell:not(.is-selected) {
+    transform: none;
+    filter: none;
+  }
+
+  /* Card continua horizontal (imagem à esquerda) */
+  .carousel-section .gallery-cell {
+    width: calc(100% - 32px);
+    height: auto;
+    margin: 16px;
+    flex-direction: row-reverse; /* ✅ mantém imagem à esquerda */
+    border-radius: 16px;
+  }
+
+  /* Imagem menor */
+  .carousel-section .card-right {
+    width: 140px;
+    height: auto;
+    min-height: 140px;
+    flex-shrink: 0;
+  }
+
+  /* Conteúdo ocupa o resto */
+  .carousel-section .card-left {
+    width: auto;
+    padding: 16px 20px;
+    gap: 10px;
+  }
+
+  .carousel-section .card-left h2 {
+    font-size: clamp(1.6rem, 5vw, 2.1rem);
+  }
+
+  .carousel-section .card-left p {
+    font-size: 14px;
+  }
+
+  /* Botão compacto e alinhado */
+  .carousel-section .card-left button {
+    width: fit-content;
+    margin: 12px 0 0;
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
+
