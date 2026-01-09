@@ -14,7 +14,7 @@
             "Collaborated with cross-functional teams ensuring compliance with financial regulations.",
             "Developed interfaces and flows using Swift, SwiftUI, Combine, and modern iOS architectures."
         ],
-        "image": "milkshake.gif"
+        "image": "/assets/picpay.png"
     },
     {
         "company_name": "Popcode",
@@ -27,7 +27,7 @@
             "Collaborated with cross-functional teams ensuring compliance with financial regulations.",
             "Developed interfaces and flows using Swift, SwiftUI, Combine, and modern iOS architectures."
         ],
-        "image": "tastes.gif"
+        "image": "/assets/popcode.png"
     },
     {
         "company_name": "Cooper Card",
@@ -40,13 +40,13 @@
             "Collaborated with cross-functional teams ensuring compliance with financial regulations.",
             "Developed interfaces and flows using Swift, SwiftUI, Combine, and modern iOS architectures."
         ],
-        "image": "tastes.gif"
+        "image": "/assets/coopercard.jpg"
     }
     ],
     "projects": [
         {
             "title": "Flux",
-            "description": "A modern iOS app for tracking your expenses and income with beautiful charts, A modern iOS app for tracking your expenses and income with beautiful charts A modern iOS app for tracking your expenses and income with beautiful charts A modern iOS app for tracking your expenses and income with beautiful charts",
+            "description": "Flux is a beautifully designed financial app that helps you stay in control of your money with clarity, confidence, and simplicity. Built with SwiftUI, Flux delivers a fast, fluid, and intuitive experience that transforms the way you manage your finances.",
             "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"]
         },
         {

@@ -1,0 +1,27 @@
+{
+  "flux": {
+    "title": "Flux",
+    "status": "Completed",
+    "mainImage": "../milkshake.gif",
+    "thumbnails": [
+      "../thumb1.jpg",
+      "../thumb2.jpg",
+      "../thumb3.avif"
+    ],
+    "technologies": ["Swift", "SwiftUI", "Firebase", "Jira"],
+    "github": "https://github.com/MauroJuliano/Flux",
+    "shortDescription": "Flux is a beautifully designed financial app that helps you stay in control of your money with clarity, confidence, and simplicity. Built with SwiftUI, Flux delivers a fast, fluid, and intuitive experience that transforms the way you manage your finances. Whether you're tracking goals, organizing your financial flow, or simply seeking better visibility into your money, Flux keeps everything clean, accessible, and effortless. Designed for people who value elegance, performance, and usability, Flux removes unnecessary complexity and lets you focus on what really matters — making smarter financial decisions.",
+    "longDescription": "✨ Features 📊 Clean and intuitive user interface powered by SwiftUI 🔐 Secure data handling with Firebase integration ⚡ Fast and responsive performance 📱 Fully optimized for iOS devices 🎯 Focused on simplicity and usability ☁️ Real-time data synchronization 🛠 Technologies Swift SwiftUI Firebase Xcode Jira (Project Management) 🚀 Goal Flux aims to simplify personal finance by providing a smooth user experience that makes managing money feel natural and effortless."
+  },
+
+  "another-project": {
+    "title": "Another Project",
+    "status": "In Progress",
+    "mainImage": "../project2.gif",
+    "thumbnails": ["../p2-1.jpg", "../p2-2.jpg"],
+    "technologies": ["React", "Node"],
+    "github": "https://github.com/yourrepo/project2",
+    "shortDescription": "Another amazing project.",
+    "longDescription": "Full description here..."
+  }
+}
