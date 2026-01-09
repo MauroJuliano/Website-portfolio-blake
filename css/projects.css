@@ -1,0 +1,230 @@
+/* =========================
+   Reset
+========================= */
+
+:root {
+  /* Light theme */
+  --bg-main: #FFFFFF;
+  --text-primary: #111;
+  --text-secondary: #666;
+}
+
+[data-theme="dark"] {
+  --bg-main: #222222;
+  --text-primary: #EDEDED;
+  --text-secondary: #A1A1A6;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   Base
+========================= */
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 5.25rem;
+  transition: color 0.3s ease;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+/* =========================
+   Layout
+========================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   Floating Nav
+========================= */
+
+.floating-nav {
+  max-width: 1200px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-buttons {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* =========================
+   Product Gallery
+========================= */
+
+.product-gallery {
+  flex: 1 1 400px;
+}
+
+.main-image {
+  width: 500px;
+  height: 600px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnails img {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.thumbnails img.active {
+  border: 2px solid #161616;
+}
+
+/* =========================
+   Product Info
+========================= */
+
+.product-info {
+  flex: 1 1 400px;
+}
+
+.logotype {
+  font-family: 'Canela', serif;
+  font-size: clamp(2rem, 3.2vw + 1rem, 2rem);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tech-title {
+  display: block;     /* allows vertical margin */
+  margin: 16px 0 8px;
+}
+
+
+.product-title {
+  font-family: 'Canela', serif;
+  font-size: clamp(2rem, 3.2vw + 1rem, 4rem);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.rating {
+  color: #f0a500;
+  margin-bottom: 10px;
+}
+
+.colors {
+  margin-bottom: 20px;
+}
+
+.colors strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.colors button {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: background 0.2s, color 0.2s;
+}
+
+.colors button:hover {
+  background-color: #020202;
+  color: #fff;
+}
+
+.add-cart {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: background 0.2s;
+}
+
+.add-cart:hover {
+  background-color: #020202;
+  color: #fff;
+}
+
+.options {
+  font-size: 18px;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* =========================
+   Text Container
+========================= */
+
+.text-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .floating-nav {
+    padding: 12px 16px;
+  }
+
+  .nav-left .product-title {
+    font-size: 1.4rem;
+  }
+}

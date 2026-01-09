@@ -1,5 +1,58 @@
 {
     "name": "Mauro F.",
     "title": "Desenvolvedor iOS",
-    "cta": "Entre em contato"
+    "cta": "Entre em contato",
+    "based_in": "Atuando no Brasil",
+    "career": [
+        {
+        "company_name": "PicPay",
+        "role": "iOS Developer",
+        "duration": "2021 - Present",
+        "responsibilities": [
+            "Teste em PTBR KRL",
+            "Worked on “Limite Garantido”, enabling secured credit access for millions of users.",
+            "Developed secure and scalable systems integrated with financial backend services.",
+            "Collaborated with cross-functional teams ensuring compliance with financial regulations.",
+            "Developed interfaces and flows using Swift, SwiftUI, Combine, and modern iOS architectures."
+        ],
+        "image": "milkshake.gif"
+    },
+    {
+        "company_name": "Popcode",
+        "role": "iOS Developer",
+        "duration": "2020 - 2021",
+        "responsibilities": [
+            "Worked on credit and limit management features within the PicPay app.",
+            "Worked on “Limite Garantido”, enabling secured credit access for millions of users.",
+            "Developed secure and scalable systems integrated with financial backend services.",
+            "Collaborated with cross-functional teams ensuring compliance with financial regulations.",
+            "Developed interfaces and flows using Swift, SwiftUI, Combine, and modern iOS architectures."
+        ],
+        "image": "tastes.gif"
+    }
+    ],
+      "projects": [
+         {
+            "title": "Flux",
+            "description": "um aplicativo moderno for tracking your expenses and income with beautiful charts",
+            "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"]
+        },
+        {
+            "title": "Flux",
+            "description": "A modern iOS app for tracking your expenses and income with beautiful charts",
+            "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"]
+        },
+        {
+            "title": "Flux",
+            "description": "A modern iOS app for tracking your expenses and income with beautiful charts",
+            "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"]
+        }
+    ],
+    "contact": {
+        "title": "Entre em contato",
+        "description": "Estou sempre aberto para conversar sobre tecnologia, desenvolvimento iOS, novos projetos e oportunidades.",
+        "based_in": "Atuando no Brasil",
+        "email": "blake.dev@outlook.com",
+        "phone": "+55 11 99999-9999"
+    }
 }
