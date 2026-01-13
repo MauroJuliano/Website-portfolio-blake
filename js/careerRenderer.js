@@ -49,56 +49,59 @@ export function renderCareer(careerData) {
     // Initialize Flickity for this carousel
     if (typeof Flickity !== 'undefined') {
       const flickity = new Flickity(carousel, {
-        wrapAround: true,
+        wrapAround: item.images.length > 1, // Only wrap if more than 1 image
         cellAlign: 'center',
-        pageDots: true,
+        pageDots: item.images.length > 1, // Only show dots if more than 1 image
         prevNextButtons: false,
-        draggable: true
+        draggable: item.images.length > 1 // Only draggable if more than 1 image
       });
       flickityInstances.push(flickity);
     }
   });
 
-  // Handle scroll-based item activation
+  // Handle scroll-based item activation using the same logic as before
   const items = list.querySelectorAll(".item");
   const carousels = carouselContainer.querySelectorAll(".career-carousel");
   
-  const observer = new IntersectionObserver(
-    (entries) => {
-      // Find the most visible item
-      let mostVisible = null;
-      let maxRatio = 0;
+  function onScroll() {
+    // Get the middle point of the carousel container
+    const containerRect = carouselContainer.getBoundingClientRect();
+    const triggerOffset = containerRect.top + containerRect.height / 2;
 
-      entries.forEach((entry) => {
-        if (entry.intersectionRatio > maxRatio) {
-          maxRatio = entry.intersectionRatio;
-          mostVisible = entry.target;
-        }
-      });
+    let activeItem = null;
 
-      // Only activate if we have a clear winner
-      if (mostVisible && maxRatio > 0.3) {
-        items.forEach(i => i.classList.remove("active"));
-        mostVisible.classList.add("active");
-        
-        const index = parseInt(mostVisible.dataset.index);
-        
-        // Hide all carousels and show only the active one
-        carousels.forEach((carousel, i) => {
-          if (i === index) {
+    // Find which item is aligned with the carousel
+    items.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      if (rect.top <= triggerOffset) {
+        activeItem = item;
+      }
+    });
+
+    if (activeItem) {
+      const index = parseInt(activeItem.dataset.index);
+      
+      // Remove active from all items
+      items.forEach(i => i.classList.remove("active"));
+      activeItem.classList.add("active");
+
+      // Show only the corresponding carousel
+      carousels.forEach((carousel, i) => {
+        if (i === index) {
+          if (carousel.style.display === "none") {
             carousel.style.display = "block";
             // Resize Flickity when showing
             if (flickityInstances[i]) {
               flickityInstances[i].resize();
             }
-          } else {
-            carousel.style.display = "none";
           }
-        });
-      }
-    },
-    { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0] }
-  );
+        } else {
+          carousel.style.display = "none";
+        }
+      });
+    }
+  }
 
-  items.forEach(item => observer.observe(item));
+  window.addEventListener("scroll", onScroll);
+  onScroll(); // Run once on load
 }
