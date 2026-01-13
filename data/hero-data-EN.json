@@ -4,43 +4,43 @@
     "cta": "Get in touch",
     "career": [
         {
-        "company_name": "PicPay",
-        "role": "iOS Developer",
-        "duration": "2021 - Present",
-        "responsibilities": [
+        "title": "iOS Developer",
+        "company": "PicPay",
+        "period": "2021 - Present",
+        "bullets": [
             "Worked on credit and limit management features within the PicPay app.",
             "Worked on “Limite Garantido”, enabling secured credit access for millions of users.",
             "Developed secure and scalable systems integrated with financial backend services.",
             "Collaborated with cross-functional teams ensuring compliance with financial regulations.",
             "Developed interfaces and flows using Swift, SwiftUI, Combine, and modern iOS architectures."
         ],
-        "image": "/assets/picpay.png"
+        "images": ["/assets/picpay.png", "/assets/milkshake.gif"]
     },
     {
-        "company_name": "Popcode",
-        "role": "iOS Developer",
-        "duration": "2020 - 2021",
-        "responsibilities": [
+        "title": "iOS Developer",
+        "company": "Popcode",
+        "period": "2020 - 2021",
+        "bullets": [
             "Worked on credit and limit management features within the PicPay app.",
             "Worked on “Limite Garantido”, enabling secured credit access for millions of users.",
             "Developed secure and scalable systems integrated with financial backend services.",
             "Collaborated with cross-functional teams ensuring compliance with financial regulations.",
             "Developed interfaces and flows using Swift, SwiftUI, Combine, and modern iOS architectures."
         ],
-        "image": "/assets/popcode.png"
+        "images": ["/assets/popcode.png"]
     },
     {
-        "company_name": "Cooper Card",
-        "role": "iOS Developer",
-        "duration": "2020 - 2020",
-        "responsibilities": [
+        "title": "iOS Developer",
+        "company": "Cooper Card",
+        "period": "2020 - 2020",
+        "bullets": [
             "Worked on credit and limit management features within the PicPay app.",
             "Worked on “Limite Garantido”, enabling secured credit access for millions of users.",
             "Developed secure and scalable systems integrated with financial backend services.",
             "Collaborated with cross-functional teams ensuring compliance with financial regulations.",
             "Developed interfaces and flows using Swift, SwiftUI, Combine, and modern iOS architectures."
         ],
-        "image": "/assets/coopercard.jpg"
+        "images": ["/assets/coopercard.jpg"]
     }
     ],
     "projects": [

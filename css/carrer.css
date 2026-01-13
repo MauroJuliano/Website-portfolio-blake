@@ -228,6 +228,38 @@
   opacity: 0.1;
 }
 
+.career-carousel {
+  width: 390px;
+  height: 390px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.4);
+}
+
+.career-carousel .carousel-cell {
+  width: 100%;
+  height: 390px;
+}
+
+.career-carousel .carousel-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.career-carousel .flickity-page-dots {
+  bottom: 10px;
+}
+
+.career-carousel .flickity-page-dots .dot {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.career-carousel .flickity-page-dots .dot.is-selected {
+  background: white;
+}
+
 @media (max-width: 900px) {
 
   /* Remove a imagem completamente */

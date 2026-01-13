@@ -1,25 +1,25 @@
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
 <section class="centered">
   <h2 class="section-title">Career</h2>
 </section>
 
-<section class="split split--intro"> 
-  <div class="split__left">
-    <h2 class="carrer-list-title">Let’s dive in</h2>
-  </div>
-</section>
- 
 <section class="split">
   <div class="split__left">
-    <ul id="career-list" class="list timeline"></ul>
+    <ul class="list timeline" id="career-list"></ul>
   </div>
 
-  <aside class="split__right">
+  <div class="split__right">
     <div class="sticky">
       <div class="media-shift">
-        <figure class="media-frame">
-          <img id="detailImage" src="tastes.gif" alt="Preview do item ativo" />
-        </figure>
+        <!-- Substituir <figure class="media-frame"> por Flickity -->
+        <div class="career-carousel js-flickity" 
+             data-flickity-options='{ "wrapAround": true, "cellAlign": "center", "pageDots": true, "prevNextButtons": false }'>
+          <!-- Images will be added dynamically -->
+        </div>
       </div>
     </div>
-  </aside>
+  </div>
 </section>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
