@@ -1,36 +1,35 @@
 {
-  "flux": {
-    "title": "Flux",
-    "tagline": "Personal Finance Experience",
-    "summary": "A modern iOS finance app designed to make money management feel clear, fast and effortless — from everyday visibility to smarter financial decisions.",
-    "mainImage": "../assets/flux.png",
+  "aetheris": {
+    "title": "Aetheris",
+    "tagline": "iOS Banking Experience",
+    "summary": "A modern banking app built with SwiftUI that simulates a complete financial experience — from authentication to transfers, cards and account management.",
+    "mainImage": "../assets/homeAetherisPreview.png",
+    "imagePresentation": "mockup",
     "github": "https://github.com/MauroJuliano/Flux",
-    "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"],
+    "technologies": ["SwiftUI", "MVVM", "Clean Architecture", "Mocked API"],
     "facts": [
       {"icon": "◉", "label": "Role", "value": "iOS Developer"},
       {"icon": "▣", "label": "Platform", "value": "iOS"},
-      {"icon": "△", "label": "Architecture", "value": "MVVM"},
-      {"icon": "◷", "label": "Status", "value": "Personal project"}
+      {"icon": "△", "label": "Architecture", "value": "MVVM + Coordinator"},
+      {"icon": "◷", "label": "Duration", "value": "2 months"}
     ],
-    "overviewTitle": "Why I built Flux",
-    "overview": "I created Flux from the ground up to explore how thoughtful product design and maintainable iOS architecture can simplify personal finance. The project brings together clear information hierarchy, smooth interactions and a focused experience that removes unnecessary complexity.",
+    "overviewTitle": "Why I built Aetheris",
+    "overview": "I wanted to go beyond simple UI challenges and build something closer to a real product. Aetheris was designed to practice architecting scalable features, handling complex banking flows and creating a clean, modern user experience.",
     "goals": [
-      "Create a complete personal finance experience from the ground up",
-      "Practice maintainable architecture and clear separation of concerns",
-      "Design an intuitive and consistent interface for financial information",
-      "Handle loading, empty, success and error states reliably"
+      "Simulate a complete banking experience end-to-end",
+      "Practice modular architecture and clean code",
+      "Design a consistent and accessible user interface",
+      "Implement robust states, validations and error handling"
     ],
     "focusAreas": [
-      {"icon": "◇", "title": "Architecture", "description": "Modular responsibilities and MVVM patterns designed for maintainability and future growth."},
-      {"icon": "●", "title": "User experience", "description": "A focused interface with clear hierarchy, purposeful motion and approachable financial information."},
-      {"icon": "⬡", "title": "Reliability", "description": "Predictable state handling, persistence and defensive error treatment throughout the app."}
+      {"icon": "◇", "title": "Architecture", "description": "Modularized features with MVVM and Coordinator patterns for scalable navigation."},
+      {"icon": "●", "title": "User experience", "description": "A clean, modern interface with attention to detail and micro interactions."},
+      {"icon": "⬡", "title": "Reliability", "description": "Loading, error, empty and success states handled across all flows and components."}
     ],
     "features": [
-      {"title": "Financial overview", "description": "A clear starting point for understanding balances, activity and financial progress.", "image": "../assets/flux.png"},
-      {"title": "Simple interactions", "description": "Focused flows that reduce friction and keep important actions easy to understand.", "image": "../assets/flux.png"},
-      {"title": "Persistent data", "description": "Local data management designed to keep the experience fast and dependable.", "image": "../assets/flux.png"}
+      {"title": "Home", "description": "An overview of balance, cards, recipients, quick actions and monthly activity.", "image": "../assets/homeAetherisPreview.png"}
     ],
-    "techStack": ["Swift", "SwiftUI", "Combine", "MVVM", "Core Data", "Xcode"],
-    "architectureFlow": ["Flux App", "Features", "Core", "Persistence"]
+    "techStack": ["Swift", "SwiftUI", "Combine", "MVVM", "Coordinator", "Mocked API", "SwiftLint", "XCTest", "Xcode"],
+    "architectureFlow": ["Aetheris App", "Feature Modules", "Core", "Network"]
   }
 }

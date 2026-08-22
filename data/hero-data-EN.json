@@ -51,13 +51,14 @@
     },
     "projects": [
         {
-            "id": "flux",
-            "title": "Flux",
-            "tagline": "Personal Finance Experience",
-            "description": "Flux is a beautifully designed financial app that helps you stay in control of your money with clarity, confidence, and simplicity. Built with SwiftUI, Flux delivers a fast, fluid, and intuitive experience that transforms the way you manage your finances.",
-            "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"],
+            "id": "aetheris",
+            "title": "Aetheris",
+            "tagline": "iOS Banking Experience",
+            "description": "A modern banking app built with SwiftUI that simulates a complete financial experience — from authentication to transfers, cards and account management.",
+            "technologies": ["SwiftUI", "MVVM", "Clean Architecture", "Mocked API"],
             "status": "Completed",
-            "image": "assets/flux.png",
+            "image": "assets/homeAetherisPreview.png",
+            "imagePresentation": "mockup",
             "github": "https://github.com/MauroJuliano/Flux"
         }
     ],

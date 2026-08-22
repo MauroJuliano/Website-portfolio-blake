@@ -28,6 +28,9 @@ export async function loadProject() {
     document.getElementById("project-summary").textContent = project.summary;
     document.getElementById("project-main-image").src = project.mainImage;
     document.getElementById("project-main-image").alt = `${project.title} app artwork`;
+    if (project.imagePresentation === "mockup") {
+      document.querySelector(".case-device").classList.add("is-mockup");
+    }
 
     const githubLink = document.getElementById("project-github");
     githubLink.href = project.github;

@@ -104,6 +104,28 @@
   perspective: 1200px;
 }
 
+.project-mockup {
+  display: flex;
+  width: min(390px, 34vw, calc((96svh - 235px) * 0.7));
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-2deg);
+}
+
+.project-mockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 32px rgba(49, 30, 88, 0.2));
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.project-visual--mockup + .project-content .project-icon {
+  display: none;
+}
+
 .device-frame {
   position: relative;
   width: min(330px, 30vw, calc((96svh - 265px) * 0.58));
@@ -295,6 +317,7 @@
     transform: none;
   }
   .project-visual { height: 390px; }
+  .project-mockup { width: 245px; }
   .device-frame {
     width: 225px;
     border-radius: 42px;
@@ -313,6 +336,7 @@
   .projects-showcase .gallery, .projects-showcase .flickity-viewport { min-height: 930px; }
   .projects-showcase .gallery-cell { min-height: 880px; }
   .project-visual { height: 350px; }
+  .project-mockup { width: 215px; }
   .device-frame { width: 198px; }
   .project-description { font-size: 14px; line-height: 1.65; }
   .project-actions { flex-direction: column; align-items: stretch; }

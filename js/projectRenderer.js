@@ -29,12 +29,14 @@ export function renderProjects(projects) {
       <li><span aria-hidden="true">${technologyIcons[technology] || "◇"}</span>${technology}</li>
     `).join("");
 
+    const isMockup = project.imagePresentation === "mockup";
+    const visual = isMockup
+      ? `<div class="project-mockup"><img src="${project.image}" alt="${project.title}"></div>`
+      : `<div class="device-frame"><span class="device-speaker" aria-hidden="true"></span><img src="${project.image ?? 'assets/flux.png'}" alt="${project.title}"></div>`;
+
     cell.innerHTML = `
-      <div class="project-visual">
-        <div class="device-frame">
-          <span class="device-speaker" aria-hidden="true"></span>
-          <img src="${project.image ?? 'assets/flux.png'}" alt="${project.title}">
-        </div>
+      <div class="project-visual ${isMockup ? "project-visual--mockup" : ""}">
+        ${visual}
       </div>
 
       <article class="project-content">
