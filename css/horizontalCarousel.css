@@ -4,6 +4,9 @@
   --project-accent: #7446ef;
   --project-accent-dark: #5c2ed5;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   height: calc(96svh - 100px);
   min-height: 660px;
@@ -17,7 +20,7 @@
   position: relative;
   z-index: 3;
   width: min(620px, calc(100% - 40px));
-  margin: 0 auto clamp(29px, 4.7svh, 52px);
+  margin: 0 auto;
   text-align: center;
 }
 
