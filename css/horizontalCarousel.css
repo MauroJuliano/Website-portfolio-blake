@@ -10,7 +10,7 @@
   width: 100%;
   height: calc(96svh - 100px);
   min-height: 660px;
-  padding: clamp(24px, 4svh, 48px) 0 clamp(16px, 2.5svh, 36px);
+  padding: clamp(14px, 2.5svh, 30px) 0 clamp(16px, 2.5svh, 36px);
   overflow: hidden;
   isolation: isolate;
   background: radial-gradient(circle at 50% 58%, rgba(128, 83, 246, 0.035), transparent 30%), var(--bg-main);
