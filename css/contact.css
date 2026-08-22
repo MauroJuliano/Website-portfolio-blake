@@ -26,11 +26,14 @@
 
 .contact_us_green .responsive-container-block.container {
   max-width: 1320px;
-  margin: 60px auto;
+  margin: 0 auto;
 }
 
 .contact_us_green .responsive-container-block.big-container {
-  padding: 0 50px;
+  padding: 4rem 50px;
+  min-height: auto;
+  display: flex;
+  align-items: flex-start;
 }
 
 .contact_us_green .text-blk.contactus-subhead {
@@ -41,6 +44,7 @@
   color: #939393;
   font-size: 18px;
   margin-bottom: 50px;
+  text-align: left;
 }
 
 .contact_us_green .contact-svg {
@@ -53,17 +57,36 @@
   margin: 0 0 rem 0;
   display: flex;
   gap: 40px;
-  justify-content: left;
+  justify-content: center;
+  width: 100%;
 }
 
 .contact_us_green .social-svg {
   width: 35px;
   height: 35px;
+  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.2s ease;
+}
+
+/* Light theme - grayish icons */
+:root .contact_us_green .social-svg {
+  filter: brightness(0) saturate(100%) opacity(0.6);
+}
+
+/* Dark theme - light icons */
+[data-theme="dark"] .contact_us_green .social-svg {
+  filter: brightness(0) invert(1);
+}
+
+.contact_us_green .social-svg:hover {
+  opacity: 0.9;
+  transform: scale(1.1);
 }
 
 .contact_us_green .text-box {
   display: flex;
   margin-bottom: 50px;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .contact_us_green .contact-text {
@@ -78,10 +101,12 @@
 }
 
 .contact_us_green .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
-  padding-left: 60px;
+  padding-left: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 .contact_us_green .head-text-box {

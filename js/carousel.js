@@ -4,10 +4,11 @@ export function initCarousel() {
   if (!gallery) return;
 
   const flkty = new Flickity(gallery, {
-    wrapAround: false,
+    wrapAround: true,
     cellAlign: 'center',
     contain: false,
-    pageDots: true
+    pageDots: true,
+    prevNextButtons: false
   });
 
   // Force Flickity to recalc after a slight delay (fixes dynamic loading issues)

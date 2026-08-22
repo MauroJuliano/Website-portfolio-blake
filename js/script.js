@@ -4,6 +4,7 @@ import { initLanguageSelector } from './language.js';
 import { initSocialLinks } from './socialLinks.js';
 import { renderCareer } from "./careerRenderer.js";
 import { renderProjects } from './projectRenderer.js';
+import { initTooltips, updateTooltips } from './tooltip.js';
 
 let currentLanguageJson = null;
 
@@ -19,6 +20,9 @@ loadSection("hero", "sections/hero.html", () => {
       });
     });
   }
+
+  // Initialize tooltips
+  initTooltips();
 
   const toggle = document.getElementById("toggle-icon");
 
@@ -56,6 +60,9 @@ toggle.addEventListener("change", () => {
       renderProjects(json.projects);
     }
 
+    // Update tooltips
+    updateTooltips(json);
+
     initItensAnimationScroll();
   }
 });
@@ -82,4 +89,8 @@ loadSection("projects", "sections/projects.html", () => {
 // CONTACT
 loadSection("contact", "sections/contact.html", () => {
     initSocialLinks();
+    initTooltips();
+    if (currentLanguageJson) {
+      updateTooltips(currentLanguageJson);
+    }
 }); 

@@ -38,7 +38,11 @@ export function renderProjects(projects) {
       wrapAround: false,
       cellAlign: "center",
       contain: false,
-      pageDots: true
+      pageDots: true,
+      prevNextButtons: false,
+      adaptiveHeight: false,
+      setGallerySize: true,
+      percentPosition: true
     });
 
     gallery.flickityInstance = flkty;
