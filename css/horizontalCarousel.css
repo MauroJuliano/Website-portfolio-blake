@@ -5,9 +5,9 @@
   --project-accent-dark: #5c2ed5;
   position: relative;
   width: 100%;
-  height: 96svh;
+  height: calc(96svh - 100px);
   min-height: 660px;
-  padding: clamp(32px, 5svh, 64px) 0 clamp(28px, 4svh, 52px);
+  padding: clamp(24px, 4svh, 48px) 0 clamp(16px, 2.5svh, 36px);
   overflow: hidden;
   isolation: isolate;
   background: radial-gradient(circle at 50% 58%, rgba(128, 83, 246, 0.035), transparent 30%), var(--bg-main);
@@ -70,7 +70,7 @@
 
 .projects-showcase .gallery {
   width: 100%;
-  height: clamp(450px, calc(96svh - 225px), 610px);
+  height: clamp(430px, calc(96svh - 325px), 540px);
 }
 
 .projects-showcase .flickity-viewport {
