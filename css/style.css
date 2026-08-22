@@ -31,6 +31,40 @@ html, body {
   padding: 0;
 }
 
+.section-divider {
+  display: flex;
+  width: min(210px, 56vw);
+  align-items: center;
+  gap: 16px;
+  margin: 22px auto;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, rgba(116, 70, 239, 0.3));
+}
+
+.section-divider::after {
+  background: linear-gradient(90deg, rgba(116, 70, 239, 0.3), transparent);
+}
+
+.section-divider span {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  background: #6953bd;
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  filter: drop-shadow(0 2px 5px rgba(105, 83, 189, 0.25));
+}
+
+[data-theme="dark"] .section-divider::before,
+[data-theme="dark"] .section-divider::after {
+  opacity: 0.75;
+}
+
 .load-error {
   margin: 2rem;
   color: #b42318;
