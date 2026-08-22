@@ -65,7 +65,7 @@ export function renderProjects(projects) {
   requestAnimationFrame(() => {
     const hasMultipleProjects = projects.length > 1;
     const flkty = new Flickity(gallery, {
-      wrapAround: hasMultipleProjects,
+      wrapAround: false,
       cellAlign: "center",
       contain: false,
       pageDots: true,
