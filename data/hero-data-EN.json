@@ -59,6 +59,26 @@
             "status": "Completed",
             "image": "assets/flux.png",
             "github": "https://github.com/MauroJuliano/Flux"
+        },
+        {
+            "id": "picpay",
+            "title": "PicPay",
+            "tagline": "Credit and Payments Experience",
+            "description": "Financial experiences designed for scale, combining clear customer journeys with secure credit and payment flows used by millions of people.",
+            "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"],
+            "status": "Professional project",
+            "image": "assets/picpay.png",
+            "caseStudy": false
+        },
+        {
+            "id": "banese",
+            "title": "Banese",
+            "tagline": "Digital Banking Experience",
+            "description": "Mobile banking journeys for retail and business customers, focused on reliable releases, accessible interfaces, and seamless API integrations.",
+            "technologies": ["Swift", "Combine", "Core Data"],
+            "status": "Professional project",
+            "image": "assets/popcode.png",
+            "caseStudy": false
         }
     ],
     "contact": {

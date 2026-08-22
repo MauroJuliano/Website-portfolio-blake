@@ -59,6 +59,26 @@
       "status": "Concluído",
       "image": "assets/flux.png",
       "github": "https://github.com/MauroJuliano/Flux"
+    },
+    {
+      "id": "picpay",
+      "title": "PicPay",
+      "tagline": "Experiência de Crédito e Pagamentos",
+      "description": "Experiências financeiras projetadas para escala, combinando jornadas claras com fluxos seguros de crédito e pagamentos usados por milhões de pessoas.",
+      "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"],
+      "status": "Projeto profissional",
+      "image": "assets/picpay.png",
+      "caseStudy": false
+    },
+    {
+      "id": "banese",
+      "title": "Banese",
+      "tagline": "Experiência Bancária Digital",
+      "description": "Jornadas de banco móvel para clientes pessoa física e jurídica, com foco em entregas confiáveis, interfaces acessíveis e integrações fluidas com APIs.",
+      "technologies": ["Swift", "Combine", "Core Data"],
+      "status": "Projeto profissional",
+      "image": "assets/popcode.png",
+      "caseStudy": false
     }
   ],
   "contact": {

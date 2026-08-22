@@ -44,7 +44,7 @@ export function renderProjects(projects) {
         <p class="project-description">${project.description}</p>
         <ul class="project-technologies" aria-label="Technologies">${technologies}</ul>
         <div class="project-actions">
-          <button type="button" class="project-details">${isPortuguese ? "Ver case" : "View case study"}<span aria-hidden="true">→</span></button>
+          ${project.caseStudy === false ? "" : `<button type="button" class="project-details">${isPortuguese ? "Ver case" : "View case study"}<span aria-hidden="true">→</span></button>`}
           ${project.github ? `<a class="project-github" href="${project.github}" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">●</span></a>` : ""}
         </div>
       </article>
@@ -53,9 +53,12 @@ export function renderProjects(projects) {
     gallery.appendChild(cell);
 
     const projectId = project.id || project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-    cell.querySelector(".project-details").addEventListener("click", () => {
-      window.location.href = `sections/projectPage.html?id=${encodeURIComponent(projectId)}`;
-    });
+    const detailsButton = cell.querySelector(".project-details");
+    if (detailsButton) {
+      detailsButton.addEventListener("click", () => {
+        window.location.href = `sections/projectPage.html?id=${encodeURIComponent(projectId)}`;
+      });
+    }
   });
 
   // 3️⃣ Init after layout
