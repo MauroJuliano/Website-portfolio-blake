@@ -45,14 +45,20 @@
       "images": ["assets/coopercard.jpg"]
     }
   ],
+  "projects_section": {
+    "title": "Projetos",
+    "subtitle": "Uma seleção de projetos pessoais e profissionais que refletem minha paixão por criar experiências relevantes."
+  },
   "projects": [
     {
       "id": "flux",
       "title": "Flux",
+      "tagline": "Experiência em Finanças Pessoais",
       "description": "Flux é um aplicativo financeiro com design elegante que ajuda você a manter o controle do seu dinheiro com clareza, confiança e simplicidade. Construído com SwiftUI, o Flux oferece uma experiência rápida, fluida e intuitiva que transforma a forma como você gerencia suas finanças.",
       "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"],
       "status": "Concluído",
-      "image": "assets/flux.png"
+      "image": "assets/flux.png",
+      "github": "https://github.com/MauroJuliano/Flux"
     }
   ],
   "contact": {
