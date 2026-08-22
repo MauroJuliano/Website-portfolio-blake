@@ -5,8 +5,9 @@
   --project-accent-dark: #5c2ed5;
   position: relative;
   width: 100%;
-  min-height: 900px;
-  padding: 72px 0 82px;
+  height: 100svh;
+  min-height: 680px;
+  padding: clamp(32px, 5svh, 64px) 0 clamp(28px, 4svh, 52px);
   overflow: hidden;
   isolation: isolate;
   background: radial-gradient(circle at 50% 58%, rgba(128, 83, 246, 0.035), transparent 30%), var(--bg-main);
@@ -16,7 +17,7 @@
   position: relative;
   z-index: 3;
   width: min(620px, calc(100% - 40px));
-  margin: 0 auto 68px;
+  margin: 0 auto clamp(24px, 4svh, 48px);
   text-align: center;
 }
 
@@ -67,8 +68,16 @@
   transform: translateX(-50%);
 }
 
-.projects-showcase .gallery { width: 100%; min-height: 650px; }
-.projects-showcase .flickity-viewport { min-height: 650px; overflow: visible; }
+.projects-showcase .gallery {
+  width: 100%;
+  height: clamp(470px, calc(100svh - 245px), 640px);
+}
+
+.projects-showcase .flickity-viewport {
+  height: 100% !important;
+  min-height: 0;
+  overflow: visible;
+}
 
 .projects-showcase .gallery-cell {
   display: grid;
@@ -76,7 +85,8 @@
   align-items: center;
   gap: clamp(90px, 8vw, 140px);
   width: min(1120px, calc(100vw - 160px));
-  min-height: 600px;
+  height: 100%;
+  min-height: 0;
   margin: 0 44px;
   opacity: 0.32;
   filter: blur(1px) saturate(0.65);
@@ -90,13 +100,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 570px;
+  height: 100%;
   perspective: 1200px;
 }
 
 .device-frame {
   position: relative;
-  width: min(390px, 35vw);
+  width: min(340px, 31vw, calc((100svh - 285px) * 0.58));
   aspect-ratio: 0.58;
   padding: 13px;
   overflow: hidden;
@@ -268,9 +278,14 @@
 }
 
 @media (max-width: 900px) {
-  .projects-showcase { min-height: auto; padding: 58px 0 72px; }
+  .projects-showcase {
+    height: auto;
+    min-height: 100svh;
+    padding: 58px 0 72px;
+  }
   .projects-heading { margin-bottom: 42px; }
-  .projects-showcase .gallery, .projects-showcase .flickity-viewport { min-height: 870px; }
+  .projects-showcase .gallery { height: 870px; }
+  .projects-showcase .flickity-viewport { min-height: 870px; }
   .projects-showcase .gallery-cell {
     grid-template-columns: 1fr;
     gap: 30px;
