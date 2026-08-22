@@ -44,11 +44,8 @@ async function init() {
       "scrollBtn": "cta",
       "projects-title": "projects_section.title",
       "projects-subtitle": "projects_section.subtitle",
-      "contact-eyebrow": "contact.eyebrow",
       "contact-title": "contact.title",
       "contact-description": "contact.description",
-      "contact-email-label": "contact.email_label",
-      "contact-social-label": "contact.social_label",
       "contact-based-in": "contact.based_in",
       "contact-email": "contact.email",
       "contact-phone": "contact.phone"
@@ -58,9 +55,6 @@ async function init() {
       renderCareer(json.career);
       renderProjects(json.projects);
       updateTooltips(json);
-
-      const emailLink = document.getElementById("contact-email-link");
-      if (emailLink) emailLink.href = `mailto:${json.contact.email}`;
     }
   });
 }

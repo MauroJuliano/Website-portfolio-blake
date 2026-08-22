@@ -62,11 +62,8 @@
         }
     ],
     "contact": {
-        "eyebrow": "Let's build something meaningful",
         "title": "Get in touch",
         "description": "Feel free to reach out for job opportunities, project ideas or even just to connect. I reply as soon as possible.",
-        "email_label": "Start a conversation",
-        "social_label": "Find me online",
         "based_in": "Based in Brazil · Open to international opportunities",
         "email": "blake@outlook.com",
         "phone": "+55 11 99999-9999"

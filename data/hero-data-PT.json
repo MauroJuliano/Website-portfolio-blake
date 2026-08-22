@@ -62,11 +62,8 @@
     }
   ],
   "contact": {
-    "eyebrow": "Vamos construir algo relevante",
     "title": "Entre em contato",
     "description": "Fique à vontade para entrar em contato sobre oportunidades de trabalho, ideias de projetos ou apenas para trocar uma conversa. Respondo o mais rápido possível.",
-    "email_label": "Inicie uma conversa",
-    "social_label": "Encontre-me online",
     "based_in": "Baseado no Brasil · Aberto a oportunidades internacionais",
     "email": "blake@outlook.com",
     "phone": "+55 11 99999-9999"
