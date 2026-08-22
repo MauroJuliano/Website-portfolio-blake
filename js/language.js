@@ -15,7 +15,8 @@ export function initLanguageSelector(options) {
 
     // ---- 1. Carrega idioma do localStorage ou usa default ----
     const savedLang = localStorage.getItem("lang") || defaultLang;
-    langRadios[savedLang].checked = true;
+    const initialLang = langRadios[savedLang] ? savedLang : defaultLang;
+    langRadios[initialLang].checked = true;
 
     // ---- 2. Função para carregar o JSON ----
     async function loadLanguageFile(lang) {
@@ -23,6 +24,9 @@ export function initLanguageSelector(options) {
 
         try {
             const response = await fetch(file);
+            if (!response.ok) {
+                throw new Error(`${response.status} ${response.statusText}`);
+            }
             const data = await response.json();
 
             // Atualiza textos
@@ -56,5 +60,5 @@ export function initLanguageSelector(options) {
 }
 
     // ---- 4. Carrega o idioma logo na inicialização ----
-    loadLanguageFile(savedLang);
+    loadLanguageFile(initialLang);
 }

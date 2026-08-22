@@ -10,5 +10,6 @@ pullrequest:
 	@read -p "Type (Feature/Bugfix/Refactor): " TYPE; \
 	read -p "Jira Card (e.g., PAY-432): " CARD; \
 	read -p "Pull request name: " NAME; \
-	gh pr create --title "$$TITLE" --body-file .github/pull_request_template.md --web;
-	echo "Pull request 'PF - $$TYPE: [$$CARD] $$NAME' created and opened in browser!"
+	TITLE="PF - $$TYPE: [$$CARD] $$NAME"; \
+	gh pr create --title "$$TITLE" --body-file .github/pull_request_template.md --web; \
+	echo "Pull request '$$TITLE' created and opened in browser!"

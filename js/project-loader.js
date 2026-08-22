@@ -8,7 +8,10 @@ export async function loadProject() {
   }
 
   try {
-    const response = await fetch("/data/projects-EN.json");
+    const response = await fetch("../data/projects-EN.json");
+    if (!response.ok) {
+      throw new Error(`${response.status} ${response.statusText}`);
+    }
     const projects = await response.json();
 
     const project = projects[projectId];
@@ -20,6 +23,7 @@ export async function loadProject() {
 
     // Populate data
     document.getElementById("title").textContent = project.title;
+    document.title = `${project.title} | Mauro G.`;
     document.getElementById("status").textContent = project.status;
     document.getElementById("mainImage").src = project.mainImage;
     document.getElementById("shortDescription").textContent = project.shortDescription;
@@ -27,7 +31,7 @@ export async function loadProject() {
 
     // Github button
     document.getElementById("githubBtn").onclick = () => {
-      window.open(project.github, "_blank");
+      window.open(project.github, "_blank", "noopener,noreferrer");
     };
 
     // Technologies
@@ -55,5 +59,6 @@ export async function loadProject() {
 
   } catch (error) {
     console.error("Failed to load project:", error);
+    document.querySelector("main").textContent = "Unable to load this project.";
   }
 }

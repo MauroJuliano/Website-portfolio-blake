@@ -1,29 +1,12 @@
-export function loadSection(id, file, callback) {
-  fetch(file)
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById(id).innerHTML = html;
-      if (callback) callback();
-    });
-}
+export async function loadSection(id, file) {
+  const container = document.getElementById(id);
+  if (!container) throw new Error(`Section container #${id} was not found.`);
 
-export function reloadAllSections(lang) {
-  const base = `sections/${lang}`;
+  const response = await fetch(file);
+  if (!response.ok) {
+    throw new Error(`Failed to load ${file}: ${response.status} ${response.statusText}`);
+  }
 
-  loadSection("hero", `${base}/hero.html`, () => {
-    initHeroLanguageSelector({
-      enRadio: "#en",
-      ptRadio: "#pt",
-      nameSelector: ".blake",
-      titleSelector: ".title"
-    });
-  });
-
-  loadSection("career", `${base}/career.html`, initItensAnimationScroll);
-
-  loadSection("projects", `${base}/projects.html`, () => {
-    initCarousel();
-  });
-
-  loadSection("contact", `${base}/contact.html`);
+  container.innerHTML = await response.text();
+  return container;
 }

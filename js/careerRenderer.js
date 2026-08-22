@@ -1,3 +1,6 @@
+let activeScrollHandler = null;
+let activeFlickityInstances = [];
+
 export function renderCareer(careerData) {
   const list = document.getElementById("career-list");
   const carouselContainer = document.querySelector(".media-shift");
@@ -6,6 +9,11 @@ export function renderCareer(careerData) {
 
   list.innerHTML = "";
   carouselContainer.innerHTML = "";
+
+  if (activeScrollHandler) {
+    window.removeEventListener("scroll", activeScrollHandler);
+  }
+  activeFlickityInstances.forEach(instance => instance.destroy());
 
   const flickityInstances = [];
 
@@ -103,5 +111,7 @@ export function renderCareer(careerData) {
   }
 
   window.addEventListener("scroll", onScroll);
+  activeScrollHandler = onScroll;
+  activeFlickityInstances = flickityInstances;
   onScroll(); // Run once on load
 }

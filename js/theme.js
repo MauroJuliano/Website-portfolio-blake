@@ -1,5 +1,5 @@
-export function initThemeToggle() {
-  const themeToggle = document.getElementById('themeToggle');
+export function initThemeToggle(toggleId = 'toggle-icon') {
+  const themeToggle = document.getElementById(toggleId);
   const html = document.documentElement;
 
   if (!themeToggle) {
@@ -10,18 +10,11 @@ export function initThemeToggle() {
   // Check for saved theme preference or default to light mode
   const currentTheme = localStorage.getItem('theme') || 'light';
   html.setAttribute('data-theme', currentTheme);
-  updateToggleIcon(themeToggle, currentTheme);
+  themeToggle.checked = currentTheme === 'dark';
 
-  themeToggle.addEventListener('click', () => {
-    const theme = html.getAttribute('data-theme');
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    
+  themeToggle.addEventListener('change', () => {
+    const newTheme = themeToggle.checked ? 'dark' : 'light';
     html.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
-    updateToggleIcon(themeToggle, newTheme);
   });
-}
-
-function updateToggleIcon(element, theme) {
-  element.textContent = theme === 'light' ? '🌙' : '☀️';
 }

@@ -14,7 +14,7 @@
             "Collaborated with cross-functional teams ensuring compliance with financial regulations.",
             "Developed interfaces and flows using Swift, SwiftUI, Combine, and modern iOS architectures."
         ],
-        "images": ["/assets/picpay.png", "/assets/PicPay_1.png","/assets/PicPay_2.png","/assets/PicPay_3.png","/assets/milkshake.gif"]
+        "images": ["assets/picpay.png", "assets/PicPay_1.png", "assets/PicPay_2.png", "assets/PicPay_3.png", "assets/milkshake.gif"]
     },
     {
         "title": "iOS Developer",
@@ -28,7 +28,7 @@
             "Collaborated with designers, product managers, and backend engineers to deliver stable releases.",
             "Maintained app performance, stability, and reliability"
         ],
-        "images": ["/assets/popcode.png"]
+        "images": ["assets/popcode.png"]
     },
     {
         "title": "iOS Developer",
@@ -42,24 +42,17 @@
             "Worked with backend services and APIs.",
             "Collaborated with product and engineering teams throughout delivery and maintenance cycles"
         ],
-        "images": ["/assets/coopercard.jpg"]
+        "images": ["assets/coopercard.jpg"]
     }
     ],
     "projects": [
         {
+            "id": "flux",
             "title": "Flux",
             "description": "Flux is a beautifully designed financial app that helps you stay in control of your money with clarity, confidence, and simplicity. Built with SwiftUI, Flux delivers a fast, fluid, and intuitive experience that transforms the way you manage your finances.",
-            "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"]
-        },
-        {
-            "title": "Flux",
-            "description": "A modern iOS app for tracking your expenses and income with beautiful charts",
-            "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"]
-        },
-        {
-            "title": "Flux",
-            "description": "A modern iOS app for tracking your expenses and income with beautiful charts",
-            "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"]
+            "technologies": ["Swift", "SwiftUI", "Combine", "Core Data"],
+            "status": "Completed",
+            "image": "assets/flux.png"
         }
     ],
     "contact": {

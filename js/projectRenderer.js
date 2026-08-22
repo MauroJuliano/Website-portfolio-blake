@@ -21,7 +21,7 @@ export function renderProjects(projects) {
         <p>${project.description}</p>
         <p><strong>Tecnologias:</strong> ${project.technologies.join(", ")}</p>
         ${project.status ? `<p><strong>Status:</strong> ${project.status}</p>` : ""}
-        <button>Ver Mais</button>
+        <button type="button" class="project-details">${document.documentElement.lang === "pt-BR" ? "Ver mais" : "View more"}</button>
       </div>
 
       <div class="card-right">
@@ -30,6 +30,11 @@ export function renderProjects(projects) {
     `;
 
     gallery.appendChild(cell);
+
+    const projectId = project.id || project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    cell.querySelector(".project-details").addEventListener("click", () => {
+      window.location.href = `sections/projectPage.html?id=${encodeURIComponent(projectId)}`;
+    });
   });
 
   // 3️⃣ Init after layout
@@ -47,9 +52,8 @@ export function renderProjects(projects) {
 
     gallery.flickityInstance = flkty;
 
-    // 4️⃣ Resize after images load
-    imagesLoaded(gallery, () => {
-      flkty.resize();
-    });
+    const images = [...gallery.querySelectorAll("img")];
+    Promise.all(images.map(image => image.decode?.().catch(() => undefined)))
+      .finally(() => flkty.resize());
   });
 }

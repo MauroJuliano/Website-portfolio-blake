@@ -3,6 +3,6 @@ import { loadProject } from './project-loader.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  initThemeToggle();
+  initThemeToggle('themeToggle');
   loadProject();
 });

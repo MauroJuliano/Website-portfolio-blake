@@ -31,6 +31,12 @@ html, body {
   padding: 0;
 }
 
+.load-error {
+  margin: 2rem;
+  color: #b42318;
+  text-align: center;
+}
+
 /* Hero */
 .hero {
   position: relative;
