@@ -22,7 +22,7 @@ export async function loadProject() {
       return;
     }
 
-    document.title = `${project.title} | Mauro G.`;
+    document.title = `${project.title} | Mauro Figueiredo`;
     document.getElementById("project-title").textContent = project.title;
     document.getElementById("project-tagline").textContent = project.tagline;
     document.getElementById("project-summary").textContent = project.summary;
