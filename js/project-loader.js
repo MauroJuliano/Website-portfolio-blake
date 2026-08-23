@@ -53,12 +53,6 @@ export async function loadProject() {
     document.getElementById("overview-title").textContent = project.overviewTitle;
     document.getElementById("overview-description").textContent = project.overview;
     renderList("project-goals", project.goals, goal => `<li>${goal}</li>`);
-    renderList("focus-areas", project.focusAreas, area => `
-      <article class="focus-card">
-        <span class="focus-icon" aria-hidden="true">${area.icon}</span>
-        <div><h3>${area.title}</h3><p>${area.description}</p></div>
-      </article>
-    `);
     renderList("feature-walkthrough", project.features, feature => `
       <article class="feature-card">
         <img src="${feature.image}" alt="${feature.title}">
@@ -66,12 +60,6 @@ export async function loadProject() {
       </article>
     `);
     renderList("tech-stack", project.techStack, technology => `<li>${technology}</li>`);
-
-    const architecture = document.getElementById("architecture-flow");
-    architecture.innerHTML = project.architectureFlow.map((node, index) => `
-      ${index ? '<span class="architecture-arrow" aria-hidden="true">→</span>' : ""}
-      <span class="architecture-node">${node}</span>
-    `).join("");
   } catch (error) {
     console.error("Failed to load project:", error);
     root.innerHTML = '<p class="project-error">Unable to load this project.</p>';
