@@ -60,6 +60,28 @@
             "image": "assets/homeAetherisPreview.png",
             "imagePresentation": "mockup",
             "github": "https://github.com/MauroJuliano/Flux"
+        },
+        {
+            "id": "aetheris",
+            "title": "Aetheris",
+            "tagline": "iOS Banking Experience",
+            "description": "A modern banking app built with SwiftUI that simulates a complete financial experience — from authentication to transfers, cards and account management.",
+            "technologies": ["SwiftUI", "MVVM", "Clean Architecture", "Mocked API"],
+            "status": "Completed",
+            "image": "assets/homeAetherisPreview.png",
+            "imagePresentation": "mockup",
+            "github": "https://github.com/MauroJuliano/Flux"
+        },
+        {
+            "id": "aetheris",
+            "title": "Aetheris",
+            "tagline": "iOS Banking Experience",
+            "description": "A modern banking app built with SwiftUI that simulates a complete financial experience — from authentication to transfers, cards and account management.",
+            "technologies": ["SwiftUI", "MVVM", "Clean Architecture", "Mocked API"],
+            "status": "Completed",
+            "image": "assets/homeAetherisPreview.png",
+            "imagePresentation": "mockup",
+            "github": "https://github.com/MauroJuliano/Flux"
         }
     ],
     "contact": {
