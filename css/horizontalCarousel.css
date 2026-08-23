@@ -109,8 +109,9 @@
 .project-visual {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   height: 100%;
+  padding-right: 24px;
   perspective: 1200px;
 }
 
@@ -333,7 +334,7 @@
     margin: 0 20px;
     transform: none;
   }
-  .project-visual { height: 390px; }
+  .project-visual { height: 390px; padding-right: 0; justify-content: center; }
   .project-mockup { width: 245px; }
   .device-frame {
     width: 225px;
