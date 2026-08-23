@@ -110,6 +110,7 @@
 }
 
 .contact-detail p { color: var(--text-secondary); }
+.contact-detail .contact-languages { margin-top: 3px; color: var(--text-tertiary); font-size: 13px; }
 
 .contact-socials { display: flex; justify-content: center; gap: 18px; margin-top: 28px; }
 .contact-socials a {

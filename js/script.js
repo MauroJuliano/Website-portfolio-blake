@@ -54,6 +54,7 @@ async function init() {
       "contact-about-label": "contact.about_label",
       "contact-role": "contact.role",
       "contact-stack": "contact.stack",
+      "contact-languages": "contact.languages",
       "contact-response-label": "contact.response_label",
       "contact-response": "contact.response",
       "contact-say-hello": "contact.say_hello"
