@@ -122,6 +122,11 @@
   transition: opacity .25s ease;
 }
 
+[data-theme="dark"] .item:not(.active) {
+  color: #6E6978;
+  opacity: 0.72;
+}
+
 /* Item ativo fica totalmente visível */
 .item.active {
   opacity: 1;
@@ -225,6 +230,11 @@
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .career-carousel,
+[data-theme="dark"] .media-frame {
+  box-shadow: 0 22px 55px rgba(3, 4, 7, 0.45), 0 0 28px rgba(155, 109, 255, 0.08);
 }
 
 .career-carousel .carousel-cell {

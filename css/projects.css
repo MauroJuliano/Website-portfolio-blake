@@ -4,18 +4,22 @@
   --surface: rgba(255, 255, 255, 0.82);
   --text-primary: #13131a;
   --text-secondary: #62616b;
+  --hero-text: #13131a;
   --border: rgba(91, 76, 132, 0.15);
   --accent: #7446ef;
   --accent-dark: #5b2fd1;
 }
 
 [data-theme="dark"] {
-  --bg-main: #202020;
-  --bg-soft: #252329;
-  --surface: rgba(40, 38, 45, 0.88);
-  --text-primary: #f3f1f7;
-  --text-secondary: #aaa6b2;
-  --border: rgba(180, 164, 224, 0.16);
+  --bg-main: #0f1115;
+  --bg-soft: #151821;
+  --surface: rgba(26, 30, 40, 0.88);
+  --text-primary: #f5f2fa;
+  --text-secondary: #c7c0d9;
+  --hero-text: #f5f2fa;
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #9b6dff;
+  --accent-dark: #7446ef;
 }
 
 * { box-sizing: border-box; }

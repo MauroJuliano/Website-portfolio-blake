@@ -59,19 +59,19 @@
   opacity: 0.5;
   font-weight: normal;
   transition: 0.3s ease;
-  color: #111;
+  color: var(--hero-text);
 }
 
 #pt:checked + label {
   opacity: 1;
   font-weight: bold;
-  color: #111;
+  color: var(--hero-text);
 }
 
 #en:checked + label {
   opacity: 1;
   font-weight: bold;
-  color: #111;
+  color: var(--hero-text);
 }
 
 /* truque para manter a ordem visual */
@@ -81,4 +81,3 @@
 .lang-selector label:nth-of-type(2) {
   order: 2;
 }
-

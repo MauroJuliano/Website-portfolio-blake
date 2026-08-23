@@ -6,18 +6,28 @@
 :root {
   /* Light theme */
   --bg-main: #FFFFFF;
+  --bg-secondary: #F8F7FB;
+  --surface: rgba(255, 255, 255, 0.82);
   --text-primary: #111;
   --text-secondary: #666;
+  --text-tertiary: #8A8495;
+  --border-soft: rgba(91, 76, 132, 0.15);
+  --accent: #7446EF;
   --hero-text: #FFFFFF; /* Text light on dark video */
   --hero-icon-filter: brightness(0) invert(1); /* White icons */
 }
 
 [data-theme="dark"] {
-  --bg-main: #222222;
-  --text-primary: #EDEDED;
-  --text-secondary: #A1A1A6;
-  --hero-text: #111; /* Text dark on light video */
-  --hero-icon-filter: brightness(0) invert(0); /* Dark icons */
+  --bg-main: #0F1115;
+  --bg-secondary: #151821;
+  --surface: rgba(26, 30, 40, 0.88);
+  --text-primary: #F5F2FA;
+  --text-secondary: #C7C0D9;
+  --text-tertiary: #9B94AE;
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --accent: #9B6DFF;
+  --hero-text: #F7F4FB;
+  --hero-icon-filter: brightness(0) invert(1);
 }
 
 body {
@@ -81,6 +91,15 @@ html, body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+}
+
+[data-theme="dark"] .hero::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 17, 21, 0.2), rgba(15, 17, 21, 0.52));
+  pointer-events: none;
 }
 
 .hero-buttons {
@@ -184,6 +203,17 @@ body.light-mode .glass_button {
   z-index: 1;
   text-align: left;
   transition: color 0.6s ease;
+}
+
+[data-theme="dark"] .hero-bottom-left .title {
+  color: #D3CADF;
+}
+
+[data-theme="dark"] .glass_button,
+[data-theme="dark"] .toggle-btn {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(15, 17, 21, 0.3);
+  box-shadow: 0 10px 30px rgba(5, 6, 9, 0.18);
 }
 
 .blake {

@@ -41,7 +41,7 @@
   font-optical-sizing: auto;
   text-shadow: 0 2px 20px rgba(0,0,0,0.25);
   width: 100%; /* Updated: now full width */
-  color: #939393;
+  color: var(--text-secondary);
   font-size: 18px;
   margin-bottom: 50px;
   text-align: left;
@@ -74,7 +74,7 @@
 
 /* Dark theme - light icons */
 [data-theme="dark"] .contact_us_green .social-svg {
-  filter: brightness(0) invert(1);
+  filter: brightness(0) saturate(100%) invert(84%) sepia(10%) saturate(684%) hue-rotate(213deg) brightness(92%);
 }
 
 .contact_us_green .social-svg:hover {
@@ -93,7 +93,7 @@
   font-family: 'Inter', system-ui, sans-serif;
   font-optical-sizing: auto;
   text-shadow: 0 2px 20px rgba(0,0,0,0.25);
-  color: #939393;
+  color: var(--text-secondary);
 }
 
 .contact_us_green .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {

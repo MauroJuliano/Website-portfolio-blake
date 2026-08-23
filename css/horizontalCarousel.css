@@ -16,6 +16,12 @@
   background: radial-gradient(circle at 50% 58%, rgba(128, 83, 246, 0.035), transparent 30%), var(--bg-main);
 }
 
+[data-theme="dark"] .projects-showcase {
+  --project-accent: #9B6DFF;
+  --project-accent-dark: #7446EF;
+  background: radial-gradient(circle at 50% 58%, rgba(155, 109, 255, 0.08), transparent 34%), var(--bg-main);
+}
+
 .projects-heading {
   position: relative;
   z-index: 3;
@@ -69,6 +75,10 @@
   background: rgba(111, 62, 234, 0.055);
   filter: blur(90px);
   transform: translateX(-50%);
+}
+
+[data-theme="dark"] .projects-glow {
+  background: rgba(155, 109, 255, 0.1);
 }
 
 .projects-showcase .gallery {
@@ -264,6 +274,13 @@
   color: var(--text-primary);
   background: var(--bg-main);
   box-shadow: 0 9px 22px rgba(35, 25, 55, 0.08);
+}
+
+[data-theme="dark"] .project-technologies li,
+[data-theme="dark"] .project-github,
+[data-theme="dark"] .projects-arrow {
+  border-color: var(--border-soft);
+  background: rgba(26, 30, 40, 0.72);
 }
 
 .project-details:hover, .project-github:hover { transform: translateY(-2px); }
