@@ -64,10 +64,18 @@
   ],
   "contact": {
     "title": "Entre em contato",
-    "description": "Fique à vontade para entrar em contato sobre oportunidades de trabalho, ideias de projetos ou apenas para trocar uma conversa. Respondo o mais rápido possível.",
-    "based_in": "Baseado no Brasil · Aberto a oportunidades internacionais",
+    "description": "Estou sempre aberto a novas oportunidades, projetos interessantes e boas conversas. Vamos nos conectar!",
+    "based_in": "Baseado no Brasil",
+    "international": "Aberto a oportunidades internacionais",
+    "remote": "Disponível para trabalho remoto",
+    "experience": "6+ anos em iOS",
     "email": "blake@outlook.com",
-    "phone": "+55 11 99999-9999"
+    "about_label": "Um pouco sobre mim",
+    "role": "Engenheiro de Software iOS",
+    "stack": "Swift · SwiftUI · Combine",
+    "response_label": "Tempo de resposta",
+    "response": "Normalmente respondo em 24–48h",
+    "say_hello": "Diga olá →"
   },
   "tooltips": {
     "resume": "Baixar Currículo",

@@ -47,8 +47,16 @@ async function init() {
       "contact-title": "contact.title",
       "contact-description": "contact.description",
       "contact-based-in": "contact.based_in",
+      "contact-international": "contact.international",
+      "contact-remote": "contact.remote",
+      "contact-experience": "contact.experience",
       "contact-email": "contact.email",
-      "contact-phone": "contact.phone"
+      "contact-about-label": "contact.about_label",
+      "contact-role": "contact.role",
+      "contact-stack": "contact.stack",
+      "contact-response-label": "contact.response_label",
+      "contact-response": "contact.response",
+      "contact-say-hello": "contact.say_hello"
     },
     onLanguageChange(lang, json) {
       document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
