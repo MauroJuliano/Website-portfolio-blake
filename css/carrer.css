@@ -2,6 +2,7 @@
 
 #career {
   position: relative;
+  padding-top: var(--section-top-padding);
 }
 
 #career > section {

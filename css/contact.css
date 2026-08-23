@@ -4,7 +4,7 @@
 .contact-section {
   position: relative;
   min-height: 720px;
-  padding: clamp(58px, 7vw, 92px) 24px clamp(64px, 8vw, 104px);
+  padding: var(--section-top-padding) 24px clamp(64px, 8vw, 104px);
   overflow: hidden;
   background: radial-gradient(circle at 50% 48%, rgba(155, 109, 255, 0.055), transparent 43%), var(--bg-main);
 }
