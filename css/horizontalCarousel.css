@@ -91,10 +91,11 @@
 
 .projects-showcase .gallery-cell {
   display: grid;
-  grid-template-columns: minmax(340px, 0.95fr) minmax(390px, 0.85fr);
+  grid-template-columns: minmax(340px, 390px) minmax(390px, 470px);
   align-items: center;
+  justify-content: center;
   gap: 0;
-  width: min(1120px, calc(100vw - 160px));
+  width: min(900px, calc(100vw - 160px));
   height: 100%;
   min-height: 0;
   margin: 0 44px;
@@ -111,7 +112,6 @@
   align-items: center;
   justify-content: flex-end;
   height: 100%;
-  padding-right: 24px;
   perspective: 1200px;
 }
 
@@ -334,7 +334,7 @@
     margin: 0 20px;
     transform: none;
   }
-  .project-visual { height: 390px; padding-right: 0; justify-content: center; }
+  .project-visual { height: 390px; justify-content: center; }
   .project-mockup { width: 245px; }
   .device-frame {
     width: 225px;
