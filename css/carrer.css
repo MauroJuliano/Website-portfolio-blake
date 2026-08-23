@@ -1,5 +1,31 @@
 /* ========== CAREER SECTION CORREÇÕES ========== */
 
+#career {
+  position: relative;
+  overflow: hidden;
+}
+
+#career > section {
+  position: relative;
+  z-index: 2;
+}
+
+.career-spark {
+  position: absolute;
+  z-index: 1;
+  color: rgba(116, 70, 239, 0.24);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.career-spark--one { top: 9%; right: 8%; font-size: 29px; }
+.career-spark--two { top: 15%; right: 11%; font-size: 16px; opacity: 0.7; }
+.career-spark--three { bottom: 10%; left: 7%; font-size: 24px; }
+
+[data-theme="dark"] .career-spark {
+  color: rgba(155, 109, 255, 0.32);
+}
+
 /* Estrutura principal */
 .split {
   position: relative;
