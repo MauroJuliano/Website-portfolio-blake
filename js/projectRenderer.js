@@ -70,7 +70,7 @@ export function renderProjects(projects) {
       wrapAround: false,
       cellAlign: "center",
       contain: false,
-      pageDots: true,
+      pageDots: false,
       prevNextButtons: false,
       adaptiveHeight: false,
       setGallerySize: true,

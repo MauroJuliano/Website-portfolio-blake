@@ -297,22 +297,6 @@
 
 .projects-arrow--previous { left: 32px; }
 .projects-arrow--next { right: 32px; }
-.projects-showcase .flickity-page-dots { bottom: 3px; }
-
-.projects-showcase .flickity-page-dots .dot {
-  width: 10px;
-  height: 10px;
-  margin: 0 7px;
-  background: #bdb9c7;
-  opacity: 0.55;
-}
-
-.projects-showcase .flickity-page-dots .dot.is-selected {
-  background: var(--project-accent);
-  box-shadow: 0 0 13px rgba(116, 70, 239, 0.7);
-  opacity: 1;
-}
-
 @media (max-width: 900px) {
   .projects-showcase {
     height: auto;
