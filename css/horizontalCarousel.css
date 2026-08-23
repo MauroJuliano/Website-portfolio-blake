@@ -108,11 +108,32 @@
 .projects-showcase .gallery-cell.is-selected { opacity: 1; filter: none; transform: scale(1); }
 
 .project-visual {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   height: 100%;
+  isolation: isolate;
   perspective: 1200px;
+}
+
+.project-visual::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: min(350px, 84%);
+  height: 62%;
+  border-radius: 50%;
+  background: rgba(116, 70, 239, 0.1);
+  filter: blur(58px);
+  transform: translate(-50%, -45%);
+  pointer-events: none;
+}
+
+[data-theme="dark"] .project-visual::before {
+  background: rgba(155, 109, 255, 0.13);
 }
 
 .project-mockup {
