@@ -67,6 +67,13 @@ async function init() {
       updateTooltips(json);
     }
   });
+
+  const requestedSection = window.location.hash;
+  if (requestedSection) {
+    requestAnimationFrame(() => {
+      document.querySelector(requestedSection)?.scrollIntoView();
+    });
+  }
 }
 
 init();
