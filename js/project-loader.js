@@ -43,16 +43,15 @@ export async function loadProject() {
     }
 
     renderList("hero-technologies", project.technologies, technology => `<li>${technology}</li>`);
-    renderList("project-facts", project.facts, fact => `
-      <article class="fact">
-        <span class="fact-icon" aria-hidden="true">${fact.icon}</span>
-        <div><strong>${fact.label}</strong><span>${fact.value}</span></div>
-      </article>
-    `);
-
     document.getElementById("overview-title").textContent = project.overviewTitle;
     document.getElementById("overview-description").textContent = project.overview;
     renderList("project-goals", project.goals, goal => `<li>${goal}</li>`);
+    renderList("focus-areas", project.focusAreas, area => `
+      <article class="focus-card">
+        <span class="focus-icon" aria-hidden="true">${area.icon}</span>
+        <div><h3>${area.title}</h3><p>${area.description}</p></div>
+      </article>
+    `);
     renderList("feature-walkthrough", project.features, feature => `
       <article class="feature-card">
         <img src="${feature.image}" alt="${feature.title}">
