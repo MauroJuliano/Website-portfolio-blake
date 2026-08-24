@@ -52,12 +52,21 @@ export async function loadProject() {
         <div><h3>${area.title}</h3><p>${area.description}</p></div>
       </article>
     `);
-    renderList("feature-walkthrough", project.features, feature => `
-      <article class="feature-card">
-        <img src="${feature.image}" alt="${feature.title}">
-        <div><h3>${feature.title}</h3><p>${feature.description}</p></div>
-      </article>
-    `);
+    renderList("feature-walkthrough", project.features, feature => {
+      const media = feature.video
+        ? `<video class="feature-media"${feature.poster ? ` poster="${feature.poster}"` : ""} autoplay loop muted playsinline controls preload="metadata" aria-label="${feature.title} demo">
+            <source src="${feature.video}">
+            Your browser does not support embedded videos.
+          </video>`
+        : `<img class="feature-media" src="${feature.image}" alt="${feature.title}">`;
+
+      return `
+        <article class="feature-card${feature.video ? " feature-card--video" : ""}">
+          ${media}
+          <div><h3>${feature.title}</h3><p>${feature.description}</p></div>
+        </article>
+      `;
+    });
     renderList("tech-stack", project.techStack, technology => `<li>${technology}</li>`);
   } catch (error) {
     console.error("Failed to load project:", error);
