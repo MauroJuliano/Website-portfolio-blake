@@ -1,0 +1,35 @@
+{
+  "aetheris": {
+    "title": "Aetheris",
+    "tagline": "Experiência Bancária para iOS",
+    "summary": "Um aplicativo bancário moderno desenvolvido com SwiftUI que simula uma experiência financeira completa — da autenticação às transferências, cartões e gestão da conta.",
+    "mainImage": "../assets/images/projects/aetheris/home-preview.png",
+    "imagePresentation": "mockup",
+    "github": "https://github.com/MauroJuliano/Flux",
+    "technologies": ["SwiftUI", "MVVM", "Arquitetura Limpa", "API Simulada"],
+    "facts": [
+      {"icon": "◉", "label": "Função", "value": "Desenvolvedor iOS"},
+      {"icon": "▣", "label": "Plataforma", "value": "iOS"},
+      {"icon": "△", "label": "Arquitetura", "value": "MVVM + Coordinator"},
+      {"icon": "◷", "label": "Duração", "value": "2 meses"}
+    ],
+    "overviewTitle": "Por que criei o Aetheris",
+    "overview": "Eu queria ir além de desafios simples de interface e construir algo mais próximo de um produto real. O Aetheris foi criado para praticar a arquitetura de funcionalidades escaláveis, lidar com fluxos bancários complexos e desenvolver uma experiência moderna e organizada.",
+    "goals": [
+      "Simular uma experiência bancária completa de ponta a ponta",
+      "Praticar arquitetura modular e código limpo",
+      "Criar uma interface consistente e acessível",
+      "Implementar estados robustos, validações e tratamento de erros"
+    ],
+    "focusAreas": [
+      {"icon": "◇", "title": "Arquitetura", "description": "Funcionalidades modularizadas com MVVM e Coordinator para uma navegação escalável."},
+      {"icon": "●", "title": "Experiência do usuário", "description": "Uma interface moderna e organizada, com atenção aos detalhes e às microinterações."},
+      {"icon": "⬡", "title": "Confiabilidade", "description": "Estados de carregamento, erro, vazio e sucesso tratados em todos os fluxos e componentes."}
+    ],
+    "features": [
+      {"title": "Início", "description": "Visão geral do saldo, cartões, destinatários, ações rápidas e atividade mensal.", "image": "../assets/images/projects/aetheris/home-preview.png"}
+    ],
+    "techStack": ["Swift", "SwiftUI", "Combine", "MVVM", "Coordinator", "API Simulada", "SwiftLint", "XCTest", "Xcode"],
+    "architectureFlow": ["App Aetheris", "Módulos de funcionalidades", "Core", "Rede"]
+  }
+}
