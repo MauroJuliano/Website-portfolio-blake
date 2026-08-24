@@ -17,7 +17,7 @@
           { "title": "Premium Experiences", "description": "Worked on experiences including restaurant reservations, VIP lounge access and a subscriptions hub." },
           { "title": "App Evolution", "description": "Contributed to ongoing maintenance, refactors, improvements and new functionality across existing iOS journeys." }
         ],
-        "technologies": ["Swift", "SwiftUI", "UIKit", "Combine", "REST APIs", "Modular Architecture"],
+        "technologies": ["Swift", "UIKit", "REST APIs", "Modular Architecture"],
         "images": ["assets/images/career/picpay/logo.png", "assets/images/career/picpay/gallery-1.png", "assets/images/career/picpay/gallery-2.png", "assets/images/career/picpay/gallery-3.png"]
       },
       {
@@ -74,7 +74,7 @@
         "based_in": "Based in Brazil",
         "international": "Open to international opportunities",
         "remote": "Remote friendly",
-        "experience": "8+ years building iOS apps",
+        "experience": "5+ years building iOS apps",
         "email": "maurodeveloper@outlook.com",
         "about_label": "A little about me",
         "role": "iOS Software Engineer",

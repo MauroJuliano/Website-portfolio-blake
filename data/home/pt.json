@@ -10,14 +10,14 @@
       "period": "2021 - 2026",
       "summary": "Atuei em experiências de conta, cartões, crédito, onboarding e benefícios premium em um dos maiores aplicativos financeiros do Brasil.",
       "highlights": [
-        { "title": "Cartão virtual", "description": "Atuei na experiência do cartão virtual e nos fluxos de gestão de cartões dentro do aplicativo PicPay." },
-        { "title": "Aquisição de cartão", "description": "Refatorei partes da jornada de solicitação e aquisição de cartão, melhorando sua estrutura e manutenibilidade." },
-        { "title": "Onboarding de conta + cartão", "description": "Atuei em uma jornada integrada na qual usuários podiam criar uma conta e solicitar um cartão na mesma experiência." },
+        { "title": "Cartão virtual", "description": "Atuei na experiência do cartão virtual e em fluxos de gestão de cartões dentro do aplicativo PicPay." },
+        { "title": "Aquisição de cartão", "description": "Refatorei partes da jornada de solicitação e aquisição de cartão, melhorando sua estrutura, manutenção e evolução." },
+        { "title": "Onboarding de conta + cartão", "description": "Atuei em uma jornada integrada na qual usuários podiam criar uma conta e solicitar um cartão dentro da mesma experiência." },
         { "title": "Limite Garantido", "description": "Contribuí para o Limite Garantido, funcionalidade que conecta saldo em conta à disponibilidade de crédito e alcançou milhões de usuários." },
         { "title": "Experiências premium", "description": "Atuei em experiências como reservas em restaurantes, acesso a salas VIP e uma central de assinaturas." },
-        { "title": "Evolução do aplicativo", "description": "Contribuí continuamente com manutenção, refatorações, melhorias e novas funcionalidades em jornadas existentes do iOS." }
+        { "title": "Evolução do aplicativo", "description": "Contribuí continuamente com manutenção, refatorações, melhorias e novas funcionalidades em jornadas existentes do aplicativo iOS." }
       ],
-      "technologies": ["Swift", "SwiftUI", "UIKit", "Combine", "APIs REST", "Arquitetura modular"],
+      "technologies": ["Swift", "UIKit", "Combine", "APIs REST", "Arquitetura modular"],
       "images": ["assets/images/career/picpay/logo.png", "assets/images/career/picpay/gallery-1.png", "assets/images/career/picpay/gallery-2.png", "assets/images/career/picpay/gallery-3.png"]
     },
     {
@@ -37,15 +37,15 @@
     },
     {
       "title": "Desenvolvedor iOS",
-      "company": "Cooper Card Administradora de Cartões Ltda",
+      "company": "Cooper Card",
       "period": "2020",
       "summary": "Atuei como único desenvolvedor iOS responsável pela manutenção e evolução diária do aplicativo Cooper Card.",
       "highlights": [
         { "title": "Responsabilidade pelo iOS", "description": "Conduzi de forma independente a manutenção e a evolução diária do aplicativo iOS." },
         { "title": "Manutenção e estabilidade", "description": "Atuei em correções, atualizações de compatibilidade e melhorias voltadas à estabilidade e confiabilidade do aplicativo." },
         { "title": "Evolução de funcionalidades", "description": "Mantive e evoluí fluxos e funcionalidades existentes voltados aos clientes." },
-        { "title": "Entrega de ponta a ponta", "description": "Conduzi tarefas de iOS da investigação e implementação até a validação e o suporte ao lançamento." },
-        { "title": "Código existente", "description": "Trabalhei em uma base de código estabelecida, aprimorando partes do aplicativo sem alterar o comportamento existente." }
+        { "title": "Entrega de ponta a ponta", "description": "Conduzi tarefas de iOS desde a investigação e implementação até a validação e o suporte ao lançamento." },
+        { "title": "Código existente", "description": "Trabalhei em uma base de código estabelecida, evoluindo partes do aplicativo com cuidado para preservar comportamentos existentes." }
       ],
       "technologies": ["Swift", "UIKit", "APIs REST", "Manutenção iOS"],
       "images": ["assets/images/career/cooper-card/logo.jpg", "assets/images/career/cooper-card/gallery-1.png", "assets/images/career/cooper-card/gallery-2.png", "assets/images/career/cooper-card/gallery-3.png"]
@@ -59,7 +59,7 @@
     {
       "id": "aetheris",
       "title": "Aetheris",
-      "tagline": "Experiência Bancária para iOS",
+      "tagline": "Experiência bancária para iOS",
       "description": "Um aplicativo bancário moderno criado para explorar jornadas financeiras completas — da autenticação e onboarding a transferências, cartões, beneficiários e gestão da conta.",
       "technologies": ["SwiftUI", "MVVM", "Coordinator", "Mocked API", "XCTest"],
       "status": "Concluído",
@@ -86,7 +86,7 @@
     "say_hello": "Diga olá →"
   },
   "tooltips": {
-    "resume": "Baixar Currículo",
+    "resume": "Baixar currículo",
     "github": "Visitar GitHub",
     "linkedin": "Conectar no LinkedIn"
   }
