@@ -54,6 +54,8 @@
 }
 
 .projects-showcase .gallery {
+  position: relative;
+  top: -24px;
   width: 100%;
   height: clamp(430px, calc(96svh - 325px), 540px);
 }
@@ -304,7 +306,7 @@
     padding: var(--section-top-padding) 0 72px;
   }
   .projects-heading { margin-bottom: 42px; }
-  .projects-showcase .gallery { height: 870px; }
+  .projects-showcase .gallery { top: 0; height: 870px; }
   .projects-showcase .flickity-viewport { min-height: 870px; }
   .projects-showcase .gallery-cell {
     grid-template-columns: 1fr;
