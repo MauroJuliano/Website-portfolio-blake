@@ -1,5 +1,6 @@
 let activeScrollHandler = null;
 let activeFlickityInstances = [];
+const CAREER_AUTOPLAY_INTERVAL = 3500;
 
 export function renderCareer(careerData) {
   const list = document.getElementById("career-list");
@@ -16,6 +17,7 @@ export function renderCareer(careerData) {
   activeFlickityInstances.forEach(instance => instance.destroy());
 
   const flickityInstances = [];
+  let activeCareerIndex = -1;
 
   careerData.forEach((item, index) => {
     // Render list item
@@ -57,12 +59,16 @@ export function renderCareer(careerData) {
     // Initialize Flickity for this carousel
     if (typeof Flickity !== 'undefined') {
       const flickity = new Flickity(carousel, {
-        wrapAround: item.images.length > 1, // Only wrap if more than 1 image
+        wrapAround: item.images.length > 1,
         cellAlign: 'center',
-        pageDots: item.images.length > 1, // Only show dots if more than 1 image
+        pageDots: item.images.length > 1,
         prevNextButtons: false,
-        draggable: item.images.length > 1 // Only draggable if more than 1 image
+        draggable: item.images.length > 1,
+        autoPlay: item.images.length > 1 ? CAREER_AUTOPLAY_INTERVAL : false,
+        pauseAutoPlayOnHover: true
       });
+
+      if (index !== 0) flickity.stopPlayer();
       flickityInstances.push(flickity);
     }
   });
@@ -88,6 +94,9 @@ export function renderCareer(careerData) {
 
     if (activeItem) {
       const index = parseInt(activeItem.dataset.index);
+
+      if (index === activeCareerIndex) return;
+      activeCareerIndex = index;
       
       // Remove active from all items
       items.forEach(i => i.classList.remove("active"));
@@ -103,8 +112,13 @@ export function renderCareer(careerData) {
               flickityInstances[i].resize();
             }
           }
+
+          if (flickityInstances[i]?.slides.length > 1) {
+            flickityInstances[i].playPlayer();
+          }
         } else {
           carousel.style.display = "none";
+          flickityInstances[i]?.stopPlayer();
         }
       });
     }
