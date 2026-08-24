@@ -1,0 +1,93 @@
+{
+    "name": "Mauro F.",
+    "title": "iOS Software Engineer",
+    "cta": "Get in touch",
+    "career_section": { "title": "Career" },
+    "career": [
+      {
+        "title": "iOS Software Engineer",
+        "company": "PicPay",
+        "period": "2021 - 2026",
+        "summary": "Worked across core banking, cards, credit, onboarding and premium experiences inside one of Brazil’s largest financial apps.",
+        "highlights": [
+          { "title": "Virtual Card", "description": "Worked on the virtual card experience and supporting card management flows inside the PicPay app." },
+          { "title": "Card Acquisition", "description": "Refactored parts of the card application and acquisition journey, improving the structure and maintainability of the flow." },
+          { "title": "Account + Card Onboarding", "description": "Worked on a combined journey where users could create an account and request a card as part of the same experience." },
+          { "title": "Guaranteed Credit Limit", "description": "Contributed to Limite Garantido, a feature that connects account balance with credit availability and reached millions of users." },
+          { "title": "Premium Experiences", "description": "Worked on experiences including restaurant reservations, VIP lounge access and a subscriptions hub." },
+          { "title": "App Evolution", "description": "Contributed to ongoing maintenance, refactors, improvements and new functionality across existing iOS journeys." }
+        ],
+        "technologies": ["Swift", "UIKit", "REST APIs", "Modular Architecture"],
+        "images": ["assets/images/career/picpay/logo.png", "assets/images/career/picpay/gallery-1.png", "assets/images/career/picpay/gallery-2.png", "assets/images/career/picpay/gallery-3.png"]
+      },
+      {
+        "title": "iOS Developer",
+        "company": "Popcode (Client: Banese Bank)",
+        "period": "2020 - 2021",
+        "summary": "Worked on the Banese Bank mobile app, contributing to customer-facing banking experiences for retail and business users.",
+        "highlights": [
+          { "title": "Banking Features", "description": "Contributed to the development and evolution of features across the Banese mobile banking experience." },
+          { "title": "Customer Journeys", "description": "Worked on flows used by both retail and business banking customers." },
+          { "title": "UI & Business Logic", "description": "Implemented interface components, user flows and business rules using Swift and UIKit." },
+          { "title": "Backend Integration", "description": "Integrated REST APIs and handled persistence, loading states and error scenarios." },
+          { "title": "Cross-functional Delivery", "description": "Collaborated with designers, product managers and backend engineers to deliver and maintain stable releases." }
+        ],
+        "technologies": ["Swift", "UIKit", "REST APIs", "Persistence", "iOS Architecture"],
+        "images": ["assets/images/career/popcode/logo.png", "assets/images/career/popcode/gallery-1.png", "assets/images/career/popcode/gallery-2.webp", "assets/images/career/popcode/gallery-3.jpeg"]
+      },
+      {
+        "title": "iOS Developer",
+        "company": "Cooper Card Administradora de Cartões Ltda",
+        "period": "2020",
+        "summary": "Worked as the sole iOS developer responsible for the maintenance and day-to-day evolution of the Cooper Card application.",
+        "highlights": [
+          { "title": "Sole iOS Ownership", "description": "Owned the day-to-day maintenance and evolution of the iOS application independently." },
+          { "title": "Maintenance & Stability", "description": "Worked on bug fixes, compatibility updates and improvements focused on keeping the app stable and reliable." },
+          { "title": "Feature Evolution", "description": "Maintained and evolved existing customer-facing flows and functionality." },
+          { "title": "End-to-end Delivery", "description": "Handled iOS tasks from investigation and implementation through validation and release support." },
+          { "title": "Existing Codebase", "description": "Worked within an established codebase, improving parts of the app while preserving existing behavior." }
+        ],
+        "technologies": ["Swift", "UIKit", "REST APIs", "iOS Maintenance"],
+        "images": ["assets/images/career/cooper-card/logo.jpg", "assets/images/career/cooper-card/gallery-1.png", "assets/images/career/cooper-card/gallery-2.png", "assets/images/career/cooper-card/gallery-3.png"]
+      }
+    ],
+    "projects_section": {
+        "title": "Projects",
+        "subtitle": "A selection of personal projects I designed and built from the ground up, turning ideas into meaningful experiences."
+    },
+    "projects": [
+        {
+            "id": "aetheris",
+            "title": "Aetheris",
+            "tagline": "iOS Banking Experience",
+            "description": "A modern banking app built to explore complete financial journeys — from authentication and onboarding to transfers, cards, beneficiaries and account management.",
+            "technologies": ["SwiftUI", "MVVM", "Coordinator", "Mocked API", "XCTest"],
+            "status": "Completed",
+            "image": "assets/images/projects/aetheris/home-preview.png",
+            "imagePresentation": "mockup",
+            "github": "https://github.com/MauroJuliano/Flux"
+        }
+    ],
+    "contact": {
+        "title": "Get in touch",
+        "description": "I’m always open to new opportunities, interesting projects, and meaningful conversations. Let’s connect!",
+        "based_in": "Based in Brazil",
+        "international": "Open to international opportunities",
+        "remote": "Remote friendly",
+        "experience": "5+ years building iOS apps",
+        "email": "maurodeveloper@outlook.com",
+        "about_label": "A little about me",
+        "role": "iOS Software Engineer",
+        "education": "B.Sc. in Computer Science",
+        "stack": "Swift · SwiftUI · UIKit · Combine",
+        "languages": "Portuguese · Native · English · Professional · German · Learning",
+        "response_label": "Response time",
+        "response": "Usually replies within 24–48h",
+        "say_hello": "Say hello →"
+    },
+    "tooltips": {
+        "resume": "Download Resume",
+        "github": "Visit GitHub",
+        "linkedin": "Connect on LinkedIn"
+    }
+}

@@ -1,67 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flux | Mauro G.</title>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="../css/toggle.css">
-  <link rel="stylesheet" href="../css/projects.css">
+  <title>Project | Mauro Figueiredo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/components/theme-language-toggle.css">
+  <link rel="stylesheet" href="../css/pages/project-page.css?v=5">
 </head>
 
 <body>
-
-  <nav class="floating-nav">
-    <div class="nav-left">
-      <div class="logotype">Mauro G.</div>
-    </div>
-
-    <div class="nav-right">
-      <div class="hero-buttons">
-        <input type="checkbox" id="themeToggle" class="toggle-checkbox">
-        <label for="themeToggle" class="toggle-btn"></label>
-      </div>
+  <nav class="project-nav">
+    <a class="project-brand" href="../index.html">Mauro F.</a>
+    <div class="project-nav-links">
+      <a id="project-nav-contact" class="project-contact-link" href="../index.html#contact">Get in touch</a>
+      <input type="checkbox" id="themeToggle" class="toggle-checkbox">
+      <label for="themeToggle" class="toggle-btn" aria-label="Toggle theme"></label>
     </div>
   </nav>
 
-  <main class="container">  
-    <!-- Galeria -->
-    <section class="product-gallery">
-  <img class="main-image" id="mainImage">
+  <main id="project-root" class="case-study">
+    <a id="project-back-link" class="back-link" href="../index.html#projects">← Back to projects</a>
 
-  <div class="thumbnails" id="thumbnails"></div>
+    <section class="case-hero">
+      <div class="case-hero-copy">
+        <p id="project-featured-label" class="section-kicker">Featured project</p>
+        <h1 id="project-title"></h1>
+        <p id="project-tagline" class="case-tagline"></p>
+        <p id="project-summary" class="case-summary"></p>
+        <div class="case-actions">
+          <a id="project-github" class="button button-primary" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+          <a id="project-demo" class="button button-secondary" target="_blank" rel="noopener noreferrer" hidden>Watch demo ▷</a>
+        </div>
+        <ul id="hero-technologies" class="technology-list"></ul>
+      </div>
+
+      <div class="case-hero-visual">
+        <div class="case-device">
+          <span class="case-device-speaker" aria-hidden="true"></span>
+          <img id="project-main-image" alt="">
+        </div>
+        <div class="case-device-glow" aria-hidden="true"></div>
+      </div>
     </section>
 
-  <section class="product-info">
-  <div class="product-title" id="title"></div>
-  <div class="rating" id="status"></div>
+    <section class="product-panel">
+      <h2 id="project-capabilities-title">What this app does</h2>
+      <div id="focus-areas" class="focus-grid"></div>
 
-  <button class="add-cart" id="githubBtn">View on Github ↗︎</button>
-  
-  <div class="colors">
-    <strong class="tech-title">Technologies</strong>
-    <div id="technologies"></div>
-  </div>
-  
-  
+      <h2 id="project-inside-title" class="inside-title">Inside the app</h2>
+      <p id="project-inside-description" class="inside-description">Explore the core flows that make banking simple and intuitive.</p>
+      <div id="feature-walkthrough" class="feature-grid"></div>
+    </section>
 
-  <div class="options">
-    <p id="shortDescription"></p>
-  </div>  
-  
-  
-  
-  </section>
-  <section class="text-container">
-    <p id="longDescription"></p>
-  </section>
+    <section class="overview-panel">
+      <div>
+        <h2 id="overview-title"></h2>
+        <p id="overview-description" class="section-description"></p>
+      </div>
+      <ul id="project-goals" class="project-goals"></ul>
+      <div class="built-with">
+        <p id="project-built-with-label" class="section-kicker">Built with</p>
+        <ul id="tech-stack" class="technology-list technology-list--large"></ul>
+      </div>
+    </section>
 
-  <!-- Scripts -->
+    <section class="project-cta">
+      <span class="cta-icon" aria-hidden="true">↗</span>
+      <div>
+        <h2 id="project-cta-title">Interested in this project?</h2>
+        <p id="project-cta-description">Let's build something amazing together.</p>
+      </div>
+      <div class="project-cta-actions">
+        <a id="project-cta-contact" class="button button-primary" href="../index.html#contact">Get in touch ↗</a>
+        <a id="project-cta-back" class="button button-secondary" href="../index.html#projects">Back to projects</a>
+      </div>
+    </section>
+  </main>
 
-  <script type="module" src="../js/project-page.js"></script>
-
-
-
+  <script type="module" src="../js/pages/project-page.js"></script>
 </body>
 </html>

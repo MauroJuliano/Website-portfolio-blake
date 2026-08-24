@@ -1,0 +1,140 @@
+let activeScrollHandler = null;
+let activeFlickityInstances = [];
+const CAREER_AUTOPLAY_INTERVAL = 3500;
+
+export function renderCareer(careerData) {
+  const list = document.getElementById("career-list");
+  const carouselContainer = document.querySelector(".media-shift");
+  
+  if (!list || !carouselContainer) return;
+
+  list.innerHTML = "";
+  carouselContainer.innerHTML = "";
+
+  if (activeScrollHandler) {
+    window.removeEventListener("scroll", activeScrollHandler);
+  }
+  activeFlickityInstances.forEach(instance => instance.destroy());
+
+  const flickityInstances = [];
+  let activeCareerIndex = -1;
+
+  careerData.forEach((item, index) => {
+    // Render list item
+    const li = document.createElement("li");
+    li.className = "item";
+    if (index === 0) li.classList.add("active");
+    li.dataset.index = index;
+
+    const highlights = item.highlights ?? (item.bullets ?? []).map(description => ({ description }));
+    const highlightItems = highlights.map(highlight => `
+      <li>
+        ${highlight.title ? `<strong>${highlight.title}</strong>` : ""}
+        <span>${highlight.description}</span>
+      </li>
+    `).join("");
+    const technologies = (item.technologies ?? []).map(technology => `<li>${technology}</li>`).join("");
+
+    li.innerHTML = `
+      <h3 class="item__title">${item.title}</h3>
+      <div class="item__meta">
+        <span>${item.company}</span>
+        <span>•</span>
+        <span>${item.period}</span>
+      </div>
+      ${item.summary ? `<p class="item__summary">${item.summary}</p>` : ""}
+      <ul class="item__bullets">${highlightItems}</ul>
+      ${technologies ? `<ul class="item__technologies" aria-label="Technologies">${technologies}</ul>` : ""}
+    `;
+
+    list.appendChild(li);
+
+    // Create a separate carousel for each item
+    const carousel = document.createElement("div");
+    carousel.className = "career-carousel";
+    carousel.dataset.careerIndex = index;
+    if (index !== 0) carousel.style.display = "none"; // Hide all except first
+
+    // Add images to this carousel
+    item.images.forEach(imgSrc => {
+      const cell = document.createElement("div");
+      cell.className = "carousel-cell";
+      cell.innerHTML = `<img src="${imgSrc}" alt="${item.title}">`;
+      carousel.appendChild(cell);
+    });
+
+    carouselContainer.appendChild(carousel);
+
+    // Initialize Flickity for this carousel
+    if (typeof Flickity !== 'undefined') {
+      const flickity = new Flickity(carousel, {
+        wrapAround: item.images.length > 1,
+        cellAlign: 'center',
+        pageDots: item.images.length > 1,
+        prevNextButtons: false,
+        draggable: item.images.length > 1,
+        autoPlay: item.images.length > 1 ? CAREER_AUTOPLAY_INTERVAL : false,
+        pauseAutoPlayOnHover: true
+      });
+
+      if (index !== 0) flickity.stopPlayer();
+      flickityInstances.push(flickity);
+    }
+  });
+
+  // Handle scroll-based item activation using the same logic as before
+  const items = list.querySelectorAll(".item");
+  const carousels = carouselContainer.querySelectorAll(".career-carousel");
+  
+  function onScroll() {
+    // Get the middle point of the carousel container
+    const containerRect = carouselContainer.getBoundingClientRect();
+    const triggerOffset = containerRect.top + containerRect.height / 2;
+
+    let activeItem = null;
+
+    // Find which item is aligned with the carousel
+    items.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      if (rect.top <= triggerOffset) {
+        activeItem = item;
+      }
+    });
+
+    if (activeItem) {
+      const index = parseInt(activeItem.dataset.index);
+
+      if (index === activeCareerIndex) return;
+      activeCareerIndex = index;
+      
+      // Remove active from all items
+      items.forEach(i => i.classList.remove("active"));
+      activeItem.classList.add("active");
+
+      // Show only the corresponding carousel
+      carousels.forEach((carousel, i) => {
+        if (i === index) {
+          if (carousel.style.display === "none") {
+            carousel.style.display = "block";
+            // Resize Flickity when showing
+            if (flickityInstances[i]) {
+              flickityInstances[i].resize();
+            }
+          }
+
+          if (flickityInstances[i]?.slides.length > 1) {
+            flickityInstances[i].playPlayer();
+          }
+        } else {
+          carousel.style.display = "none";
+          flickityInstances[i]?.stopPlayer();
+        }
+      });
+    }
+  }
+
+  window.addEventListener("scroll", onScroll);
+  activeScrollHandler = onScroll;
+  activeFlickityInstances = flickityInstances;
+  onScroll(); // Run once on load
+}

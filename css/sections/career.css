@@ -1,0 +1,301 @@
+/* ========== CAREER SECTION CORREÇÕES ========== */
+
+#career {
+  position: relative;
+  padding-top: var(--section-top-padding);
+}
+
+#career > section {
+  position: relative;
+  z-index: 2;
+}
+
+.career-spark {
+  position: absolute;
+  z-index: 1;
+  color: rgba(116, 70, 239, 0.24);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.career-spark--one { top: 9%; right: 8%; font-size: 29px; }
+.career-spark--two { top: 15%; right: 11%; font-size: 16px; opacity: 0.7; }
+.career-spark--three { bottom: 10%; left: 7%; font-size: 24px; }
+
+[data-theme="dark"] .career-spark {
+  color: rgba(155, 109, 255, 0.32);
+}
+
+/* Estrutura principal */
+.split {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: flex-start; /* FIX */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+/* Lado esquerdo (lista) */
+.split__left {
+  position: relative;
+}
+
+.list.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.25rem;
+}
+
+.item {
+  font-family: 'Inter', system-ui, sans-serif;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5.25rem;
+  transition: color 0.3s ease;
+  color: var(--text-primary);
+}
+
+.item.active {
+  color: #111827;
+  color: var(--text-primary);
+}
+
+/* Lado direito (sticky image) */
+.split__right {
+  height: 100%;
+}
+
+.split__right .sticky {
+  position: sticky;
+  top: 10vh; /* ⭐ image becomes sticky here */
+}
+
+/* STATIC IMAGE — NO SCROLLING ANIMATION */
+.media-shift {
+  position: relative;
+  width: 100%;
+  transform: none !important; /* completely disable JS movement */
+}
+
+/* Ativo e inativo */
+.item.active .item__title {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: var(--text-primary);
+}
+
+/* Título */
+.section-title {
+  font-family: 'Canela', serif;
+  font-size: clamp(2rem, 3.2vw + 1rem, 4rem);
+  text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+  font-weight: 800;
+  margin: 0 0 rem 0;
+  justify-content: center;
+
+  color: var(--text-primary);
+}
+
+/* ------------------------------- */
+/* ITEM ATIVO E INATIVO            */
+/* ------------------------------- */
+
+/* Todos os itens começam inativos */
+.item:not(.active) {
+  opacity: 0.35;
+  transition: opacity .25s ease;
+}
+
+[data-theme="dark"] .item:not(.active) {
+  color: #6E6978;
+  opacity: 0.72;
+}
+
+/* Item ativo fica totalmente visível */
+.item.active {
+  opacity: 1;
+}
+
+/* Subtítulo do item ativo */
+.item.active .item__title {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ------------------------------- */
+/* TÍTULO DO ITEM (EMPRESA)        */
+/* ------------------------------- */
+
+.item__title {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.9rem;       /* maior, igual ao estilo Lunar-X */
+  line-height: 1.25;
+  color: #111;
+  color: var(--text-primary);
+}
+
+/* ------------------------------- */
+/* META (CARGO + PERÍODO)          */
+/* ------------------------------- */
+
+.item__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  align-items: center;
+  margin-top: .35rem;
+  font-size: 1.1rem;       /* mais elegante e próximo da referência */
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* ------------------------------- */
+/* BULLETS                         */
+/* ------------------------------- */
+
+.item__bullets {
+  list-style: disc;
+  margin: 1rem 0 0 1.25rem;
+  padding: 0;
+  color: var(--text-primary);
+}
+
+.item__bullets li {
+  line-height: 1.6;        /* mais suave, como o da referência */
+  margin-bottom: .55rem;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+}
+
+.item__summary {
+  margin: 1rem 0 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.item__bullets strong,
+.item__bullets span {
+  display: block;
+}
+
+.item__bullets strong {
+  margin-bottom: 0.12rem;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.item__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item__technologies li {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid rgba(120, 112, 138, 0.22);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.item__bullets li::marker {
+  font-size: .9em;
+  color: var(--text-secondary);
+}
+
+/* ------------------------------- */
+/* RESPONSIVO                      */
+/* ------------------------------- */
+
+@media (max-width: 900px) {
+  .split { 
+    grid-template-columns: 1fr; 
+    gap: 1.5rem; 
+  }
+  .split__right .sticky { 
+    position: static; 
+  }
+}
+
+/* ------------------------------- */
+/* CENTRALIZAÇÃO                   */
+/* ------------------------------- */
+
+.centered {
+  display: grid;
+  place-items: center;
+  margin-bottom: 2rem;
+}
+
+.career-carousel {
+  width: 390px;
+  height: 390px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .career-carousel {
+  box-shadow: 0 22px 55px rgba(3, 4, 7, 0.45), 0 0 28px rgba(155, 109, 255, 0.08);
+}
+
+.career-carousel .carousel-cell {
+  width: 100%;
+  height: 390px;
+}
+
+.career-carousel .carousel-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.career-carousel .flickity-page-dots {
+  bottom: 10px;
+}
+
+.career-carousel .flickity-page-dots .dot {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.career-carousel .flickity-page-dots .dot.is-selected {
+  background: white;
+}
+
+@media (max-width: 900px) {
+
+  /* Remove a imagem completamente */
+  .split__right {
+    display: none;
+  }
+
+  /* Lista ocupa toda a largura */
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  /* Todos os itens ficam ativos */
+  .item {
+    opacity: 1 !important;
+  }
+
+  .item__title {
+    text-decoration: none;
+  }
+
+  /* Remove espaçamento excessivo entre itens */
+  .item {
+    margin-bottom: 2.5rem;
+  }
+}
