@@ -42,6 +42,7 @@ async function init() {
       "hero-name": "name",
       "hero-title": "title",
       "scrollBtn": "cta",
+      "career-title": "career_section.title",
       "projects-title": "projects_section.title",
       "projects-subtitle": "projects_section.subtitle",
       "contact-title": "contact.title",

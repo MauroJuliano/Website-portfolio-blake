@@ -1,0 +1,110 @@
+{
+  "name": "Mauro F.",
+  "title": "iOS Softwareentwickler",
+  "cta": "Kontakt aufnehmen",
+  "career_section": { "title": "Karriere" },
+  "career": [
+    {
+      "title": "iOS Softwareentwickler",
+      "company": "PicPay",
+      "period": "2021 – heute",
+      "bullets": [
+        "Arbeit an Funktionen für Kredit- und Limitverwaltung in der PicPay-App.",
+        "Mitarbeit an ‚Limite Garantido‘, das Millionen von Nutzern einen abgesicherten Kreditzugang ermöglicht.",
+        "Entwicklung sicherer und skalierbarer Systeme mit Integration in Finanz-Backend-Services.",
+        "Zusammenarbeit mit interdisziplinären Teams unter Einhaltung regulatorischer Anforderungen.",
+        "Entwicklung von Oberflächen und Abläufen mit Swift, SwiftUI, Combine und modernen iOS-Architekturen."
+      ],
+      "images": ["assets/picpay.png", "assets/PicPay_1.png", "assets/PicPay_2.png", "assets/PicPay_3.png", "assets/milkshake.gif"]
+    },
+    {
+      "title": "iOS-Entwickler",
+      "company": "Popcode (Kunde: Banese Bank)",
+      "period": "2020 – 2021",
+      "bullets": [
+        "Mitarbeit an neuen Funktionen für die mobile App der Banese Bank.",
+        "Entwicklung kundenorientierter Abläufe für Privat- und Geschäftskunden.",
+        "Implementierung von UI-Komponenten, Nutzerabläufen und Geschäftslogik in Swift.",
+        "Integration von REST-APIs sowie Datenpersistenz und Fehlerbehandlung.",
+        "Zusammenarbeit mit Design, Produktmanagement und Backend-Entwicklung für stabile Releases.",
+        "Sicherstellung von Performance, Stabilität und Zuverlässigkeit der App."
+      ],
+      "images": ["assets/popcode.png"]
+    },
+    {
+      "title": "iOS-Entwickler",
+      "company": "Cooper Card Administradora de Cartões Ltda",
+      "period": "2020",
+      "bullets": [
+        "Mitarbeit an neuen Funktionen für die mobile App von Cooper Card.",
+        "Wartung und Verbesserung bestehender Funktionen für mehr Stabilität und Performance.",
+        "Fehlerbehebung und Unterstützung der langfristigen Zuverlässigkeit der App.",
+        "Implementierung von UI-Komponenten und Geschäftslogik in Swift.",
+        "Arbeit mit Backend-Services und APIs.",
+        "Zusammenarbeit mit Produkt- und Entwicklungsteams während der Auslieferungs- und Wartungszyklen."
+      ],
+      "images": ["assets/coopercard.jpg"]
+    }
+  ],
+  "projects_section": {
+    "title": "Projekte",
+    "subtitle": "Eine Auswahl persönlicher Projekte, die ich von Grund auf konzipiert und entwickelt habe, um Ideen in bedeutungsvolle Erlebnisse zu verwandeln."
+  },
+  "projects": [
+    {
+      "id": "aetheris",
+      "title": "Aetheris",
+      "tagline": "iOS-Banking-Erlebnis",
+      "description": "Eine moderne, mit SwiftUI entwickelte Banking-App, die ein vollständiges Finanzerlebnis simuliert – von der Anmeldung über Überweisungen bis zur Karten- und Kontoverwaltung.",
+      "technologies": ["SwiftUI", "MVVM", "Clean Architecture", "Mocked API"],
+      "status": "Abgeschlossen",
+      "image": "assets/homeAetherisPreview.png",
+      "imagePresentation": "mockup",
+      "github": "https://github.com/MauroJuliano/Flux"
+    },
+    {
+      "id": "aetheris",
+      "title": "Aetheris",
+      "tagline": "iOS-Banking-Erlebnis",
+      "description": "Eine moderne, mit SwiftUI entwickelte Banking-App, die ein vollständiges Finanzerlebnis simuliert – von der Anmeldung über Überweisungen bis zur Karten- und Kontoverwaltung.",
+      "technologies": ["SwiftUI", "MVVM", "Clean Architecture", "Mocked API"],
+      "status": "Abgeschlossen",
+      "image": "assets/homeAetherisPreview.png",
+      "imagePresentation": "mockup",
+      "github": "https://github.com/MauroJuliano/Flux"
+    },
+    {
+      "id": "aetheris",
+      "title": "Aetheris",
+      "tagline": "iOS-Banking-Erlebnis",
+      "description": "Eine moderne, mit SwiftUI entwickelte Banking-App, die ein vollständiges Finanzerlebnis simuliert – von der Anmeldung über Überweisungen bis zur Karten- und Kontoverwaltung.",
+      "technologies": ["SwiftUI", "MVVM", "Clean Architecture", "Mocked API"],
+      "status": "Abgeschlossen",
+      "image": "assets/homeAetherisPreview.png",
+      "imagePresentation": "mockup",
+      "github": "https://github.com/MauroJuliano/Flux"
+    }
+  ],
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "description": "Ich bin immer offen für neue Möglichkeiten, interessante Projekte und wertvolle Gespräche. Lassen Sie uns in Kontakt treten!",
+    "based_in": "In Brasilien ansässig",
+    "international": "Offen für internationale Möglichkeiten",
+    "remote": "Remote-freundlich",
+    "experience": "Mehr als 5 Jahre iOS-Erfahrung",
+    "email": "maurodeveloper@outlook.com",
+    "about_label": "Kurz über mich",
+    "role": "iOS Softwareentwickler",
+    "education": "Bachelor in Informatik",
+    "stack": "Swift · SwiftUI · Combine",
+    "languages": "Portugiesisch · Muttersprache · Englisch · B2+ · Deutsch · A1 · Aktives Lernen",
+    "response_label": "Antwortzeit",
+    "response": "Antwort normalerweise innerhalb von 24–48 Stunden",
+    "say_hello": "Hallo sagen →"
+  },
+  "tooltips": {
+    "resume": "Lebenslauf herunterladen",
+    "github": "GitHub besuchen",
+    "linkedin": "Auf LinkedIn vernetzen"
+  }
+}

@@ -2,7 +2,13 @@ export function renderProjects(projects) {
   const gallery = document.querySelector(".gallery");
   if (!gallery || !projects?.length) return;
 
-  const isPortuguese = document.documentElement.lang === "pt-BR";
+  const currentLanguage = document.documentElement.lang.split("-")[0];
+  const labels = {
+    en: { caseStudy: "View case study" },
+    pt: { caseStudy: "Ver case" },
+    de: { caseStudy: "Fallstudie ansehen" },
+    fr: { caseStudy: "Voir l’étude de cas" }
+  }[currentLanguage] || { caseStudy: "View case study" };
   const technologyIcons = {
     Swift: "◆",
     SwiftUI: "◒",
@@ -46,7 +52,7 @@ export function renderProjects(projects) {
         <p class="project-description">${project.description}</p>
         <ul class="project-technologies" aria-label="Technologies">${technologies}</ul>
         <div class="project-actions">
-          ${project.caseStudy === false ? "" : `<button type="button" class="project-details">${isPortuguese ? "Ver case" : "View case study"}<span aria-hidden="true">→</span></button>`}
+          ${project.caseStudy === false ? "" : `<button type="button" class="project-details">${labels.caseStudy}<span aria-hidden="true">→</span></button>`}
           ${project.github ? `<a class="project-github" href="${project.github}" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">●</span></a>` : ""}
         </div>
       </article>
