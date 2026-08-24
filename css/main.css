@@ -268,3 +268,118 @@ html, body {
   opacity: 0.8;
   filter: var(--hero-icon-filter);
 }
+
+@media (max-width: 640px) {
+  .hero {
+    height: 100svh;
+    min-height: 560px;
+  }
+
+  .hero-buttons {
+    top: max(14px, env(safe-area-inset-top));
+    right: max(16px, env(safe-area-inset-right));
+    left: max(16px, env(safe-area-inset-left));
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .lang-selector {
+    margin-right: auto;
+    font-size: 14px;
+  }
+
+  .lang-selector button + button {
+    margin-left: 14px;
+  }
+
+  .lang-selector button + button::before {
+    left: -9px;
+  }
+
+  .toggle-btn {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    border-radius: 11px;
+  }
+
+  .toggle-btn::before {
+    width: 21px;
+    height: 21px;
+  }
+
+  .hero-contact-button {
+    min-height: 44px;
+    padding: 9px 15px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .hero-bottom-left {
+    right: max(20px, env(safe-area-inset-right));
+    bottom: max(28px, calc(env(safe-area-inset-bottom) + 18px));
+    left: max(20px, env(safe-area-inset-left));
+  }
+
+  .hero-name {
+    font-size: clamp(4rem, 20vw, 6.5rem);
+    line-height: 0.92;
+  }
+
+  .hero-title {
+    margin-top: 14px;
+    font-size: clamp(1.25rem, 6vw, 1.8rem);
+    line-height: 1.2;
+  }
+
+  .hero-social-links {
+    gap: 15px;
+    margin-top: 18px;
+  }
+
+  .hero-social-links a {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-buttons {
+    gap: 8px;
+  }
+
+  .hero-contact-button {
+    padding-inline: 12px;
+    font-size: 13px;
+  }
+
+  .toggle-btn {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    height: 100svh;
+    min-height: 400px;
+  }
+
+  .hero-bottom-left {
+    bottom: max(18px, env(safe-area-inset-bottom));
+  }
+
+  .hero-name {
+    font-size: clamp(3.5rem, 13vw, 6rem);
+  }
+
+  .hero-title {
+    margin-top: 8px;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+  }
+
+  .hero-social-links {
+    margin-top: 12px;
+  }
+}
