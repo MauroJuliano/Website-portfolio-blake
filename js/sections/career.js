@@ -26,7 +26,14 @@ export function renderCareer(careerData) {
     if (index === 0) li.classList.add("active");
     li.dataset.index = index;
 
-    const bullets = item.bullets.map(b => `<li>${b}</li>`).join("");
+    const highlights = item.highlights ?? (item.bullets ?? []).map(description => ({ description }));
+    const highlightItems = highlights.map(highlight => `
+      <li>
+        ${highlight.title ? `<strong>${highlight.title}</strong>` : ""}
+        <span>${highlight.description}</span>
+      </li>
+    `).join("");
+    const technologies = (item.technologies ?? []).map(technology => `<li>${technology}</li>`).join("");
 
     li.innerHTML = `
       <h3 class="item__title">${item.title}</h3>
@@ -35,7 +42,9 @@ export function renderCareer(careerData) {
         <span>•</span>
         <span>${item.period}</span>
       </div>
-      <ul class="item__bullets">${bullets}</ul>
+      ${item.summary ? `<p class="item__summary">${item.summary}</p>` : ""}
+      <ul class="item__bullets">${highlightItems}</ul>
+      ${technologies ? `<ul class="item__technologies" aria-label="Technologies">${technologies}</ul>` : ""}
     `;
 
     list.appendChild(li);
