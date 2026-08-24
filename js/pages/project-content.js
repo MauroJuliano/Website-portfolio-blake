@@ -77,13 +77,13 @@ export async function loadProject(language = "en") {
   }
 
   try {
-    let response = await fetch(`../data/projects-${selectedLanguage.toUpperCase()}.json`);
+    let response = await fetch(`../data/projects/${selectedLanguage}.json`);
     if (!response.ok && selectedLanguage !== "en") {
       selectedLanguage = "en";
       copy = PAGE_COPY.en;
       applyPageCopy(copy);
       document.documentElement.lang = "en";
-      response = await fetch("../data/projects-EN.json");
+      response = await fetch("../data/projects/en.json");
     }
     if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
 

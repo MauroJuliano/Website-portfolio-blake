@@ -1,4 +1,3 @@
-// socialLinks.js
 export function initSocialLinks() {
   const SOCIAL_LINKS = {
     resume: "assets/resume.pdf",

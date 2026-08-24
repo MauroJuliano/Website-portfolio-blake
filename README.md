@@ -16,15 +16,34 @@ Then open `http://localhost:8000`.
 
 ## Content
 
-- `data/hero-data-EN.json`: English career, project, and contact content.
-- `data/hero-data-PT.json`: Portuguese career, project, and contact content.
-- `data/projects-EN.json`: detailed project-page content.
+- `data/home/`: localized home-page content (`en.json`, `pt.json`).
+- `data/projects/`: localized project-page content (`en.json`, `pt.json`).
 - `sections/`: HTML fragments loaded by the home page.
 - `assets/`: portfolio media and résumé.
+
+## Structure
+
+```text
+css/
+  components/   Shared UI controls
+  pages/        Page-specific styles
+  sections/     Home-section styles
+  main.css      Home stylesheet entry point
+js/
+  components/   Reusable UI behavior
+  config/       Shared configuration
+  pages/        Page entry points and page-specific logic
+  sections/     Career and projects renderers
+  services/     Section-loading utilities
+data/
+  home/         Localized home content
+  projects/     Localized project-page content
+sections/       HTML fragments and the project-page template
+```
 
 ## Validation
 
 ```sh
-for file in js/*.js; do node --check "$file"; done
-for file in data/*.json; do jq empty "$file"; done
+find js -name '*.js' -exec node --check {} \;
+find data -name '*.json' -exec jq empty {} \;
 ```

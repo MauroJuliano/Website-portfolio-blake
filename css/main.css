@@ -1,7 +1,7 @@
-@import url('contact.css');
-@import url('horizontalCarousel.css?v=16');
-@import url('toggle.css');
-@import url('carrer.css');
+@import url('./components/theme-language-toggle.css');
+@import url('./sections/career.css');
+@import url('./sections/projects-showcase.css');
+@import url('./sections/contact.css');
 
 :root {
   /* Light theme */
@@ -142,8 +142,7 @@ html, body {
   z-index: 10;
 }
 
-/* Glass Button */
-.glass_button {
+.hero-contact-button {
   font-family: 'Inter', system-ui, sans-serif;
   padding: 12px 28px;
   border-radius: 999px;
@@ -157,57 +156,10 @@ html, body {
   transition: all 0.3s ease;
 }
 
-.glass_button:hover {
+.hero-contact-button:hover {
   background: rgba(255, 255, 255, 0.2);
   text-shadow: 0 2px 20px rgba(0,0,0,0.25);
   transform: scale(1.05);
-}
-
-/* Tema claro */
-body.light-mode {
-  background: #f8f9fa;
-  color: #222;
-}
-
-body.light-mode .theme_toggle {
-  color: #111;
-}
-
-body.light-mode .glass_button {
-  background: rgba(0, 0, 0, 0.1);
-  color: #000;
-  border-color: rgba(0, 0, 0, 0.2);
-}
-
-
-/* Botão de tema simples */
-.theme_toggle {
-  background: none;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-  color: white;
-  transition: transform 0.2s ease, color 0.3s ease;
-}
-
-.theme_toggle:hover {
-  transform: scale(1.25);
-}
-
-/* Tema claro */
-body.light-mode {
-  background: #f8f9fa;
-  color: #222;
-}
-
-body.light-mode .theme_toggle {
-  color: #111;
-}
-
-body.light-mode .glass_button {
-  background: rgba(0, 0, 0, 0.1);
-  color: #000;
-  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .hero video {
@@ -235,18 +187,18 @@ body.light-mode .glass_button {
   transition: color 0.6s ease;
 }
 
-[data-theme="dark"] .hero-bottom-left .title {
+[data-theme="dark"] .hero-bottom-left .hero-title {
   color: #D3CADF;
 }
 
-[data-theme="dark"] .glass_button,
+[data-theme="dark"] .hero-contact-button,
 [data-theme="dark"] .toggle-btn {
   border-color: rgba(255, 255, 255, 0.16);
   background: rgba(15, 17, 21, 0.3);
   box-shadow: 0 10px 30px rgba(5, 6, 9, 0.18);
 }
 
-.blake {
+.hero-name {
   font-family: 'Canela', serif;
   font-optical-sizing: auto;
   text-shadow: 0 2px 20px rgba(0,0,0,0.25);
@@ -257,7 +209,7 @@ body.light-mode .glass_button {
   margin-left: -0.04em;
 }
 
-.title {
+.hero-title {
   font-family: 'Inter', system-ui, sans-serif;
   font-optical-sizing: auto;
   text-shadow: 0 2px 20px rgba(0,0,0,0.25);
@@ -267,8 +219,7 @@ body.light-mode .glass_button {
   margin-top: 10px;
 }
 
-/* Links */
-.links {
+.hero-social-links {
   display: flex;
   gap: 20px;
   margin-top: 20px;
@@ -276,7 +227,7 @@ body.light-mode .glass_button {
   text-shadow: 0 2px 20px rgba(0,0,0,0.25);
 }
 
-.links a {
+.hero-social-links a {
   display: block;
   width: 40px;
   height: 40px;
@@ -303,7 +254,7 @@ body.light-mode .glass_button {
   transition: opacity 0.2s ease;
 }
 
-.links a img {
+.hero-social-links a img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -312,7 +263,7 @@ body.light-mode .glass_button {
   filter: var(--hero-icon-filter);
 }
 
-.links a:hover img {
+.hero-social-links a:hover img {
   transform: scale(1.2);
   opacity: 0.8;
   filter: var(--hero-icon-filter);

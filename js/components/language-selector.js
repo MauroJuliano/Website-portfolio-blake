@@ -1,11 +1,9 @@
-// Arquivo: language.js
-
 export function initLanguageSelector(options) {
     const {
         defaultLang = "en",
         onLanguageChange = null,
-        jsonPath = "./",        // caminho onde ficam seus hero-data-PT.json e hero-data-EN.json
-        elementsToUpdate = {}   // mapeamento: idDoElemento → chaveDoJSON
+        jsonPath = "./",
+        elementsToUpdate = {}
     } = options;
 
     const languageButtons = [...document.querySelectorAll(".lang-selector [data-lang]")];
@@ -25,7 +23,7 @@ export function initLanguageSelector(options) {
 
     // ---- 2. Função para carregar o JSON ----
     async function loadLanguageFile(lang) {
-        const file = `${jsonPath}hero-data-${lang.toUpperCase()}.json`;
+        const file = `${jsonPath}${lang}.json`;
 
         try {
             const response = await fetch(file);
