@@ -3,6 +3,7 @@ export function renderProjects(projects) {
   if (!gallery || !projects?.length) return;
 
   const currentLanguage = document.documentElement.lang.split("-")[0];
+  const fallbackImage = "assets/images/projects/aetheris/home-preview.png";
   const labels = {
     en: { caseStudy: "View case study" },
     pt: { caseStudy: "Ver case" },
@@ -38,7 +39,7 @@ export function renderProjects(projects) {
     const isMockup = project.imagePresentation === "mockup";
     const visual = isMockup
       ? `<div class="project-mockup"><img src="${project.image}" alt="${project.title}"></div>`
-      : `<div class="device-frame"><span class="device-speaker" aria-hidden="true"></span><img src="${project.image ?? 'assets/flux.png'}" alt="${project.title}"></div>`;
+      : `<div class="device-frame"><span class="device-speaker" aria-hidden="true"></span><img src="${project.image ?? fallbackImage}" alt="${project.title}"></div>`;
 
     cell.innerHTML = `
       <div class="project-visual ${isMockup ? "project-visual--mockup" : ""}">
@@ -46,7 +47,7 @@ export function renderProjects(projects) {
       </div>
 
       <article class="project-content">
-        <img class="project-icon" src="${project.image ?? 'assets/flux.png'}" alt="">
+        <img class="project-icon" src="${project.image ?? fallbackImage}" alt="">
         <h3>${project.title}</h3>
         <p class="project-tagline">${project.tagline || project.status || ""}</p>
         <p class="project-description">${project.description}</p>

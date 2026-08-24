@@ -3,7 +3,7 @@
     "title": "Aetheris",
     "tagline": "Experiência Bancária para iOS",
     "summary": "Um aplicativo bancário moderno desenvolvido com SwiftUI que simula uma experiência financeira completa — da autenticação às transferências, cartões e gestão da conta.",
-    "mainImage": "../assets/homeAetherisPreview.png",
+    "mainImage": "../assets/images/projects/aetheris/home-preview.png",
     "imagePresentation": "mockup",
     "github": "https://github.com/MauroJuliano/Flux",
     "technologies": ["SwiftUI", "MVVM", "Arquitetura Limpa", "API Simulada"],
@@ -27,7 +27,7 @@
       {"icon": "⬡", "title": "Confiabilidade", "description": "Estados de carregamento, erro, vazio e sucesso tratados em todos os fluxos e componentes."}
     ],
     "features": [
-      {"title": "Início", "description": "Visão geral do saldo, cartões, destinatários, ações rápidas e atividade mensal.", "image": "../assets/homeAetherisPreview.png"}
+      {"title": "Início", "description": "Visão geral do saldo, cartões, destinatários, ações rápidas e atividade mensal.", "image": "../assets/images/projects/aetheris/home-preview.png"}
     ],
     "techStack": ["Swift", "SwiftUI", "Combine", "MVVM", "Coordinator", "API Simulada", "SwiftLint", "XCTest", "Xcode"],
     "architectureFlow": ["App Aetheris", "Módulos de funcionalidades", "Core", "Rede"]

@@ -15,7 +15,7 @@
         "Colaborei com times multidisciplinares garantindo conformidade com regulamentações financeiras.",
         "Desenvolvi interfaces e fluxos utilizando Swift, SwiftUI, Combine e arquiteturas modernas de iOS."
       ],
-      "images": ["assets/picpay.png", "assets/PicPay_1.png", "assets/PicPay_2.png", "assets/PicPay_3.png", "assets/milkshake.gif"]
+      "images": ["assets/images/career/picpay/logo.png", "assets/images/career/picpay/gallery-1.png", "assets/images/career/picpay/gallery-2.png", "assets/images/career/picpay/gallery-3.png", "assets/images/career/picpay/milkshake.gif"]
     },
     {
       "title": "Desenvolvedor iOS",
@@ -29,7 +29,7 @@
         "Colaborei com designers, product managers e engenheiros de backend para entregar releases estáveis.",
         "Mantive a performance, estabilidade e confiabilidade do aplicativo."
       ],
-      "images": ["assets/popcode.png"]
+      "images": ["assets/images/career/popcode/logo.png"]
     },
     {
       "title": "Desenvolvedor iOS",
@@ -43,7 +43,7 @@
         "Trabalhei com serviços de backend e APIs.",
         "Colaborei com os times de produto e engenharia durante ciclos de entrega e manutenção."
       ],
-      "images": ["assets/coopercard.jpg"]
+      "images": ["assets/images/career/cooper-card/logo.jpg"]
     }
   ],
   "projects_section": {
@@ -58,7 +58,7 @@
       "description": "Um aplicativo bancário moderno construído com SwiftUI que simula uma experiência financeira completa — da autenticação a transferências, cartões e gestão da conta.",
       "technologies": ["SwiftUI", "MVVM", "Clean Architecture", "Mocked API"],
       "status": "Concluído",
-      "image": "assets/homeAetherisPreview.png",
+      "image": "assets/images/projects/aetheris/home-preview.png",
       "imagePresentation": "mockup",
       "github": "https://github.com/MauroJuliano/Flux"
     },
@@ -69,7 +69,7 @@
       "description": "Um aplicativo bancário moderno construído com SwiftUI que simula uma experiência financeira completa — da autenticação a transferências, cartões e gestão da conta.",
       "technologies": ["SwiftUI", "MVVM", "Clean Architecture", "Mocked API"],
       "status": "Concluído",
-      "image": "assets/homeAetherisPreview.png",
+      "image": "assets/images/projects/aetheris/home-preview.png",
       "imagePresentation": "mockup",
       "github": "https://github.com/MauroJuliano/Flux"
     },
@@ -80,7 +80,7 @@
       "description": "Um aplicativo bancário moderno construído com SwiftUI que simula uma experiência financeira completa — da autenticação a transferências, cartões e gestão da conta.",
       "technologies": ["SwiftUI", "MVVM", "Clean Architecture", "Mocked API"],
       "status": "Concluído",
-      "image": "assets/homeAetherisPreview.png",
+      "image": "assets/images/projects/aetheris/home-preview.png",
       "imagePresentation": "mockup",
       "github": "https://github.com/MauroJuliano/Flux"
     }

@@ -19,7 +19,7 @@ Then open `http://localhost:8000`.
 - `data/home/`: localized home-page content (`en.json`, `pt.json`).
 - `data/projects/`: localized project-page content (`en.json`, `pt.json`).
 - `sections/`: HTML fragments loaded by the home page.
-- `assets/`: portfolio media and résumé.
+- `assets/`: icons, documents, and portfolio media organized by context.
 
 ## Structure
 
@@ -39,6 +39,12 @@ data/
   home/         Localized home content
   projects/     Localized project-page content
 sections/       HTML fragments and the project-page template
+assets/
+  documents/    Downloadable documents such as the résumé
+  icons/        Shared social and document icons
+  images/
+    career/     Career media grouped by company
+    projects/   Project media grouped by project
 ```
 
 ## Validation

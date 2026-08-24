@@ -1,6 +1,6 @@
 export function initSocialLinks() {
   const SOCIAL_LINKS = {
-    resume: "assets/resume.pdf",
+    resume: "assets/documents/resume.pdf",
     github: "https://github.com/MauroJuliano",
     linkedin: "https://www.linkedin.com/in/mauro-figueiredo-4b7014154/"
   };
