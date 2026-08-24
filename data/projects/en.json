@@ -1,0 +1,35 @@
+{
+  "aetheris": {
+    "title": "Aetheris",
+    "tagline": "iOS Banking Experience",
+    "summary": "A modern banking app built with SwiftUI that simulates a complete financial experience — from authentication to transfers, cards and account management.",
+    "mainImage": "../assets/images/projects/aetheris/home-preview.png",
+    "imagePresentation": "mockup",
+    "github": "https://github.com/MauroJuliano/Flux",
+    "technologies": ["SwiftUI", "MVVM", "Clean Architecture", "Mocked API"],
+    "facts": [
+      {"icon": "◉", "label": "Role", "value": "iOS Developer"},
+      {"icon": "▣", "label": "Platform", "value": "iOS"},
+      {"icon": "△", "label": "Architecture", "value": "MVVM + Coordinator"},
+      {"icon": "◷", "label": "Duration", "value": "2 months"}
+    ],
+    "overviewTitle": "Why I built Aetheris",
+    "overview": "I wanted to go beyond simple UI challenges and build something closer to a real product. Aetheris was designed to practice architecting scalable features, handling complex banking flows and creating a clean, modern user experience.",
+    "goals": [
+      "Simulate a complete banking experience end-to-end",
+      "Practice modular architecture and clean code",
+      "Design a consistent and accessible user interface",
+      "Implement robust states, validations and error handling"
+    ],
+    "focusAreas": [
+      {"icon": "◇", "title": "Architecture", "description": "Modularized features with MVVM and Coordinator patterns for scalable navigation."},
+      {"icon": "●", "title": "User experience", "description": "A clean, modern interface with attention to detail and micro interactions."},
+      {"icon": "⬡", "title": "Reliability", "description": "Loading, error, empty and success states handled across all flows and components."}
+    ],
+    "features": [
+      {"title": "Home", "description": "An overview of balance, cards, recipients, quick actions and monthly activity.", "image": "../assets/images/projects/aetheris/home-preview.png"}
+    ],
+    "techStack": ["Swift", "SwiftUI", "Combine", "MVVM", "Coordinator", "Mocked API", "SwiftLint", "XCTest", "Xcode"],
+    "architectureFlow": ["Aetheris App", "Feature Modules", "Core", "Network"]
+  }
+}
