@@ -55,7 +55,7 @@
 
 .projects-showcase .gallery {
   position: relative;
-  top: -24px;
+  top: -48px;
   width: 100%;
   height: clamp(430px, calc(96svh - 325px), 540px);
 }
