@@ -15,7 +15,7 @@
             "Collaborated with cross-functional teams ensuring compliance with financial regulations.",
             "Developed interfaces and flows using Swift, SwiftUI, Combine, and modern iOS architectures."
         ],
-        "images": ["assets/images/career/picpay/logo.png", "assets/images/career/picpay/gallery-1.png", "assets/images/career/picpay/gallery-2.png", "assets/images/career/picpay/gallery-3.png", "assets/images/career/picpay/milkshake.gif"]
+        "images": ["assets/images/career/picpay/logo.png", "assets/images/career/picpay/gallery-1.png", "assets/images/career/picpay/gallery-2.png", "assets/images/career/picpay/gallery-3.png"]
     },
     {
         "title": "iOS Developer",
@@ -29,7 +29,7 @@
             "Collaborated with designers, product managers, and backend engineers to deliver stable releases.",
             "Maintained app performance, stability, and reliability"
         ],
-        "images": ["assets/images/career/popcode/logo.png"]
+        "images": ["assets/images/career/popcode/logo.png", "assets/images/career/popcode/gallery-1.png", "assets/images/career/popcode/gallery-2.webp", "assets/images/career/popcode/gallery-3.jpeg"]
     },
     {
         "title": "iOS Developer",
@@ -43,7 +43,7 @@
             "Worked with backend services and APIs.",
             "Collaborated with product and engineering teams throughout delivery and maintenance cycles"
         ],
-        "images": ["assets/images/career/cooper-card/logo.jpg"]
+        "images": ["assets/images/career/cooper-card/logo.jpg", "assets/images/career/cooper-card/gallery-1.webp", "assets/images/career/cooper-card/gallery-2.webp", "assets/images/career/cooper-card/gallery-3.webp"]
     }
     ],
     "projects_section": {
