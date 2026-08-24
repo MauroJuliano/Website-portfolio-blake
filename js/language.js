@@ -8,15 +8,20 @@ export function initLanguageSelector(options) {
         elementsToUpdate = {}   // mapeamento: idDoElemento → chaveDoJSON
     } = options;
 
-    const langRadios = {
-        pt: document.getElementById("pt"),
-        en: document.getElementById("en")
-    };
+    const languageButtons = [...document.querySelectorAll(".lang-selector [data-lang]")];
+    const supportedLanguages = new Map(
+        languageButtons.map(button => [button.dataset.lang.toLowerCase(), button])
+    );
+
+    if (!supportedLanguages.size) return;
 
     // ---- 1. Carrega idioma do localStorage ou usa default ----
     const savedLang = localStorage.getItem("lang") || defaultLang;
-    const initialLang = langRadios[savedLang] ? savedLang : defaultLang;
-    langRadios[initialLang].checked = true;
+    const fallbackLang = supportedLanguages.has(defaultLang)
+        ? defaultLang
+        : supportedLanguages.keys().next().value;
+    const initialLang = supportedLanguages.has(savedLang) ? savedLang : fallbackLang;
+    setActiveLanguage(initialLang);
 
     // ---- 2. Função para carregar o JSON ----
     async function loadLanguageFile(lang) {
@@ -45,14 +50,23 @@ export function initLanguageSelector(options) {
         }
     }
 
-    // ---- 3. Listener de mudança (PT/EN) ----
-    langRadios.en.addEventListener("change", () => changeLang("en"));
-    langRadios.pt.addEventListener("change", () => changeLang("pt"));
+    // ---- 3. Cada botão funciona de forma independente ----
+    languageButtons.forEach(button => {
+        button.addEventListener("click", () => changeLang(button.dataset.lang.toLowerCase()));
+    });
     
 
     function changeLang(lang) {
+        if (!supportedLanguages.has(lang)) return;
         localStorage.setItem("lang", lang);
+        setActiveLanguage(lang);
         loadLanguageFile(lang);
+    }
+
+    function setActiveLanguage(lang) {
+        languageButtons.forEach(button => {
+            button.setAttribute("aria-pressed", String(button.dataset.lang.toLowerCase() === lang));
+        });
     }
 
     function getNestedValue(obj, path) {

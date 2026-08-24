@@ -5,12 +5,9 @@
   </video>
 
   <div class="hero-buttons">
-    <div class="lang-selector">
-    <label for="divisor">/</label>
-    <input type="radio" name="lang" id="pt">
-    <label for="pt">PT</label>
-    <input type="radio" name="lang" id="en" checked>
-    <label for="en">EN</label>
+    <div class="lang-selector" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
     </div>
 
     <input type="checkbox" id="toggle-icon" class="toggle-checkbox">

@@ -61,7 +61,8 @@ async function init() {
       "contact-say-hello": "contact.say_hello"
     },
     onLanguageChange(lang, json) {
-      document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+      const languageTags = { en: "en", pt: "pt-BR", de: "de", fr: "fr" };
+      document.documentElement.lang = languageTags[lang] || lang;
       renderCareer(json.career);
       renderProjects(json.projects);
       updateTooltips(json);
