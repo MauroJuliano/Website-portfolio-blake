@@ -133,8 +133,8 @@ export async function loadProject(language = "en") {
     });
     renderList("feature-walkthrough", project.features, feature => {
       const media = feature.video
-        ? `<video class="feature-media"${feature.poster ? ` poster="${feature.poster}"` : ""} autoplay loop muted playsinline controls preload="metadata" aria-label="${feature.title} ${copy.demoLabel}">
-            <source src="${feature.video}">
+        ? `<video class="feature-media"${feature.poster ? ` poster="${feature.poster}"` : ""} playsinline controls preload="metadata" aria-label="${feature.title} ${copy.demoLabel}">
+            <source src="${feature.video}" type="video/mp4">
             Your browser does not support embedded videos.
           </video>`
         : `<img class="feature-media" src="${feature.image}" alt="${feature.title}">`;
