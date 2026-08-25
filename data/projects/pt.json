@@ -3,7 +3,7 @@
     "title": "Aetheris",
     "tagline": "Experiência Bancária para iOS",
     "summary": "Um aplicativo bancário moderno desenvolvido com SwiftUI que simula uma experiência financeira completa — da autenticação às transferências, cartões e gestão da conta.",
-    "mainImage": "../assets/images/projects/aetheris/home-preview.png",
+    "mainImage": "../assets/images/projects/aetheris/aetherisPage.png",
     "imagePresentation": "mockup",
     "github": "https://github.com/MauroJuliano/Flux",
     "technologies": ["SwiftUI", "MVVM", "Arquitetura Limpa", "API Simulada"],
@@ -22,14 +22,20 @@
       "Implementar estados robustos, validações e tratamento de erros"
     ],
     "focusAreas": [
-      {"iconImage": "../assets/icons/features/wallet-pass.png", "title": "Gerencie seu dinheiro em um só lugar", "description": "Veja saldo, cartões e atividades recentes de forma clara em uma tela inicial organizada."},
-      {"iconImage": "../assets/icons/features/paperplane.png", "title": "Envie e solicite com facilidade", "description": "Movimente dinheiro ou solicite pagamentos por meio de fluxos simples, guiados e confiáveis."},
-      {"iconImage": "../assets/icons/features/chart-bar.png", "title": "Acompanhe e entenda seus gastos", "description": "Entenda seus gastos e hábitos com visualizações simples e relatórios claros."}
+      {"icon": "▱", "title": "Experiência bancária completa", "description": "O Aetheris reúne conta, cartões, transferências, beneficiários e informações financeiras em uma experiência integrada."},
+      {"icon": "↝", "title": "Jornadas conectadas", "description": "O app foi pensado como um produto contínuo, com fluxos completos e conectados em vez de telas isoladas."},
+      {"icon": "✓", "title": "Além do cenário ideal", "description": "Estados de carregamento, validação, vazio, erro e sucesso fazem parte da experiência nas principais jornadas."}
     ],
     "features": [
-      {"title": "Início", "description": "Visão geral do saldo, cartões, destinatários, ações rápidas e atividade mensal.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/Home.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"},
-      {"title": "Cartões", "description": "Gerencie cartões, consulte detalhes e acesse ações essenciais em um só lugar.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/cards.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"},
-      {"title": "Transferências", "description": "Envie ou solicite dinheiro por meio de um fluxo simples, guiado e seguro.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/transfer.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"}
+      {"title": "Início", "description": "Visão geral do saldo, cartões, destinatários, ações rápidas e atividade mensal.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/Home.mp4", "poster": "../assets/images/projects/aetheris/Home.png"},
+      {"title": "Cartões", "description": "Gerencie cartões, consulte detalhes e acesse ações essenciais em um só lugar.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/cards.mp4", "poster": "../assets/images/projects/aetheris/Cards.png"},
+      {"title": "Transferências", "description": "Envie ou solicite dinheiro por meio de um fluxo simples, guiado e seguro.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/transfer.mp4", "poster": "../assets/images/projects/aetheris/Transfer.png"}
+    ],
+    "otherFlows": [
+      {"icon": "→", "title": "Login", "subtitle": "Fluxo de autenticação", "duration": "0:18", "description": "Acesso seguro com validação e recuperação de senha.", "thumbnail": "../assets/images/projects/aetheris/Login.png"},
+      {"icon": "+", "title": "Registro", "subtitle": "Fluxo de criação da conta", "duration": "0:41", "description": "Fluxo completo e guiado para criação da conta.", "thumbnail": "../assets/images/projects/aetheris/Register.png"},
+      {"icon": "◯", "title": "Perfil", "subtitle": "Configurações da conta", "duration": "0:26", "description": "Gerencie suas informações, notificações e segurança.", "thumbnail": "../assets/images/projects/aetheris/Profile.png", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/Profile.mp4"},
+      {"icon": "文", "title": "Idioma", "subtitle": "Preferências de idioma", "duration": "0:15", "description": "Escolha o idioma que melhor se adapta à sua experiência.", "thumbnail": "../assets/images/projects/aetheris/Language.png", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/Language.mp4"}
     ],
     "techStack": ["Swift", "SwiftUI", "Combine", "MVVM", "Coordinator", "API Simulada", "SwiftLint", "XCTest", "Xcode"],
     "architectureFlow": ["App Aetheris", "Módulos de funcionalidades", "Core", "Rede"]

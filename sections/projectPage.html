@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project | Mauro Figueiredo</title>
-  <link rel="icon" type="image/png" href="../assets/icons/mf-logo2.png">
-  <link rel="apple-touch-icon" href="../assets/icons/mf-logo2.png">
+  <link rel="icon" type="image/png" href="../assets/icons/mf-logo.png">
+  <link rel="apple-touch-icon" href="../assets/icons/mf-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -49,12 +49,19 @@
     </section>
 
     <section class="product-panel">
-      <h2 id="project-capabilities-title">What this app does</h2>
+      <h2 id="project-capabilities-title">Built as a complete product</h2>
       <div id="focus-areas" class="focus-grid"></div>
 
       <h2 id="project-inside-title" class="inside-title">Inside the app</h2>
       <p id="project-inside-description" class="inside-description">Explore the core flows that make banking simple and intuitive.</p>
+      <h3 id="project-main-flows-title" class="flow-group-title">Main flows</h3>
       <div id="feature-walkthrough" class="feature-grid"></div>
+
+      <div class="other-flows-heading">
+        <h3 id="project-other-flows-title" class="flow-group-title">Other flows</h3>
+        <p id="project-other-flows-description">Complementary journeys that complete the experience.</p>
+      </div>
+      <div id="other-flow-walkthrough" class="other-flow-grid"></div>
     </section>
 
     <section class="overview-panel">
@@ -81,6 +88,23 @@
       </div>
     </section>
   </main>
+
+  <dialog id="flow-modal" class="flow-modal" aria-labelledby="flow-modal-title">
+    <div class="flow-modal-panel">
+      <button id="flow-modal-close" class="flow-modal-close" type="button" aria-label="Close">×</button>
+      <header class="flow-modal-header">
+        <h2 id="flow-modal-title"></h2>
+        <p id="flow-modal-subtitle"></p>
+      </header>
+      <div id="flow-modal-media" class="flow-modal-media"></div>
+      <p id="flow-modal-description" class="flow-modal-description"></p>
+      <nav class="flow-modal-navigation" aria-label="Flow navigation">
+        <button id="flow-modal-previous" type="button">← Previous</button>
+        <span id="flow-modal-position">1 / 4</span>
+        <button id="flow-modal-next" type="button">Next →</button>
+      </nav>
+    </div>
+  </dialog>
 
   <script type="module" src="../js/pages/project-page.js"></script>
 </body>
