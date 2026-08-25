@@ -28,8 +28,8 @@
     ],
     "features": [
       {"title": "Início", "description": "Visão geral do saldo, cartões, destinatários, ações rápidas e atividade mensal.", "image": "../assets/images/projects/aetheris/home-preview.png"},
-      {"title": "Transferências", "description": "Envie ou solicite dinheiro por meio de um fluxo simples, guiado e seguro.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/transfer.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"},
-      {"title": "Cartões", "description": "Gerencie cartões, consulte detalhes e acesse ações essenciais em um só lugar.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/cards.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"}
+      {"title": "Cartões", "description": "Gerencie cartões, consulte detalhes e acesse ações essenciais em um só lugar.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/cards.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"},
+      {"title": "Transferências", "description": "Envie ou solicite dinheiro por meio de um fluxo simples, guiado e seguro.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/transfer.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"}
     ],
     "techStack": ["Swift", "SwiftUI", "Combine", "MVVM", "Coordinator", "API Simulada", "SwiftLint", "XCTest", "Xcode"],
     "architectureFlow": ["App Aetheris", "Módulos de funcionalidades", "Core", "Rede"]

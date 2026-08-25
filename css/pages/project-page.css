@@ -213,11 +213,11 @@ a { color: inherit; }
 .feature-card h3 { margin: 0 0 9px; font-size: 14px; }
 .feature-card p { margin: 0; color: var(--text-secondary); font-size: 12px; line-height: 1.65; }
 
-.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 18px; }
+.feature-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
 .feature-card { display: grid; grid-template-columns: 160px 1fr; gap: 22px; min-height: 240px; padding: 12px; border: 1px solid var(--border); border-radius: 15px; background: var(--surface); }
 .feature-media { width: 160px; height: 216px; border-radius: 11px; object-fit: contain; background: #090a0d; }
-.feature-card--video { grid-template-columns: minmax(220px, 0.9fr) 1fr; }
-.feature-card--video .feature-media { width: 100%; }
+.feature-card--video { grid-template-columns: minmax(280px, 0.65fr) 1fr; min-height: 440px; }
+.feature-card--video .feature-media { width: 100%; height: 416px; }
 .feature-card div { align-self: center; }
 
 .technology-list--large li { padding: 11px 15px; }
