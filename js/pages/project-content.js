@@ -21,6 +21,7 @@ const PAGE_COPY = {
     next: "Next →",
     comingSoon: "Video coming soon",
     close: "Close",
+    backToTop: "Back to top",
     builtWith: "Built with",
     ctaTitle: "Interested in this project?",
     ctaDescription: "Let's build something amazing together.",
@@ -47,6 +48,7 @@ const PAGE_COPY = {
     next: "Próximo →",
     comingSoon: "Vídeo em breve",
     close: "Fechar",
+    backToTop: "Voltar ao topo",
     builtWith: "Desenvolvido com",
     ctaTitle: "Gostou deste projeto?",
     ctaDescription: "Vamos construir algo incrível juntos.",
@@ -80,6 +82,8 @@ function applyPageCopy(copy) {
     const element = document.getElementById(id);
     if (element) element.textContent = text;
   });
+
+  document.getElementById("back-to-top")?.setAttribute("aria-label", copy.backToTop);
 }
 
 function initOtherFlowModal(flows, copy) {

@@ -329,6 +329,36 @@ a { color: inherit; }
 
 .project-error { padding: 90px 20px; text-align: center; }
 
+.back-to-top {
+  position: fixed;
+  z-index: 20;
+  right: clamp(18px, 3vw, 42px);
+  bottom: clamp(18px, 3vw, 38px);
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(116,70,239,.28);
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(135deg, #865af5, var(--accent-dark));
+  box-shadow: 0 12px 30px rgba(91,47,209,.24);
+  font: inherit;
+  font-size: 20px;
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  transform: translateY(12px) scale(.92);
+  transition: opacity .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0) scale(1); }
+.back-to-top:hover { box-shadow: 0 16px 34px rgba(91,47,209,.34); transform: translateY(-2px) scale(1); }
+.back-to-top:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top { transition: none; }
+}
+
 @media (max-width: 900px) {
   .project-nav-links { gap: 14px; }
   .case-hero { grid-template-columns: 1fr; gap: 30px; }
