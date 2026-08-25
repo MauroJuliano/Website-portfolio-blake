@@ -119,14 +119,12 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  transform: rotate(-2deg);
 }
 
 .project-mockup img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 30px 32px rgba(49, 30, 88, 0.2));
   user-select: none;
   -webkit-user-drag: none;
 }

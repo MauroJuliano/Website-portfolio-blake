@@ -10,9 +10,18 @@ const PAGE_COPY = {
     featured: "Featured project",
     viewGitHub: "View on GitHub ↗",
     watchDemo: "Watch demo ▷",
-    capabilities: "What this app does",
+    capabilities: "Built as a complete product",
     inside: "Inside the app",
     insideDescription: "Explore the core flows that make banking simple and intuitive.",
+    mainFlows: "Main flows",
+    otherFlows: "Other flows",
+    otherFlowsDescription: "Complementary journeys that complete the experience.",
+    moreFlows: "More screens coming soon",
+    previous: "← Previous",
+    next: "Next →",
+    comingSoon: "Video coming soon",
+    close: "Close",
+    backToTop: "Back to top",
     builtWith: "Built with",
     ctaTitle: "Interested in this project?",
     ctaDescription: "Let's build something amazing together.",
@@ -28,9 +37,18 @@ const PAGE_COPY = {
     featured: "Projeto em destaque",
     viewGitHub: "Ver no GitHub ↗",
     watchDemo: "Ver demonstração ▷",
-    capabilities: "O que este app faz",
+    capabilities: "Construído como um produto completo",
     inside: "Por dentro do app",
     insideDescription: "Explore os principais fluxos que tornam a experiência bancária simples e intuitiva.",
+    mainFlows: "Principais fluxos",
+    otherFlows: "Outros fluxos",
+    otherFlowsDescription: "Jornadas complementares que completam a experiência.",
+    moreFlows: "Mais telas em breve",
+    previous: "← Anterior",
+    next: "Próximo →",
+    comingSoon: "Vídeo em breve",
+    close: "Fechar",
+    backToTop: "Voltar ao topo",
     builtWith: "Desenvolvido com",
     ctaTitle: "Gostou deste projeto?",
     ctaDescription: "Vamos construir algo incrível juntos.",
@@ -50,6 +68,9 @@ function applyPageCopy(copy) {
     "project-capabilities-title": copy.capabilities,
     "project-inside-title": copy.inside,
     "project-inside-description": copy.insideDescription,
+    "project-main-flows-title": copy.mainFlows,
+    "project-other-flows-title": copy.otherFlows,
+    "project-other-flows-description": copy.otherFlowsDescription,
     "project-built-with-label": copy.builtWith,
     "project-cta-title": copy.ctaTitle,
     "project-cta-description": copy.ctaDescription,
@@ -60,6 +81,64 @@ function applyPageCopy(copy) {
   Object.entries(textById).forEach(([id, text]) => {
     const element = document.getElementById(id);
     if (element) element.textContent = text;
+  });
+
+  document.getElementById("back-to-top")?.setAttribute("aria-label", copy.backToTop);
+}
+
+function initOtherFlowModal(flows, copy) {
+  const modal = document.getElementById("flow-modal");
+  const media = document.getElementById("flow-modal-media");
+  const title = document.getElementById("flow-modal-title");
+  const subtitle = document.getElementById("flow-modal-subtitle");
+  const description = document.getElementById("flow-modal-description");
+  const position = document.getElementById("flow-modal-position");
+  const previous = document.getElementById("flow-modal-previous");
+  const next = document.getElementById("flow-modal-next");
+  const close = document.getElementById("flow-modal-close");
+  let activeIndex = 0;
+
+  const stopVideo = () => {
+    const video = media.querySelector("video");
+    if (video) video.pause();
+  };
+
+  const renderFlow = index => {
+    stopVideo();
+    activeIndex = (index + flows.length) % flows.length;
+    const flow = flows[activeIndex];
+
+    title.textContent = flow.title;
+    subtitle.textContent = flow.subtitle || "";
+    description.textContent = flow.description;
+    position.textContent = `${activeIndex + 1} / ${flows.length}`;
+    media.innerHTML = flow.video
+      ? `<video playsinline controls autoplay muted aria-label="${flow.title} ${copy.demoLabel}"><source src="${flow.video}" type="video/mp4"></video>`
+      : `<div class="flow-modal-placeholder"><span>${flow.icon || "◇"}</span><p>${copy.comingSoon}</p></div>`;
+
+    const video = media.querySelector("video");
+    if (video) video.play().catch(() => {});
+  };
+
+  document.querySelectorAll("[data-flow-index]").forEach(card => {
+    card.addEventListener("click", () => {
+      renderFlow(Number(card.dataset.flowIndex));
+      modal.showModal();
+    });
+  });
+
+  previous.textContent = copy.previous;
+  next.textContent = copy.next;
+  close.setAttribute("aria-label", copy.close);
+  previous.addEventListener("click", () => renderFlow(activeIndex - 1));
+  next.addEventListener("click", () => renderFlow(activeIndex + 1));
+  close.addEventListener("click", () => modal.close());
+  modal.addEventListener("click", event => {
+    if (event.target === modal) modal.close();
+  });
+  modal.addEventListener("close", () => {
+    stopVideo();
+    media.innerHTML = "";
   });
 }
 
@@ -146,6 +225,40 @@ export async function loadProject(language = "en") {
         </article>
       `;
     });
+    const otherFlows = project.otherFlows || [];
+    const otherFlowsHeading = document.querySelector(".other-flows-heading");
+    const otherFlowsGrid = document.getElementById("other-flow-walkthrough");
+    otherFlowsHeading.hidden = otherFlows.length === 0;
+    otherFlowsGrid.hidden = otherFlows.length === 0;
+
+    renderList("other-flow-walkthrough", otherFlows, (flow, index) => `
+      <button class="other-flow-card" type="button" data-flow-index="${index}" aria-label="${flow.title}: ${flow.subtitle}">
+        <span class="other-flow-thumbnail">
+          ${flow.thumbnail
+            ? `<img class="other-flow-media" src="${flow.thumbnail}" alt="">`
+            : flow.video
+            ? `<video class="other-flow-media" playsinline muted preload="metadata" tabindex="-1"><source src="${flow.video}" type="video/mp4"></video>`
+            : `<span class="other-flow-preview" aria-hidden="true"><span>${flow.icon || "◇"}</span></span>`}
+          <span class="other-flow-play" aria-hidden="true">▶</span>
+        </span>
+        <span class="other-flow-meta"><strong>${flow.title}</strong><span>${flow.duration}</span></span>
+        <span class="other-flow-summary">${flow.description}</span>
+      </button>
+    `);
+    document.querySelectorAll(".other-flow-media").forEach(video => {
+      video.addEventListener("loadedmetadata", () => {
+        video.currentTime = Math.min(0.1, video.duration / 2);
+      }, { once: true });
+    });
+    if (otherFlows.length) {
+      otherFlowsGrid.insertAdjacentHTML("beforeend", `
+        <article class="other-flow-card other-flow-card--soon">
+          <span aria-hidden="true">＋</span>
+          <p>${copy.moreFlows}</p>
+        </article>
+      `);
+      initOtherFlowModal(otherFlows, copy);
+    }
     renderList("tech-stack", project.techStack, technology => `<li>${technology}</li>`);
   } catch (error) {
     console.error("Failed to load project:", error);

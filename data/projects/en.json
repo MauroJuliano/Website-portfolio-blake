@@ -3,7 +3,7 @@
     "title": "Aetheris",
     "tagline": "iOS Banking Experience",
     "summary": "A modern banking app built with SwiftUI that simulates a complete financial experience — from authentication to transfers, cards and account management.",
-    "mainImage": "../assets/images/projects/aetheris/home-preview.png",
+    "mainImage": "../assets/images/projects/aetheris/aetheris-page1.png",
     "imagePresentation": "mockup",
     "github": "https://github.com/MauroJuliano/Flux",
     "technologies": ["SwiftUI", "MVVM", "Clean Architecture", "Mocked API"],
@@ -22,14 +22,20 @@
       "Implement robust states, validations and error handling"
     ],
     "focusAreas": [
-      {"iconImage": "../assets/icons/features/wallet-pass.png", "title": "Manage your money in one place", "description": "See your balance, cards and recent activity at a glance with a clean, organized home."},
-      {"iconImage": "../assets/icons/features/paperplane.png", "title": "Send and request with ease", "description": "Move money or request payments through simple, guided flows you can trust."},
-      {"iconImage": "../assets/icons/features/chart-bar.png", "title": "Track and understand spending", "description": "Get insights into your spending and habits with simple visuals and clear reports."}
+      {"icon": "▱", "title": "Complete banking experience", "description": "Aetheris connects accounts, cards, transfers, beneficiaries and financial insights in one cohesive experience."},
+      {"icon": "↝", "title": "Designed around real user journeys", "description": "The app was built as a connected product, with complete flows instead of isolated showcase screens."},
+      {"icon": "✓", "title": "Built beyond the happy path", "description": "Loading, validation, empty, error and success states are part of the experience across the main journeys."}
     ],
     "features": [
-      {"title": "Home", "description": "An overview of balance, cards, recipients, quick actions and monthly activity.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/Home.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"},
-      {"title": "Cards", "description": "Manage cards, review details and access essential actions in one place.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/cards.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"},
-      {"title": "Transfers", "description": "Send or request money through a simple, guided and secure flow.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/transfer.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"}
+      {"title": "Home", "description": "An overview of balance, cards, recipients, quick actions and monthly activity.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/Home.mp4", "poster": "../assets/images/projects/aetheris/Home.png"},
+      {"title": "Cards", "description": "Manage cards, review details and access essential actions in one place.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/cards.mp4", "poster": "../assets/images/projects/aetheris/Cards.png"},
+      {"title": "Transfers", "description": "Send or request money through a simple, guided and secure flow.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/transfer.mp4", "poster": "../assets/images/projects/aetheris/Transfer.png"}
+    ],
+    "otherFlows": [
+      {"icon": "→", "title": "Login", "subtitle": "Authentication flow", "duration": "0:18", "description": "Secure access with validation and password recovery.", "thumbnail": "../assets/images/projects/aetheris/Login.png"},
+      {"icon": "+", "title": "Registration", "subtitle": "Account creation flow", "duration": "0:41", "description": "A complete, guided account creation flow.", "thumbnail": "../assets/images/projects/aetheris/Register.png"},
+      {"icon": "◯", "title": "Profile", "subtitle": "Account settings flow", "duration": "0:26", "description": "Manage personal information, notifications and security.", "thumbnail": "../assets/images/projects/aetheris/Profile.png", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/Profile.mp4"},
+      {"icon": "文", "title": "Language", "subtitle": "Language preferences", "duration": "0:15", "description": "Choose the language that best suits your experience.", "thumbnail": "../assets/images/projects/aetheris/Language.png", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/Language.mp4"}
     ],
     "techStack": ["Swift", "SwiftUI", "Combine", "MVVM", "Coordinator", "Mocked API", "SwiftLint", "XCTest", "Xcode"],
     "architectureFlow": ["Aetheris App", "Feature Modules", "Core", "Network"]
