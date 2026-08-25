@@ -119,12 +119,18 @@ export async function loadProject(language = "en") {
     document.getElementById("overview-title").textContent = project.overviewTitle;
     document.getElementById("overview-description").textContent = project.overview;
     renderList("project-goals", project.goals, goal => `<li>${goal}</li>`);
-    renderList("focus-areas", project.focusAreas, area => `
-      <article class="focus-card">
-        <span class="focus-icon" aria-hidden="true">${area.icon}</span>
-        <div><h3>${area.title}</h3><p>${area.description}</p></div>
-      </article>
-    `);
+    renderList("focus-areas", project.focusAreas, area => {
+      const icon = area.iconImage
+        ? `<img src="${area.iconImage}" alt="">`
+        : area.icon;
+
+      return `
+        <article class="focus-card">
+          <span class="focus-icon" aria-hidden="true">${icon}</span>
+          <div><h3>${area.title}</h3><p>${area.description}</p></div>
+        </article>
+      `;
+    });
     renderList("feature-walkthrough", project.features, feature => {
       const media = feature.video
         ? `<video class="feature-media"${feature.poster ? ` poster="${feature.poster}"` : ""} autoplay loop muted playsinline controls preload="metadata" aria-label="${feature.title} ${copy.demoLabel}">

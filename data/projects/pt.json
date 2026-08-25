@@ -22,9 +22,9 @@
       "Implementar estados robustos, validações e tratamento de erros"
     ],
     "focusAreas": [
-      {"icon": "◇", "title": "Arquitetura", "description": "Funcionalidades modularizadas com MVVM e Coordinator para uma navegação escalável."},
-      {"icon": "●", "title": "Experiência do usuário", "description": "Uma interface moderna e organizada, com atenção aos detalhes e às microinterações."},
-      {"icon": "⬡", "title": "Confiabilidade", "description": "Estados de carregamento, erro, vazio e sucesso tratados em todos os fluxos e componentes."}
+      {"iconImage": "../assets/icons/features/wallet-pass.png", "title": "Gerencie seu dinheiro em um só lugar", "description": "Veja saldo, cartões e atividades recentes de forma clara em uma tela inicial organizada."},
+      {"iconImage": "../assets/icons/features/paperplane.png", "title": "Envie e solicite com facilidade", "description": "Movimente dinheiro ou solicite pagamentos por meio de fluxos simples, guiados e confiáveis."},
+      {"iconImage": "../assets/icons/features/chart-bar.png", "title": "Acompanhe e entenda seus gastos", "description": "Entenda seus gastos e hábitos com visualizações simples e relatórios claros."}
     ],
     "features": [
       {"title": "Início", "description": "Visão geral do saldo, cartões, destinatários, ações rápidas e atividade mensal.", "image": "../assets/images/projects/aetheris/home-preview.png"}

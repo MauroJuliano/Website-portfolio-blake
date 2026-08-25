@@ -22,9 +22,9 @@
       "Implement robust states, validations and error handling"
     ],
     "focusAreas": [
-      {"icon": "◇", "title": "Architecture", "description": "Modularized features with MVVM and Coordinator patterns for scalable navigation."},
-      {"icon": "●", "title": "User experience", "description": "A clean, modern interface with attention to detail and micro interactions."},
-      {"icon": "⬡", "title": "Reliability", "description": "Loading, error, empty and success states handled across all flows and components."}
+      {"iconImage": "../assets/icons/features/wallet-pass.png", "title": "Manage your money in one place", "description": "See your balance, cards and recent activity at a glance with a clean, organized home."},
+      {"iconImage": "../assets/icons/features/paperplane.png", "title": "Send and request with ease", "description": "Move money or request payments through simple, guided flows you can trust."},
+      {"iconImage": "../assets/icons/features/chart-bar.png", "title": "Track and understand spending", "description": "Get insights into your spending and habits with simple visuals and clear reports."}
     ],
     "features": [
       {"title": "Home", "description": "An overview of balance, cards, recipients, quick actions and monthly activity.", "image": "../assets/images/projects/aetheris/home-preview.png"}

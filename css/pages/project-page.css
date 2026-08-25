@@ -177,6 +177,17 @@ a { color: inherit; }
   color: #fff;
   background: linear-gradient(135deg, #865af5, var(--accent-dark));
 }
+
+.focus-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.focus-icon {
+  border-radius: 50%;
+}
 .product-panel,
 .overview-panel {
   margin-top: 18px;
