@@ -1,6 +1,6 @@
 import { initLanguageSelector } from '../components/language-selector.js';
 import { initBackToTop } from '../components/back-to-top.js';
-import { initSocialLinks } from '../components/social-links.js';
+import { initSocialLinks, updateResumeLink } from '../components/social-links.js';
 import { initThemeToggle } from '../components/theme.js';
 import { initTooltips, updateTooltips } from '../components/tooltips.js';
 import {
@@ -48,6 +48,7 @@ async function init() {
     elementsToUpdate: HOME_CONTENT_BINDINGS,
     onLanguageChange(lang, json) {
       applyDocumentLanguage(lang);
+      updateResumeLink(lang);
       document.getElementById('back-to-top')?.setAttribute(
         'aria-label',
         lang === 'pt' ? 'Voltar ao topo' : 'Back to top'
