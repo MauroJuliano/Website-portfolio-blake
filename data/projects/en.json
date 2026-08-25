@@ -27,7 +27,7 @@
       {"iconImage": "../assets/icons/features/chart-bar.png", "title": "Track and understand spending", "description": "Get insights into your spending and habits with simple visuals and clear reports."}
     ],
     "features": [
-      {"title": "Home", "description": "An overview of balance, cards, recipients, quick actions and monthly activity.", "image": "../assets/images/projects/aetheris/home-preview.png"},
+      {"title": "Home", "description": "An overview of balance, cards, recipients, quick actions and monthly activity.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/Home.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"},
       {"title": "Cards", "description": "Manage cards, review details and access essential actions in one place.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/cards.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"},
       {"title": "Transfers", "description": "Send or request money through a simple, guided and secure flow.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/transfer.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"}
     ],

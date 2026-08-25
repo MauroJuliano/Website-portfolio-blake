@@ -27,7 +27,7 @@
       {"iconImage": "../assets/icons/features/chart-bar.png", "title": "Acompanhe e entenda seus gastos", "description": "Entenda seus gastos e hábitos com visualizações simples e relatórios claros."}
     ],
     "features": [
-      {"title": "Início", "description": "Visão geral do saldo, cartões, destinatários, ações rápidas e atividade mensal.", "image": "../assets/images/projects/aetheris/home-preview.png"},
+      {"title": "Início", "description": "Visão geral do saldo, cartões, destinatários, ações rápidas e atividade mensal.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/Home.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"},
       {"title": "Cartões", "description": "Gerencie cartões, consulte detalhes e acesse ações essenciais em um só lugar.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/cards.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"},
       {"title": "Transferências", "description": "Envie ou solicite dinheiro por meio de um fluxo simples, guiado e seguro.", "video": "https://uictvk5pk08zs29k.public.blob.vercel-storage.com/transfer.mp4", "poster": "../assets/images/projects/aetheris/home-preview.png"}
     ],
