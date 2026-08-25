@@ -27,7 +27,9 @@
       {"iconImage": "../assets/icons/features/chart-bar.png", "title": "Track and understand spending", "description": "Get insights into your spending and habits with simple visuals and clear reports."}
     ],
     "features": [
-      {"title": "Home", "description": "An overview of balance, cards, recipients, quick actions and monthly activity.", "image": "../assets/images/projects/aetheris/home-preview.png"}
+      {"title": "Home", "description": "An overview of balance, cards, recipients, quick actions and monthly activity.", "image": "../assets/images/projects/aetheris/home-preview.png"},
+      {"title": "Transfers", "description": "Send or request money through a simple, guided and secure flow.", "image": "../assets/images/projects/aetheris/home-preview.png"},
+      {"title": "Cards", "description": "Manage cards, review details and access essential actions in one place.", "image": "../assets/images/projects/aetheris/home-preview.png"}
     ],
     "techStack": ["Swift", "SwiftUI", "Combine", "MVVM", "Coordinator", "Mocked API", "SwiftLint", "XCTest", "Xcode"],
     "architectureFlow": ["Aetheris App", "Feature Modules", "Core", "Network"]
