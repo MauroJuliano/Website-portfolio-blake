@@ -166,7 +166,7 @@ a { color: inherit; }
 }
 .technology-list li::before { content: "◇"; margin-right: 8px; color: var(--accent); }
 
-.case-hero-visual { position: relative; display: flex; height: 430px; align-items: center; justify-content: center; }
+.case-hero-visual { position: relative; display: flex; height: 460px; align-items: center; justify-content: center; }
 .case-device {
   position: relative;
   z-index: 2;
@@ -185,7 +185,7 @@ a { color: inherit; }
 .case-device-glow { position: absolute; bottom: 30px; width: 520px; height: 150px; border-radius: 50%; background: rgba(116,70,239,.14); filter: blur(55px); }
 
 .case-device.is-mockup {
-  width: 410px;
+  width: min(600px, 100%);
   aspect-ratio: auto;
   padding: 0;
   overflow: visible;
@@ -193,11 +193,11 @@ a { color: inherit; }
   border-radius: 0;
   background: transparent;
   box-shadow: none;
-  transform: rotate(2deg);
+  transform: none;
 }
 
 .case-device.is-mockup .case-device-speaker { display: none; }
-.case-device.is-mockup img { width: 100%; height: 100%; border-radius: 0; object-fit: contain; filter: drop-shadow(0 35px 34px rgba(42, 25, 82, .2)); }
+.case-device.is-mockup img { width: 100%; height: 100%; border-radius: 0; object-fit: contain; }
 
 .focus-icon, .cta-icon {
   display: inline-flex;
@@ -319,7 +319,7 @@ a { color: inherit; }
   .case-hero-copy { max-width: 620px; }
   .case-hero-visual { height: 520px; }
   .case-device { width: 280px; }
-  .case-device.is-mockup { width: 350px; }
+  .case-device.is-mockup { width: min(500px, 100%); }
   .focus-grid { grid-template-columns: 1fr; }
   .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .other-flow-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -336,7 +336,7 @@ a { color: inherit; }
   .case-hero h1 { font-size: clamp(3.2rem, 18vw, 5rem); }
   .case-hero-visual { height: 450px; }
   .case-device { width: 235px; border-radius: 44px; }
-  .case-device.is-mockup { width: 285px; border-radius: 0; }
+  .case-device.is-mockup { width: min(360px, 100%); border-radius: 0; }
   .case-device img { border-radius: 33px; }
   .feature-grid { grid-template-columns: 1fr; }
   .other-flows-heading { align-items: flex-start; flex-direction: column; }
