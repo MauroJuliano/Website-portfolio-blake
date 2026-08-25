@@ -214,9 +214,9 @@ a { color: inherit; }
 .feature-card p { margin: 0; color: var(--text-secondary); font-size: 12px; line-height: 1.65; }
 
 .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
-.feature-card { display: grid; grid-template-columns: 95px 1fr; gap: 17px; min-height: 150px; padding: 10px; border: 1px solid var(--border); border-radius: 15px; background: var(--surface); }
-.feature-media { width: 95px; height: 130px; border-radius: 11px; object-fit: cover; background: #090a0d; }
-.feature-card--video { grid-template-columns: minmax(150px, 0.8fr) 1fr; }
+.feature-card { display: grid; grid-template-columns: 120px 1fr; gap: 19px; min-height: 190px; padding: 10px; border: 1px solid var(--border); border-radius: 15px; background: var(--surface); }
+.feature-media { width: 120px; height: 170px; border-radius: 11px; object-fit: cover; background: #090a0d; }
+.feature-card--video { grid-template-columns: minmax(180px, 0.8fr) 1fr; }
 .feature-card--video .feature-media { width: 100%; }
 .feature-card div { align-self: center; }
 
