@@ -172,7 +172,7 @@ export async function loadProject(language = "en") {
       return;
     }
 
-    document.title = `${project.title} | Mauro Figueiredo`;
+    document.title = `${project.title} | Mauro G. Figueiredo`;
     document.getElementById("project-title").textContent = project.title;
     document.getElementById("project-tagline").textContent = project.tagline;
     document.getElementById("project-summary").textContent = project.summary;
