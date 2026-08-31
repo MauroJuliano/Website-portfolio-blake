@@ -1,5 +1,6 @@
 import { initLanguageSelector } from '../components/language-selector.js';
 import { initBackToTop } from '../components/back-to-top.js';
+import { initProgressiveImages } from '../components/progressive-images.js';
 import { initSocialLinks, updateResumeLink } from '../components/social-links.js';
 import { initThemeToggle } from '../components/theme.js';
 import { initTooltips, updateTooltips } from '../components/tooltips.js';
@@ -13,6 +14,8 @@ import { renderProjects } from '../sections/projects.js';
 import { loadSection } from '../services/section-loader.js';
 
 async function init() {
+  initProgressiveImages();
+
   try {
     await Promise.all([
       loadSection("hero", "sections/hero.html"),
