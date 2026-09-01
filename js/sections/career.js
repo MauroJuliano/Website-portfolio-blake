@@ -1,6 +1,5 @@
 let activeScrollHandler = null;
 let activeFlickityInstances = [];
-const CAREER_AUTOPLAY_INTERVAL = 3500;
 
 export function renderCareer(careerData) {
   const list = document.getElementById("career-list");
@@ -72,12 +71,8 @@ export function renderCareer(careerData) {
         cellAlign: 'center',
         pageDots: item.images.length > 1,
         prevNextButtons: false,
-        draggable: item.images.length > 1,
-        autoPlay: item.images.length > 1 ? CAREER_AUTOPLAY_INTERVAL : false,
-        pauseAutoPlayOnHover: true
+        draggable: item.images.length > 1
       });
-
-      if (index !== 0) flickity.stopPlayer();
       flickityInstances.push(flickity);
     }
   });
@@ -122,12 +117,8 @@ export function renderCareer(careerData) {
             }
           }
 
-          if (flickityInstances[i]?.slides.length > 1) {
-            flickityInstances[i].playPlayer();
-          }
         } else {
           carousel.style.display = "none";
-          flickityInstances[i]?.stopPlayer();
         }
       });
     }
